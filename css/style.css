@@ -1,0 +1,141 @@
+/* ************************************************************ */
+/* BEGINNING of light/dark color theme logic */
+/*
+  Reference:
+  "Creating a website theme switcher with CSS only" at alexandersandberg.com
+*/
+
+:root {
+  --light-text-color: black;
+  --light-background-color: white;
+  --light-math-color: black;
+  --light-label-content: "dark mode";
+  --light-code-background-color: lightgrey;
+  --light-link-color: navy;
+
+  --dark-text-color: white;
+  --dark-background-color: #1f1f1f;
+  --dark-math-color: white;
+  --dark-label-content: "light mode";
+  --dark-code-background-color: #5f5f5f;
+  --dark-link-color: lightskyblue;
+
+  --text-color: var(--light-text-color);
+  --background-color: var(--light-background-color);
+  --math-color: var(--light-math-color);
+  --label-content: var(--light-label-content);
+  --code-background-color: var(--light-code-background-color);
+  --link-color: var(--light-link-color);
+}
+
+#color-theme-switch:checked ~ #color-theme-container {
+  --text-color: var(--dark-text-color);
+  --background-color: var(--dark-background-color);
+  --math-color: var(--dark-math-color);
+  --label-content: var(--dark-label-content);
+  --code-background-color: var(--dark-code-background-color);
+  --link-color: var(--dark-link-color);
+}
+
+#color-theme-container {
+  color: var(--text-color);
+  background: var(--background-color);
+  min-height: 100%;
+}
+
+/* equivalent of the original body */
+#color-theme-body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+#color-theme-container .richly-math {
+  fill: var(--math-color);
+}
+
+/*
+  the next two rule sets along with #color-theme-container min-height: 100%
+  are needed so that #color-theme-container fills the entire page
+*/
+
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+#color-theme-switch {
+  position: absolute;
+  visibility: hidden;
+}
+
+#color-theme-switch-div {
+  display: flex;
+  justify-content: center;
+}
+
+#color-theme-switch-label::after {
+  content: var(--label-content);
+}
+
+/* END of light/dark color theme logic */
+/* ************************************************************ */
+
+a {
+  color: var(--link-color);
+}
+
+/* header and footer areas */
+.menu { padding: 0; }
+.menu li { display: inline-block; }
+.article-meta, .menu a, #color-theme-switch-label {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu a, #color-theme-switch-label {
+  color: darkgoldenrod;
+}
+
+.article-meta {
+  color: black;
+}
+
+.menu, .article-meta, footer { text-align: center; }
+.title { font-size: 1.1em; }
+footer a { text-decoration: none; }
+hr {
+  border-style: solid;
+  color: #ddd;
+}
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: var(--code-background-color); }
+pre code { background: none; }
+
+/* misc elements */
+img, iframe, video { max-width: 100%; }
+main { hyphens: auto; }
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }

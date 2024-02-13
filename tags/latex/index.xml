@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on I dream, therefore I am</title>
+    <link>https://xwcal.github.io/tags/latex/</link>
+    <description>Recent content in latex on I dream, therefore I am</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xwcal.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A few words on exponentiation</title>
+      <link>https://xwcal.github.io/posts/2024/01/21/on-exponentiation/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/01/21/on-exponentiation/</guid>
+      <description>Although MathJax dominates today&#39;s html+latex landscape, I always feel reader-side rendering of latex leaves much to be desired.&#xA;After getting my writer-side svg generation and embedding engine up and running, I thought, why not write something to test drive it? So here it goes.&#xA;Mathematics First, note that a^b (a^b or a**b in most programming languages) is right associative. So, 2^{3^4} = 2^{81} , an enormous number of 25 digits, not (2^3)^4 , which is merely 4096.</description>
+    </item>
+  </channel>
+</rss>
