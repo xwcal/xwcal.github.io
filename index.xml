@@ -20,7 +20,7 @@
       <link>https://xwcal.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/about/</guid>
-      <description>About me (under construction)&#xA;About this site What I use to put this site together:&#xA;richly: my python script that renders latex as inline svg when converting markdown or org files into html latex: richly dependency pandoc: richly dependency dvisvgm: richly dependency hugo: static site generator xminxt: my hugo theme based on Yihui Xie&amp;rsquo;s XMin and enhanced with Alexander Sandberg&amp;rsquo;s CSS only (light/dark) theme switcher emacs: org-mode for editing posts xubuntu: richly (and almost everything else&amp;rsquo;s) dependency </description>
+      <description>About me (under construction)&#xA;About this site What I use to put this site together:&#xA;richly: my python script that converts markdown or emacs org-mode files into html and renders latex as inline svg latex: richly dependency pandoc: richly dependency dvisvgm: richly dependency hugo: static site generator xminxt: my hugo theme based on Yihui Xie&amp;rsquo;s XMin and enhanced with Alexander Sandberg&amp;rsquo;s CSS only (light/dark) theme switcher emacs: org-mode for editing posts xubuntu: richly (and almost everything else&amp;rsquo;s) dependency Quote New scientific ideas never spring from a communal body, however organized, but rather from the head of an individually inspired researcher who struggles with his problems in lonely thought and unites all his thought on one single point which is his whole world for the moment.</description>
     </item>
   </channel>
 </rss>
