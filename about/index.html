@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="/css/fonts.css" />
     <style>
    
-  br { display: none; }
-
-   
   :root {
+    --light-math-color: black;
     --light-pandoc-code-cf-color: #0000ff;
     --light-pandoc-code-kw-color: #0000ff;
 
+    --dark-math-color: white;
     --dark-pandoc-code-cf-color: aqua;
     --dark-pandoc-code-kw-color: aqua;
 
+    --math-color: var(--light-math-color);
     --pandoc-code-cf-color: var(--light-pandoc-code-cf-color);
     --pandoc-code-kw-color: var(--light-pandoc-code-kw-color);
   }
 
   #color-theme-switch:checked ~ #color-theme-container {
+    --math-color: var(--dark-math-color);
     --pandoc-code-cf-color: var(--dark-pandoc-code-cf-color);
     --pandoc-code-kw-color: var(--dark-pandoc-code-kw-color);
   }
+
+  .richly-math {
+    fill: var(--math-color);
+  }
+
+  .richly-heading > a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
 
    
   code{white-space: pre-wrap;}
@@ -116,16 +127,34 @@
     </div>
     <hr/>
     </nav>
+    <script>
+    (function() {
+      let tswitch = document.querySelector('#color-theme-switch');
+      tswitch.checked = !!sessionStorage.getItem('color-theme-switch-checked');
+      tswitch.addEventListener('change', function(){
+	sessionStorage.setItem('color-theme-switch-checked', tswitch.checked? 'sure': '');
+      });
+    })()
+    </script>
 
 <div class="article-meta">
-<h1><span class="title">About</span></h1>
-
-
+  <h1>
+    <span class="title">About</span>
+    <br/>
+    
+  </h1>
+  
+  
 </div>
 
 <main>
 <h2 id="about-me">About me</h2>
-<p>(under construction)</p>
+<p>Knowledgeable about AI, distributed computing, foundations of mathematics and theoretical computer science. Proficient in a few programming languages and fewer natural languages.</p>
+<h2 id="quote">Quote</h2>
+<blockquote>
+<p>New scientific ideas never spring from a communal body, however organized, but rather from the head of an individually inspired researcher who struggles with his problems in lonely thought and unites all his thought on one single point which is his whole world for the moment.</p>
+<p>&ndash; Max Planck</p>
+</blockquote>
 <h2 id="about-this-site">About this site</h2>
 <p>What I use to put this site together:</p>
 <ul>
@@ -138,14 +167,11 @@
 <li>emacs: org-mode for editing posts</li>
 <li>xubuntu: richly (and almost everything else&rsquo;s) dependency</li>
 </ul>
-<h2 id="quote">Quote</h2>
-<blockquote>
-<p>New scientific ideas never spring from a communal body, however organized, but rather from the head of an individually inspired researcher who struggles with his problems in lonely thought and unites all his thought on one single point which is his whole world for the moment.</p>
-<p>&ndash; Max Planck</p>
-</blockquote>
 <h2 id="disclaimer">Disclaimer</h2>
 <p>I don&rsquo;t social network and I am aware that the benefit of peace and privacy comes at a cost: other than my github account, I do not have control over the &ldquo;digital territory&rdquo; that people may assume belongs to me.</p>
 <p>However, I may need to give in eventually. If I ever decide to start social networking, I will be sure to announce it here.</p>
+<h2 id="impersonation-alert">Impersonation alert</h2>
+<p><strong>If we communicate by email, messages from me should originate from either my .edu address, or my outlook.com address with a simple user name: it contains my name and a reference to my alma mater; it does NOT contain any numbers.</strong></p>
 
 </main>
 
@@ -158,15 +184,6 @@
   </footer>
   </div>
   </div>
-  <script>
-  (function() {
-    let tswitch = document.querySelector('#color-theme-switch');
-    tswitch.checked = !!sessionStorage.getItem('color-theme-switch-checked');
-    tswitch.addEventListener('change', function(){
-      sessionStorage.setItem('color-theme-switch-checked', tswitch.checked? 'sure': '');
-    });
-  })()
-  </script>
   </body>
 </html>
 

@@ -6,21 +6,28 @@
     <description>Recent content in Home on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jane Street Puzzle solution: Robot Long Jump</title>
+      <link>https://xwcal.github.io/posts/2024/02/29/jane-st-202303-robot-long-jump-solution/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/02/29/jane-st-202303-robot-long-jump-solution/</guid>
+      <description>Recently I found in my drawer some five pages of scribble dating back to Mar 2023, of my solution to that month&#39;s Jane Street Puzzle 1. Working on the puzzle was a wonderful process of meditation in a time of turmoil, and of reliving the peaceful memories of an aspiring student of math, statistics and computer science 2.&#xA;Somewhat surprisingly, I was able to recall the techniques in calculus and probability theory I hadn&#39;t touched for years.</description>
+    </item>
     <item>
       <title>A few words on exponentiation</title>
       <link>https://xwcal.github.io/posts/2024/01/21/on-exponentiation/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/posts/2024/01/21/on-exponentiation/</guid>
-      <description>Although MathJax dominates today&#39;s html+latex landscape, I always feel reader-side rendering of latex leaves much to be desired.&#xA;After getting my writer-side svg generation and embedding engine up and running, I thought, why not write something to test drive it? So here it goes.&#xA;Mathematics First, note that a^b (a^b or a**b in most programming languages) is right associative. So, 2^{3^4} = 2^{81} , an enormous number of 25 digits, not (2^3)^4 , which is merely 4096.</description>
+      <description>Although MathJax dominates today&#39;s html+latex landscape, I always feel reader-side rendering of latex leaves much to be desired.&#xA;After getting my writer-side svg generation and embedding engine up and running, I thought, why not write something to test drive it? So here it goes.&#xA;Mathematics First, note that a^b $a^b$ (a^b or a**b in most programming languages) is right associative. So, 2^{3^4} = 2^{81} $2^{3^4} = 2^{81}$, an enormous number of 25 digits, not (2^3)^4 $(2^3)^4$, which is merely 4096.</description>
     </item>
     <item>
       <title>About</title>
       <link>https://xwcal.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/about/</guid>
-      <description>About me (under construction)&#xA;About this site What I use to put this site together:&#xA;richly: my python script that converts markdown or emacs org-mode files into html and renders latex as inline svg latex: richly dependency pandoc: richly dependency dvisvgm: richly dependency hugo: static site generator xminxt: my hugo theme based on Yihui Xie&amp;rsquo;s XMin and enhanced with Alexander Sandberg&amp;rsquo;s CSS only (light/dark) theme switcher emacs: org-mode for editing posts xubuntu: richly (and almost everything else&amp;rsquo;s) dependency Quote New scientific ideas never spring from a communal body, however organized, but rather from the head of an individually inspired researcher who struggles with his problems in lonely thought and unites all his thought on one single point which is his whole world for the moment.</description>
+      <description>About me Knowledgeable about AI, distributed computing, foundations of mathematics and theoretical computer science. Proficient in a few programming languages and fewer natural languages.&#xA;Quote New scientific ideas never spring from a communal body, however organized, but rather from the head of an individually inspired researcher who struggles with his problems in lonely thought and unites all his thought on one single point which is his whole world for the moment.</description>
     </item>
   </channel>
 </rss>

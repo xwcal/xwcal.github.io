@@ -9,24 +9,35 @@
     <link rel="stylesheet" href="/css/fonts.css" />
     <style>
    
-  br { display: none; }
-
-   
   :root {
+    --light-math-color: black;
     --light-pandoc-code-cf-color: #0000ff;
     --light-pandoc-code-kw-color: #0000ff;
 
+    --dark-math-color: white;
     --dark-pandoc-code-cf-color: aqua;
     --dark-pandoc-code-kw-color: aqua;
 
+    --math-color: var(--light-math-color);
     --pandoc-code-cf-color: var(--light-pandoc-code-cf-color);
     --pandoc-code-kw-color: var(--light-pandoc-code-kw-color);
   }
 
   #color-theme-switch:checked ~ #color-theme-container {
+    --math-color: var(--dark-math-color);
     --pandoc-code-cf-color: var(--dark-pandoc-code-cf-color);
     --pandoc-code-kw-color: var(--dark-pandoc-code-kw-color);
   }
+
+  .richly-math {
+    fill: var(--math-color);
+  }
+
+  .richly-heading > a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
 
    
   code{white-space: pre-wrap;}
@@ -117,6 +128,15 @@
     </div>
     <hr/>
     </nav>
+    <script>
+    (function() {
+      let tswitch = document.querySelector('#color-theme-switch');
+      tswitch.checked = !!sessionStorage.getItem('color-theme-switch-checked');
+      tswitch.addEventListener('change', function(){
+	sessionStorage.setItem('color-theme-switch-checked', tswitch.checked? 'sure': '');
+      });
+    })()
+    </script>
 
 
 
@@ -128,6 +148,11 @@
 <ul>
   
   
+  
+  <li>
+    <span class="date">2024/02/29</span>
+    <a href="/posts/2024/02/29/jane-st-202303-robot-long-jump-solution/">Jane Street Puzzle solution: Robot Long Jump</a>
+  </li>
   
   <li>
     <span class="date">2024/01/21</span>
@@ -145,15 +170,6 @@
   </footer>
   </div>
   </div>
-  <script>
-  (function() {
-    let tswitch = document.querySelector('#color-theme-switch');
-    tswitch.checked = !!sessionStorage.getItem('color-theme-switch-checked');
-    tswitch.addEventListener('change', function(){
-      sessionStorage.setItem('color-theme-switch-checked', tswitch.checked? 'sure': '');
-    });
-  })()
-  </script>
   </body>
 </html>
 
