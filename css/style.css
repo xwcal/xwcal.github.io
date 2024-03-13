@@ -136,11 +136,3 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
-
-/* hotfix: copyable overlay */
-.richly-math + span {
-  text-overflow: clip;
-  overflow: hidden;
-  max-width: 100%;
-  max-height: 100%;
-}
