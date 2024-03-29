@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quantum-mechanics on I dream, therefore I am</title>
+    <link>https://xwcal.github.io/tags/quantum-mechanics/</link>
+    <description>Recent content in quantum-mechanics on I dream, therefore I am</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xwcal.github.io/tags/quantum-mechanics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantum observer paradox</title>
+      <link>https://xwcal.github.io/posts/2024/03/28/quantum_observer_paradox/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/03/28/quantum_observer_paradox/</guid>
+      <description>Suppose we have a Stern-Gerlach device exhibiting particle-like behavior 1, such that in the x $x$ direction, we have a complete basis: \{ |measure_{+x}\rangle, |measure_{-x}\rangle \} $\{ |measure_{+x}\rangle, |measure_{-x}\rangle \}$, akin to a spin-\frac{1}{2} $\frac{1}{2}$ particle, which has \{ |spin_{+x}\rangle, |spin_{-x}\rangle \} $\{ |spin_{+x}\rangle, |spin_{-x}\rangle \}$.&#xA;Suppose the Stern-Gerlach device is configured as in Feynman&#39;s beautiful exposition 2 to block the lower beam, allowing only particles that take the upper route to fly through.</description>
+    </item>
+  </channel>
+</rss>

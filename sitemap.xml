@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xwcal.github.io/tags/calculus/</loc>
-    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://xwcal.github.io/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/physics/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/posts/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/posts/2024/03/28/quantum_observer_paradox/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/quantum-mechanics/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/calculus/</loc>
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xwcal.github.io/posts/2024/02/29/jane-st-202303-robot-long-jump-solution/</loc>
@@ -17,13 +32,7 @@
     <loc>https://xwcal.github.io/tags/math/</loc>
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://xwcal.github.io/posts/</loc>
-    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://xwcal.github.io/tags/probability/</loc>
-    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xwcal.github.io/tags/</loc>
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xwcal.github.io/posts/2024/01/21/on-exponentiation/</loc>
