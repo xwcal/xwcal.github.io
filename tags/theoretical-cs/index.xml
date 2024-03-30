@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theoretical-cs on I dream, therefore I am</title>
+    <link>https://xwcal.github.io/tags/theoretical-cs/</link>
+    <description>Recent content in theoretical-cs on I dream, therefore I am</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xwcal.github.io/tags/theoretical-cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ending a detour: solving an open problem in 17 days</title>
+      <link>https://xwcal.github.io/posts/2024/03/30/detour_problem/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/03/30/detour_problem/</guid>
+      <description>1 The detour problem The statement given by Antoine Amarilli is rephrased here:&#xA;Given a directed graph G = (V,E) $G = (V,E)$, a source s \in V $s \in V$ and a target t \in V $t \in V$ reachable from s $s$, decide if there a simple directed path from s $s$ to t $t$ whose length (in terms of edge count) is greater than that of the shortest path from s $s$ to t $t$.</description>
+    </item>
+  </channel>
+</rss>
