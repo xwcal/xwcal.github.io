@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>theoretical-cs on I dream, therefore I am</title>
-    <link>https://xwcal.github.io/tags/theoretical-cs/</link>
-    <description>Recent content in theoretical-cs on I dream, therefore I am</description>
+    <title>bugfix on I dream, therefore I am</title>
+    <link>https://xwcal.github.io/tags/bugfix/</link>
+    <description>Recent content in bugfix on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://xwcal.github.io/tags/theoretical-cs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xwcal.github.io/tags/bugfix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bugfix: detour problem solution should search for fork/join</title>
       <link>https://xwcal.github.io/posts/2024/04/02/detour_problem_bugfix/</link>
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/posts/2024/04/02/detour_problem_bugfix/</guid>
       <description>Bugfix The previous algorithm contains a flagrant bug 1 that managed to elude my attention. Here is an updated version with VDJ-122 and VDJ-221 modified (the definitions in my previous post are a prerequisite):&#xA;For u, v \in \mathcal{B}_{s,t} $u, v \in \mathcal{B}_{s,t}$, u \neq v $u \neq v$:&#xA;If dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) $dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) &lt; \infty$:&#xA;If dist(s,u) \le dist(s,v) $dist(s,u) \le dist(s,v)$:&#xA;Return True&#xA;Elif VDJ-122(\mathcal{B}_{s,t}, s, u, v) $(\mathcal{B}_{s,t}, s, u, v)$ and</description>
-    </item>
-    <item>
-      <title>Ending a detour: solving an open problem in 17 days</title>
-      <link>https://xwcal.github.io/posts/2024/03/30/detour_problem/</link>
-      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://xwcal.github.io/posts/2024/03/30/detour_problem/</guid>
-      <description>1 The detour problem The statement given by Antoine Amarilli is rephrased here:&#xA;Given a directed graph G = (V,E) $G = (V,E)$, a source s \in V $s \in V$ and a target t \in V $t \in V$ reachable from s $s$, decide if there a simple directed path from s $s$ to t $t$ whose length (in terms of edge count) is greater than that of the shortest path from s $s$ to t $t$.</description>
     </item>
   </channel>
 </rss>

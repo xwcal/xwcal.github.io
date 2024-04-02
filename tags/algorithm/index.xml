@@ -6,8 +6,15 @@
     <description>Recent content in algorithm on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bugfix: detour problem solution should search for fork/join</title>
+      <link>https://xwcal.github.io/posts/2024/04/02/detour_problem_bugfix/</link>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/04/02/detour_problem_bugfix/</guid>
+      <description>Bugfix The previous algorithm contains a flagrant bug 1 that managed to elude my attention. Here is an updated version with VDJ-122 and VDJ-221 modified (the definitions in my previous post are a prerequisite):&#xA;For u, v \in \mathcal{B}_{s,t} $u, v \in \mathcal{B}_{s,t}$, u \neq v $u \neq v$:&#xA;If dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) $dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) &lt; \infty$:&#xA;If dist(s,u) \le dist(s,v) $dist(s,u) \le dist(s,v)$:&#xA;Return True&#xA;Elif VDJ-122(\mathcal{B}_{s,t}, s, u, v) $(\mathcal{B}_{s,t}, s, u, v)$ and</description>
+    </item>
     <item>
       <title>Ending a detour: solving an open problem in 17 days</title>
       <link>https://xwcal.github.io/posts/2024/03/30/detour_problem/</link>
