@@ -6,8 +6,15 @@
     <description>Recent content in bugfix on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/tags/bugfix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bugfix: detour problem solution needs transitive closure</title>
+      <link>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</guid>
+      <description>Bugfix While typesetting a paper for my solution to the detour problem, I realized that the algorithm is still flawed after the previous bugfix.&#xA;Here is a test case that triggers the bug:&#xA;VDJ-122 returns true on edge 1 and false on edge 2; VDJ-221 returns true on edge 2 and false on edge 1. But no test is performed on the two edges combined because the backward &#34;flight&#34; has a &#34;</description>
+    </item>
     <item>
       <title>Bugfix: detour problem solution should search for fork/join</title>
       <link>https://xwcal.github.io/posts/2024/04/02/detour_problem_bugfix/</link>
