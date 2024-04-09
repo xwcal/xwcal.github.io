@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 07 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bugfix: detour problem solution needs transitive closure</title>
+      <title>Bugfix: detour problem solution needs [not] transitive closure</title>
       <link>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</link>
       <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</guid>
-      <description>Bugfix While typesetting a paper for my solution to the detour problem, I realized that the algorithm is still flawed after the previous bugfix.&#xA;Here is a test case that triggers the bug:&#xA;VDJ-122 returns true on edge 1 and false on edge 2; VDJ-221 returns true on edge 2 and false on edge 1. But no test is performed on the two edges combined because the backward &#34;flight&#34; has a &#34;</description>
+      <description>Bugfix EDIT 20240408: What can I say about a bad brain fart? Guess there is no substitute for letting an idea sit for a while, preferably over at least a night of sound sleep, so that I get a chance to see my own mistakes. In going from one extreme (research, but never publish) to another, I have removed the gate that keeps my mistakes from escaping into the wild. Despite the cost (confusion to my readers, if any, and embarrassment to myself), I will keep this experiment going: this is the first time I do research completely in the open and document the process as I go.</description>
     </item>
     <item>
       <title>Bugfix: detour problem solution should search for fork/join</title>
@@ -23,7 +23,7 @@
       <description>Bugfix The previous algorithm contains a flagrant bug 1 that managed to elude my attention. Here is an updated version with VDJ-122 and VDJ-221 modified (the definitions in my previous post are a prerequisite):&#xA;For u, v \in \mathcal{B}_{s,t} $u, v \in \mathcal{B}_{s,t}$, u \neq v $u \neq v$:&#xA;If dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) $dist_{G-\mathcal{B}_{s,t}+u+v}(u,v) &lt; \infty$:&#xA;If dist(s,u) \le dist(s,v) $dist(s,u) \le dist(s,v)$:&#xA;Return True&#xA;Elif VDJ-122(\mathcal{B}_{s,t}, s, u, v) $(\mathcal{B}_{s,t}, s, u, v)$ and</description>
     </item>
     <item>
-      <title>Ending a detour: solving an open problem in 17 days</title>
+      <title>Ending a detour: [not] solving an open problem in 17 days</title>
       <link>https://xwcal.github.io/posts/2024/03/30/detour_problem/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/posts/2024/03/30/detour_problem/</guid>

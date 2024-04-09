@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 07 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/tags/bugfix/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bugfix: detour problem solution needs transitive closure</title>
+      <title>Bugfix: detour problem solution needs [not] transitive closure</title>
       <link>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</link>
       <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</guid>
-      <description>Bugfix While typesetting a paper for my solution to the detour problem, I realized that the algorithm is still flawed after the previous bugfix.&#xA;Here is a test case that triggers the bug:&#xA;VDJ-122 returns true on edge 1 and false on edge 2; VDJ-221 returns true on edge 2 and false on edge 1. But no test is performed on the two edges combined because the backward &#34;flight&#34; has a &#34;</description>
+      <description>Bugfix EDIT 20240408: What can I say about a bad brain fart? Guess there is no substitute for letting an idea sit for a while, preferably over at least a night of sound sleep, so that I get a chance to see my own mistakes. In going from one extreme (research, but never publish) to another, I have removed the gate that keeps my mistakes from escaping into the wild. Despite the cost (confusion to my readers, if any, and embarrassment to myself), I will keep this experiment going: this is the first time I do research completely in the open and document the process as I go.</description>
     </item>
     <item>
       <title>Bugfix: detour problem solution should search for fork/join</title>
