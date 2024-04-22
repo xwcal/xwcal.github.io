@@ -6,8 +6,15 @@
     <description>Recent content in Home on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Detour problem&#39;s next challenge: irreducible saw patterns</title>
+      <link>https://xwcal.github.io/posts/2024/04/21/detour_problem_next_challenge_irreducible_saw_patterns/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/04/21/detour_problem_next_challenge_irreducible_saw_patterns/</guid>
+      <description>To facilitate our discussion, let&#39;s expand the existing definitions and make a few things formal. For u,v \in V $u,v \in V$, let&#39;s refer to a simple path in G-\mathcal{B}_{s,t}+u+v $G-\mathcal{B}_{s,t}+u+v$ (ie. completely outside \mathcal{B}_{s,t} $\mathcal{B}_{s,t}$ except the end points) from u $u$ to v $v$ as a hop from u $u$ to v $v$. We say it is forward if dist(s,u) $dist(s,u) &lt; dist(s,v)$, lateral if dist(s,u) = dist(s,v) $dist(s,u) = dist(s,v)$, and backward if dist(s,u) &gt; dist(s,v) $dist(s,u) &gt; dist(s,v)$.</description>
+    </item>
     <item>
       <title>Bugfix: detour problem solution needs [not] transitive closure</title>
       <link>https://xwcal.github.io/posts/2024/04/07/detour_problem_bugfix_trans_closure/</link>
