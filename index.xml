@@ -6,8 +6,15 @@
     <description>Recent content in Home on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unwalling the NP-completeness of multi-commodity integral flow</title>
+      <link>https://xwcal.github.io/posts/2024/04/23/multi-commodity_integral_flow_np_complete/</link>
+      <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/04/23/multi-commodity_integral_flow_np_complete/</guid>
+      <description>While ruminating on the difficulty of irreducible saw patterns, I took another look at Fortune et al. and noticed the following mention of On the complexity of time table and multi-commodity flow problems by Even et al.:&#xA;We note that the result of Even, Itai and Shamir [2] on multicommodity flows implies that the directed subgraph homeomorphism problem is NP-complete if both pattern and input graphs are given as input, even if the input graph is acyclic.</description>
+    </item>
     <item>
       <title>Detour problem&#39;s next challenge: irreducible saw patterns</title>
       <link>https://xwcal.github.io/posts/2024/04/21/detour_problem_next_challenge_irreducible_saw_patterns/</link>
