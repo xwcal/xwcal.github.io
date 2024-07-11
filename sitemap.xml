@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://xwcal.github.io/tags/abstract-algebra/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/elementary-number-theory/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/featured/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/generative-art/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/group-theory/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/posts/2024/07/10/self_closing_loop_generators/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/javascript/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/math/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/posts/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xwcal.github.io/tags/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://xwcal.github.io/tags/algorithm/</loc>
     <lastmod>2024-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://xwcal.github.io/</loc>
-    <lastmod>2024-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xwcal.github.io/posts/</loc>
-    <lastmod>2024-04-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://xwcal.github.io/tags/research/</loc>
-    <lastmod>2024-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xwcal.github.io/tags/</loc>
     <lastmod>2024-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xwcal.github.io/tags/theoretical-cs/</loc>
@@ -57,9 +81,6 @@
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xwcal.github.io/tags/jane-street-puzzle/</loc>
-    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xwcal.github.io/tags/math/</loc>
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xwcal.github.io/tags/probability/</loc>

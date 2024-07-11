@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on I dream, therefore I am</title>
+    <link>https://xwcal.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on I dream, therefore I am</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xwcal.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Groups, rings, Bézout&#39;s identity, modular arithmetic and self-closing loop generators</title>
+      <link>https://xwcal.github.io/posts/2024/07/10/self_closing_loop_generators/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/07/10/self_closing_loop_generators/</guid>
+      <description>1 Introduction Daniel Fedorin investigated an intriguing phenomenon where rich patterns arise out of an extremely simple algorithm:&#xA;Generate a finite sequence of integers, then iterate though the sequence repeatedly: at each step, draw a line segment of that integer length and then turn a fixed angle. This post extends Daniel&#39;s excellent work and delves deeper into the math behind this magic 1.&#xA;Here is a demo for those who have yet to appreciate the magic.</description>
+    </item>
+  </channel>
+</rss>

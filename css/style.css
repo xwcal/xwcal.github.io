@@ -16,7 +16,7 @@
   --dark-text-color: white;
   --dark-background-color: #1f1f1f;
   --dark-label-content: "light mode";
-  --dark-code-background-color: #5f5f5f;
+  --dark-code-background-color: #333;
   --dark-link-color: lightskyblue;
   --dark-img-filter: invert(1);
 
@@ -135,4 +135,4 @@ table {
 }
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
+thead, tfoot, tr:nth-child(even) { background: var(--code-background-color); }
