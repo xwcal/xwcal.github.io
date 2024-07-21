@@ -84,7 +84,7 @@ a {
 
 /* header and footer areas */
 .menu { padding: 0; }
-.menu li { display: inline-block; }
+.menu li { display: inline-block; margin-top: 10px; }
 .article-meta, .menu a, #color-theme-switch-label {
   text-decoration: none;
   background: #eee;
