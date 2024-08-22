@@ -6,8 +6,15 @@
     <description>Recent content in javascript on I dream, therefore I am</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://xwcal.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>208V electricity and some trigonometric identities</title>
+      <link>https://xwcal.github.io/posts/2024/08/21/208v/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://xwcal.github.io/posts/2024/08/21/208v/</guid>
+      <description>Recently it became necessary for me to prove that my theoretical skills are easily transferable to practical matters. In the process I stumbled on something new: 208V electricity.&#xA;Richard Feynman is famously believed to have said: &#34;If you can&#39;t explain something in simple terms, you don&#39;t understand it.&#34; 1 In this post I will explain how 208V comes about 2 and let my readers judge how well I understand it.</description>
+    </item>
     <item>
       <title>Groups, rings, Bézout&#39;s identity, modular arithmetic and self-closing loop generators</title>
       <link>https://xwcal.github.io/posts/2024/07/10/self_closing_loop_generators/</link>

@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>208V electricity and some trigonometric identities | I dream, therefore I am</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+   
+  :root {
+    --light-math-color: black;
+    --light-pandoc-code-cf-color: #0000ff;
+    --light-pandoc-code-kw-color: #0000ff;
+
+    --dark-math-color: white;
+    --dark-pandoc-code-cf-color: aqua;
+    --dark-pandoc-code-kw-color: aqua;
+
+    --math-color: var(--light-math-color);
+    --pandoc-code-cf-color: var(--light-pandoc-code-cf-color);
+    --pandoc-code-kw-color: var(--light-pandoc-code-kw-color);
+  }
+
+  #color-theme-switch:checked ~ #color-theme-container {
+    --math-color: var(--dark-math-color);
+    --pandoc-code-cf-color: var(--dark-pandoc-code-cf-color);
+    --pandoc-code-kw-color: var(--dark-pandoc-code-kw-color);
+  }
+
+  .richly-math {
+    fill: var(--math-color);
+    max-width: 80%;  
+  }
+
+  .richly-heading > a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+   
+  div.line-block {
+    font-family: monospace;  
+    font-size: 125%;  
+    background: var(--code-background-color);
+  }
+
+
+   
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+  pre > code.sourceCode { white-space: pre; position: relative; }
+  pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+  pre > code.sourceCode > span:empty { height: 1.2em; }
+  code.sourceCode > span { color: inherit; text-decoration: inherit; }
+  div.sourceCode { margin: 1em 0; }
+  pre.sourceCode { margin: 0; }
+  @media screen {
+  div.sourceCode { overflow: auto; }
+  }
+  @media print {
+  pre > code.sourceCode { white-space: pre-wrap; }
+  pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+  }
+  pre.numberSource code
+    { counter-reset: source-line 0; }
+  pre.numberSource code > span
+    { position: relative; left: -4em; counter-increment: source-line; }
+  pre.numberSource code > span > a:first-child::before
+    { content: counter(source-line);
+      position: relative; left: -1em; text-align: right; vertical-align: baseline;
+      border: none; display: inline-block;
+      -webkit-touch-callout: none; -webkit-user-select: none;
+      -khtml-user-select: none; -moz-user-select: none;
+      -ms-user-select: none; user-select: none;
+      padding: 0 4px; width: 4em;
+      color: #aaaaaa;
+    }
+  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+  div.sourceCode
+    {   }
+  @media screen {
+  pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+  }
+  code span.al { color: #ff0000; }  
+  code span.an { color: #008000; }  
+  code span.at { }  
+  code span.bu { }  
+  code span.cf { color: var(--pandoc-code-cf-color); }  
+  code span.ch { color: #008080; }  
+  code span.cn { }  
+  code span.co { color: #008000; }  
+  code span.cv { color: #008000; }  
+  code span.do { color: #008000; }  
+  code span.er { color: #ff0000; font-weight: bold; }  
+  code span.ex { }  
+  code span.im { }  
+  code span.in { color: #008000; }  
+  code span.kw { color: var(--pandoc-code-kw-color); }  
+  code span.op { }  
+  code span.ot { color: #ff4000; }  
+  code span.pp { color: #ff4000; }  
+  code span.sc { color: #008080; }  
+  code span.ss { color: #008080; }  
+  code span.st { color: #008080; }  
+  code span.va { }  
+  code span.vs { color: #008080; }  
+  code span.wa { color: #008000; font-weight: bold; }  
+</style>
+
+  </head>
+
+  <body>
+    <input type="checkbox" id="color-theme-switch">
+    <div id="color-theme-container">
+    <div id="color-theme-body">
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/tags/featured">Featured</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <div id="color-theme-switch-div">
+      <label id="color-theme-switch-label" for="color-theme-switch"></label>
+    </div>
+    <hr/>
+    </nav>
+    <script>
+    (function() {
+      let tswitch = document.querySelector('#color-theme-switch');
+      tswitch.checked = !!sessionStorage.getItem('color-theme-switch-checked');
+      tswitch.addEventListener('change', function(){
+	sessionStorage.setItem('color-theme-switch-checked', tswitch.checked? 'sure': '');
+      });
+    })()
+    </script>
+
+<div class="article-meta">
+  <h1>
+    <span class="title">208V electricity and some trigonometric identities</span>
+    <br/>
+    
+  </h1>
+  
+  <h2 class="date">2024/08/21</h2>
+</div>
+
+<main>
+<style >
+.interactive-demo input[type="number"] {
+  color: var(--text-color);
+  background: var(--background-color);
+  max-width: 20vw;
+}
+.interactive-demo input[type="range"] {
+  accent-color: darkgray;
+}
+.interactive-demo input[type="button"] {
+  width: 100%;
+  font-size: 120%;
+  filter: var(--img-filter);
+}
+
+/* 
+Don't want the even row highlighting in style.css so just overwrite it: 
+stackoverflow 9459062 "whichever one appears last wins" 
+*/
+tr:nth-child(even) {
+  background: var(--background-color); 
+}
+</style>
+<p >Recently it became necessary for me to prove that my theoretical skills are easily transferable to practical matters. In the process I stumbled on something new: 208V electricity.</p>
+<p >Richard Feynman is famously believed to have said: "If you can't explain something in simple terms, you don't understand it." <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref" ><sup >1</sup></a> In this post I will explain how 208V comes about <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref" ><sup >2</sup></a> and let my readers judge how well I understand it.</p>
+<p >We will look at two <a href="https://en.m.wikipedia.org/wiki/Three-phase_electric_power#Three-wire_and_four-wire_circuits">3-phase transformer secondary winding configurations</a>: Y (or wye) and <a href="https://en.m.wikipedia.org/wiki/High-leg_delta">high-leg delta</a>, which are mentioned in the <a href="https://www.thermalcorporation.com/208-volts-is-a-weird-voltage-where-did-it-come-from">top result</a> when I google <code >208 volt</code>.</p>
+<p >For the uninitiated, I recommend <a href="https://m.youtube.com/watch?v=u0SsejDCVkU">this youtube video</a> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref" ><sup >3</sup></a>, which provides a comprehensive overview (less the mathematics below) of how 3-phase transformers work and the various configurations.</p>
+<p ><strong >WARNING</strong>: The colors used in this post are meant to facilitate exposition. They almost certainly do not correspond to those prescribed in the <a href="https://en.m.wikipedia.org/wiki/Electrical_wiring#Color_code">standards</a>.</p>
+<h1 id="rhid-1-y" class="richly-heading"><a href="#rhid-1-y">1 Y</a></h1>
+<h2 id="rhid-1.1-v-as-the-phase-to-phase-voltage" class="richly-heading"><a href="#rhid-1.1-v-as-the-phase-to-phase-voltage">1.1 208V as the phase-to-phase voltage</a></h2>
+<p >This diagram depicts a Y configuration (the three phases are offset by <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.5638em" height="1.1216em" viewbox="60.63 56.78 22.79 9.97" style="vertical-align:-7.47%"><title>120^\circ</title><g><use x="60.627414" y="65.753425" href="#rlsid-2"/>
+<use x="66.480404" y="65.753425" href="#rlsid-3"/>
+<use x="72.333395" y="65.753425" href="#rlsid-1"/>
+<use x="78.186385" y="61.414988" href="#rlsid-0"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$120^\circ$</span></span>):</p>
+<span style="display: flex; justify-content: center; filter: var(--img-filter);"><img src="./y.svg"/></span>
+<p ><strong >Claim:</strong> <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.9643em" height="1.5691em" viewbox="60.63 54.39 79.68 13.95" style="vertical-align:-19.38%"><title>? = \sqrt{3}\times120V</title><g><use x="60.627414" y="65.753425" href="#rlsid-9"/>
+<use x="69.476068" y="65.753425" href="#rlsid-8"/>
+<use x="81.901548" y="55.86386" href="#rlsid-6"/>
+<use x="91.864219" y="65.753425" href="#rlsid-7"/>
+<use x="100.373873" y="65.753425" href="#rlsid-5"/>
+<use x="112.329033" y="65.753425" href="#rlsid-2"/>
+<use x="118.182023" y="65.753425" href="#rlsid-3"/>
+<use x="124.035014" y="65.753425" href="#rlsid-1"/>
+<use x="129.888004" y="65.753425" href="#rlsid-4"/>
+<rect x='91.864219' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$? = \sqrt{3}\times120V$</span></span>.</p>
+<p >Using a calculator with [ <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.9812em" height="1.5691em" viewbox="60.96 55.67 17.61 13.95" style="vertical-align:-28.97%"><title>\sqrt[2]{x}</title><g><use x="63.948243" y="61.732508" href="#rlsid-11"/>
+<use x="60.959497" y="57.14239" href="#rlsid-6"/>
+<use x="70.922167" y="65.753425" href="#rlsid-10"/>
+<rect x='70.922167' y='56.664203' height='.478187' width='6.652087'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt[2]{x}$</span></span> ] key, it's easy to verify that <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.2792em" height="1.5691em" viewbox="60.63 54.39 82.48 13.95" style="vertical-align:-19.38%"><title>208 \approx \sqrt{3}\times120</title><g><use x="60.627414" y="65.753425" href="#rlsid-3"/>
+<use x="66.480404" y="65.753425" href="#rlsid-1"/>
+<use x="72.333395" y="65.753425" href="#rlsid-13"/>
+<use x="81.507214" y="65.753425" href="#rlsid-12"/>
+<use x="94.126541" y="55.86386" href="#rlsid-6"/>
+<use x="104.089211" y="65.753425" href="#rlsid-7"/>
+<use x="112.598865" y="65.753425" href="#rlsid-5"/>
+<use x="124.554025" y="65.753425" href="#rlsid-2"/>
+<use x="130.407016" y="65.753425" href="#rlsid-3"/>
+<use x="136.260006" y="65.753425" href="#rlsid-1"/>
+<rect x='104.089211' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$208 \approx \sqrt{3}\times120$</span></span>. The question now is where the <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8913em" height="1.5691em" viewbox="60.63 54.39 16.81 13.95" style="vertical-align:-19.38%"><title>\sqrt{3}</title><g><use x="60.627414" y="55.86386" href="#rlsid-6"/>
+<use x="70.590085" y="65.753425" href="#rlsid-7"/>
+<rect x='70.590085' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt{3}$</span></span> comes from.</p>
+<p >What we will prove is the following equality:</p>
+<p ><span id="reid-1" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.7872em" height="1.8323em" viewbox="100.74 68.25 264.77 16.29" ><title>
+V_p\sin(t+60^\circ) - V_p\sin(t-60^\circ) = \sqrt{3}V_p\sin(t+90^\circ)
+</title><g><use x="101.734706" y="80.199253" href="#rlsid-4"/>
+<use x="108.559056" y="81.992516" href="#rlsid-23"/>
+<use x="115.312463" y="80.199253" href="#rlsid-22"/>
+<use x="119.929822" y="80.199253" href="#rlsid-20"/>
+<use x="123.181483" y="80.199253" href="#rlsid-21"/>
+<use x="129.684805" y="80.199253" href="#rlsid-15"/>
+<use x="134.237131" y="80.199253" href="#rlsid-24"/>
+<use x="141.120954" y="80.199253" href="#rlsid-17"/>
+<use x="152.882269" y="80.199253" href="#rlsid-18"/>
+<use x="158.73526" y="80.199253" href="#rlsid-1"/>
+<use x="164.58825" y="75.263067" href="#rlsid-0"/>
+<use x="169.320565" y="80.199253" href="#rlsid-16"/>
+<use x="176.529554" y="80.199253" href="#rlsid-14"/>
+<use x="188.484714" y="80.199253" href="#rlsid-4"/>
+<use x="195.309064" y="81.992516" href="#rlsid-23"/>
+<use x="202.062471" y="80.199253" href="#rlsid-22"/>
+<use x="206.67983" y="80.199253" href="#rlsid-20"/>
+<use x="209.931492" y="80.199253" href="#rlsid-21"/>
+<use x="216.434814" y="80.199253" href="#rlsid-15"/>
+<use x="220.98714" y="80.199253" href="#rlsid-24"/>
+<use x="227.870963" y="80.199253" href="#rlsid-14"/>
+<use x="239.826124" y="80.199253" href="#rlsid-18"/>
+<use x="245.679114" y="80.199253" href="#rlsid-1"/>
+<use x="251.532104" y="75.263067" href="#rlsid-0"/>
+<use x="256.264419" y="80.199253" href="#rlsid-16"/>
+<use x="264.137574" y="80.199253" href="#rlsid-8"/>
+<use x="276.563055" y="69.726046" href="#rlsid-6"/>
+<use x="286.525725" y="80.199253" href="#rlsid-7"/>
+<use x="292.378716" y="80.199253" href="#rlsid-4"/>
+<use x="299.203066" y="81.992516" href="#rlsid-23"/>
+<use x="305.956473" y="80.199253" href="#rlsid-22"/>
+<use x="310.573832" y="80.199253" href="#rlsid-20"/>
+<use x="313.825493" y="80.199253" href="#rlsid-21"/>
+<use x="320.328815" y="80.199253" href="#rlsid-15"/>
+<use x="324.881141" y="80.199253" href="#rlsid-24"/>
+<use x="331.764964" y="80.199253" href="#rlsid-17"/>
+<use x="343.526279" y="80.199253" href="#rlsid-19"/>
+<use x="349.379269" y="80.199253" href="#rlsid-1"/>
+<use x="355.23226" y="75.263067" href="#rlsid-0"/>
+<use x="359.964575" y="80.199253" href="#rlsid-16"/>
+<rect x='286.525725' y='69.247858' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+V_p\sin(t+60^\circ) - V_p\sin(t-60^\circ) = \sqrt{3}V_p\sin(t+90^\circ)
+$$</span><span style="position:absolute;right:0;top:0.1661em;"><a href="#reid-1">(1)</a></span></span></p>
+<p >In other words, when we take the difference of the two sine waves with the same amplitude <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3594em" height="1.5193em" viewbox="60.63 56.59 12.08 13.50" style="vertical-align:-32.54%"><title>V_p</title><g><use x="60.627414" y="65.753425" href="#rlsid-4"/>
+<use x="67.451764" y="67.546688" href="#rlsid-23"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$V_p$</span></span> and a phase difference of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.5638em" height="1.1216em" viewbox="60.63 56.78 22.79 9.97" style="vertical-align:-7.47%"><title>120^\circ</title><g><use x="60.627414" y="65.753425" href="#rlsid-2"/>
+<use x="66.480404" y="65.753425" href="#rlsid-3"/>
+<use x="72.333395" y="65.753425" href="#rlsid-1"/>
+<use x="78.186385" y="61.414988" href="#rlsid-0"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$120^\circ$</span></span>, we get a new sine wave with amplitude <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3.1386em" height="1.7666em" viewbox="60.63 54.39 27.90 15.70" style="vertical-align:-32.54%"><title>\sqrt{3}V_p</title><g><use x="60.627414" y="55.86386" href="#rlsid-6"/>
+<use x="70.590085" y="65.753425" href="#rlsid-7"/>
+<use x="76.443075" y="65.753425" href="#rlsid-4"/>
+<use x="83.267425" y="67.546688" href="#rlsid-23"/>
+<rect x='70.590085' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt{3}V_p$</span></span>. The common factor <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3594em" height="1.5193em" viewbox="60.63 56.59 12.08 13.50" style="vertical-align:-32.54%"><title>V_p</title><g><use x="60.627414" y="65.753425" href="#rlsid-4"/>
+<use x="67.451764" y="67.546688" href="#rlsid-23"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$V_p$</span></span> does not affect the equality so we just need to prove:</p>
+<p ><span id="reid-2" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.4288em" height="1.7924em" viewbox="120.11 68.25 226.03 15.93" ><title>
+\sin(t+60^\circ) - \sin(t-60^\circ) = \sqrt{3}\sin(t+90^\circ)
+</title><g><use x="121.105075" y="80.199253" href="#rlsid-22"/>
+<use x="125.722434" y="80.199253" href="#rlsid-20"/>
+<use x="128.974096" y="80.199253" href="#rlsid-21"/>
+<use x="135.477418" y="80.199253" href="#rlsid-15"/>
+<use x="140.029744" y="80.199253" href="#rlsid-24"/>
+<use x="146.913567" y="80.199253" href="#rlsid-17"/>
+<use x="158.674882" y="80.199253" href="#rlsid-18"/>
+<use x="164.527872" y="80.199253" href="#rlsid-1"/>
+<use x="170.380862" y="75.263067" href="#rlsid-0"/>
+<use x="175.113177" y="80.199253" href="#rlsid-16"/>
+<use x="182.322167" y="80.199253" href="#rlsid-14"/>
+<use x="194.277327" y="80.199253" href="#rlsid-22"/>
+<use x="198.894686" y="80.199253" href="#rlsid-20"/>
+<use x="202.146347" y="80.199253" href="#rlsid-21"/>
+<use x="208.64967" y="80.199253" href="#rlsid-15"/>
+<use x="213.201996" y="80.199253" href="#rlsid-24"/>
+<use x="220.085819" y="80.199253" href="#rlsid-14"/>
+<use x="232.040979" y="80.199253" href="#rlsid-18"/>
+<use x="237.893969" y="80.199253" href="#rlsid-1"/>
+<use x="243.74696" y="75.263067" href="#rlsid-0"/>
+<use x="248.479274" y="80.199253" href="#rlsid-16"/>
+<use x="256.35243" y="80.199253" href="#rlsid-8"/>
+<use x="268.77791" y="69.726046" href="#rlsid-6"/>
+<use x="278.740581" y="80.199253" href="#rlsid-7"/>
+<use x="286.586069" y="80.199253" href="#rlsid-22"/>
+<use x="291.203428" y="80.199253" href="#rlsid-20"/>
+<use x="294.455089" y="80.199253" href="#rlsid-21"/>
+<use x="300.958412" y="80.199253" href="#rlsid-15"/>
+<use x="305.510737" y="80.199253" href="#rlsid-24"/>
+<use x="312.39456" y="80.199253" href="#rlsid-17"/>
+<use x="324.155875" y="80.199253" href="#rlsid-19"/>
+<use x="330.008866" y="80.199253" href="#rlsid-1"/>
+<use x="335.861856" y="75.263067" href="#rlsid-0"/>
+<use x="340.594171" y="80.199253" href="#rlsid-16"/>
+<rect x='278.740581' y='69.247858' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+\sin(t+60^\circ) - \sin(t-60^\circ) = \sqrt{3}\sin(t+90^\circ)
+$$</span><span style="position:absolute;right:0;top:0.1462em;"><a href="#reid-2">(2)</a></span></span></p>
+<p >Before we get into the nitty-gritty of trig identities, here is a "proof by interactive demo":</p>
+<div id="interactive-demo-208y">
+<div style="justify-content: center;display: flex;">
+<span style="background: red;">JavaScript is necessary for this demo.</span>
+</div>
+</div>
+<p >Slide <strong >t</strong> around to appreciate how the sine wave in the lower frame arises as the difference of the two sine waves in the upper frame.</p>
+<p >Now in order to prove <a href="#reid-2" >(2)</a> we will need …</p>
+<h2 id="rhid-1.2-trig_identities" class="richly-heading"><a href="#rhid-1.2-trig_identities">1.2 Some trigonometric identities</a></h2>
+<h3 id="rhid-1.2.1-sin_odd" class="richly-heading"><a href="#rhid-1.2.1-sin_odd">1.2.1 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.3745em" height="1.5691em" viewbox="62.62 55.79 92.22 13.95" style="vertical-align:-29.89%"><title>\sin(-\alpha) = -\sin\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-14"/>
+<use x="90.843077" y="65.753425" href="#rlsid-25"/>
+<use x="98.364801" y="65.753425" href="#rlsid-16"/>
+<use x="106.237956" y="65.753425" href="#rlsid-8"/>
+<use x="118.663437" y="65.753425" href="#rlsid-14"/>
+<use x="129.954432" y="65.753425" href="#rlsid-22"/>
+<use x="134.571791" y="65.753425" href="#rlsid-20"/>
+<use x="137.823452" y="65.753425" href="#rlsid-21"/>
+<use x="146.319272" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(-\alpha) = -\sin\alpha$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p >This identity can be easily seen using the definition of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.7993em" height="1.1168em" viewbox="62.62 56.82 24.88 9.93" style="vertical-align:-7.47%"><title>\sin\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="78.984752" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin\alpha$</span></span>. When we change the sign of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.9583em" height="0.8032em" viewbox="60.63 59.61 8.52 7.14" style="vertical-align:-7.47%"><title>\alpha</title><g><use x="60.627414" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\alpha$</span></span>, the right triangle is flipped along the <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.8604em" height="0.8032em" viewbox="60.63 59.61 7.65 7.14" style="vertical-align:-7.47%"><title>x</title><g><use x="60.627414" y="65.753425" href="#rlsid-10"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$x$</span></span>-axis. <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.8025em" height="1.0648em" viewbox="60.63 59.61 7.13 9.46" style="vertical-align:-24.91%"><title>y</title><g><use x="60.627414" y="65.753425" href="#rlsid-29"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$y$</span></span> changes sign and so does the ratio <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6.9314em" height="1.8381em" viewbox="60.63 53.91 61.61 16.34" style="vertical-align:-33.74%"><title>y/\sqrt{x^2+y^2}</title><g><use x="60.627414" y="65.753425" href="#rlsid-29"/>
+<use x="66.764066" y="65.753425" href="#rlsid-30"/>
+<use x="72.617056" y="55.38777" href="#rlsid-74"/>
+<use x="84.572255" y="65.753425" href="#rlsid-10"/>
+<use x="91.224342" y="62.299717" href="#rlsid-54"/>
+<use x="98.61332" y="65.753425" href="#rlsid-17"/>
+<use x="110.374635" y="65.753425" href="#rlsid-29"/>
+<use x="116.511287" y="62.299717" href="#rlsid-54"/>
+<rect x='84.572255' y='54.909583' height='.478187' width='36.671336'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$y/\sqrt{x^2+y^2}$</span></span>:</p>
+<span style="display: flex; justify-content: center; filter: var(--img-filter);"><img style="max-width: 80%;" src="./sin_odd.svg"/></span>
+<p >∎</p>
+<h3 id="rhid-1.2.2-cos_even" class="richly-heading"><a href="#rhid-1.2.2-cos_even">1.2.2 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.3969em" height="1.5691em" viewbox="62.62 55.79 83.53 13.95" style="vertical-align:-29.89%"><title>\cos(-\alpha) = \cos\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="78.292919" y="65.753425" href="#rlsid-15"/>
+<use x="82.845245" y="65.753425" href="#rlsid-14"/>
+<use x="92.143742" y="65.753425" href="#rlsid-25"/>
+<use x="99.665466" y="65.753425" href="#rlsid-16"/>
+<use x="107.538621" y="65.753425" href="#rlsid-8"/>
+<use x="119.964102" y="65.753425" href="#rlsid-27"/>
+<use x="125.16676" y="65.753425" href="#rlsid-28"/>
+<use x="131.01975" y="65.753425" href="#rlsid-22"/>
+<use x="137.629607" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos(-\alpha) = \cos\alpha$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p ><span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.8604em" height="0.8032em" viewbox="60.63 59.61 7.65 7.14" style="vertical-align:-7.47%"><title>x</title><g><use x="60.627414" y="65.753425" href="#rlsid-10"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$x$</span></span> doesn't change sign when the right triangle is flipped, so the ratio stays the same: <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.7085em" height="1.8543em" viewbox="60.63 53.91 157.41 16.48" style="vertical-align:-34.82%"><title>x/\sqrt{x^2+(-y)^2} = x/\sqrt{x^2+y^2}</title><g><use x="60.627414" y="65.753425" href="#rlsid-10"/>
+<use x="67.279501" y="65.753425" href="#rlsid-30"/>
+<use x="73.132491" y="55.531685" href="#rlsid-74"/>
+<use x="85.08769" y="65.753425" href="#rlsid-10"/>
+<use x="91.739777" y="62.299717" href="#rlsid-54"/>
+<use x="99.128755" y="65.753425" href="#rlsid-17"/>
+<use x="110.89007" y="65.753425" href="#rlsid-15"/>
+<use x="115.442396" y="65.753425" href="#rlsid-14"/>
+<use x="124.740893" y="65.753425" href="#rlsid-29"/>
+<use x="130.877545" y="65.753425" href="#rlsid-16"/>
+<use x="135.429871" y="62.299717" href="#rlsid-54"/>
+<use x="143.482996" y="65.753425" href="#rlsid-8"/>
+<use x="155.908477" y="65.753425" href="#rlsid-10"/>
+<use x="162.560564" y="65.753425" href="#rlsid-30"/>
+<use x="168.413554" y="55.38777" href="#rlsid-74"/>
+<use x="180.368753" y="65.753425" href="#rlsid-10"/>
+<use x="187.02084" y="62.299717" href="#rlsid-54"/>
+<use x="194.409818" y="65.753425" href="#rlsid-17"/>
+<use x="206.171133" y="65.753425" href="#rlsid-29"/>
+<use x="212.307785" y="62.299717" href="#rlsid-54"/>
+<rect x='85.08769' y='55.053498' height='.478187' width='55.074477'/>
+<rect x='180.368753' y='54.909583' height='.478187' width='36.671336'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$x/\sqrt{x^2+(-y)^2} = x/\sqrt{x^2+y^2}$</span></span>. ∎</p>
+<h3 id="rhid-1.2.3-sin_angle_sum" class="richly-heading"><a href="#rhid-1.2.3-sin_angle_sum">1.2.3 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.4373em" height="1.5691em" viewbox="62.62 55.79 66.11 13.95" style="vertical-align:-29.89%"><title>\sin(\alpha + \beta) =</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-25"/>
+<use x="91.722968" y="65.753425" href="#rlsid-17"/>
+<use x="103.484283" y="65.753425" href="#rlsid-26"/>
+<use x="110.755554" y="65.753425" href="#rlsid-16"/>
+<use x="118.628709" y="65.753425" href="#rlsid-8"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(\alpha + \beta) =$</span></span> <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.1677em" height="1.4197em" viewbox="62.62 56.45 117.05 12.62" style="vertical-align:-24.91%"><title>\sin\alpha \cos\beta + \cos\alpha \sin\beta</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="78.984752" y="65.753425" href="#rlsid-25"/>
+<use x="88.498974" y="65.753425" href="#rlsid-27"/>
+<use x="93.701632" y="65.753425" href="#rlsid-28"/>
+<use x="99.554622" y="65.753425" href="#rlsid-22"/>
+<use x="106.164479" y="65.753425" href="#rlsid-26"/>
+<use x="116.092413" y="65.753425" href="#rlsid-17"/>
+<use x="127.853728" y="65.753425" href="#rlsid-27"/>
+<use x="133.056386" y="65.753425" href="#rlsid-28"/>
+<use x="138.909376" y="65.753425" href="#rlsid-22"/>
+<use x="145.519233" y="65.753425" href="#rlsid-25"/>
+<use x="155.033455" y="65.753425" href="#rlsid-22"/>
+<use x="159.650814" y="65.753425" href="#rlsid-20"/>
+<use x="162.902475" y="65.753425" href="#rlsid-21"/>
+<use x="171.398295" y="65.753425" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin\alpha \cos\beta + \cos\alpha \sin\beta$</span></span></a></h3>
+<p ><a href="https://en.m.wikipedia.org/wiki/Proof_without_words"><strong >Proof without words:</strong></a></p>
+<figure style="display: flex; flex-flow: column;">
+<span style="display: flex; justify-content: center; filter: var(--img-filter);">
+<img src="./AngleAdditionDiagramSine.svg" style="max-width: 70%;"/>
+</span>
+<figcaption style="text-align: center;font-size: smaller;">
+<a href="https://commons.wikimedia.org/wiki/File:AngleAdditionDiagramSine.svg">SVG</a> by <a href="https://en.wikipedia.org/wiki/User:Gaiacarra">Gaiacarra</a> under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>
+</figcaption>
+</figure>
+<p >∎</p>
+<h3 id="rhid-1.2.4-cos_angle_sum" class="richly-heading"><a href="#rhid-1.2.4-cos_angle_sum">1.2.4 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.5837em" height="1.5691em" viewbox="62.62 55.79 67.41 13.95" style="vertical-align:-29.89%"><title>\cos(\alpha + \beta) =</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="78.292919" y="65.753425" href="#rlsid-15"/>
+<use x="82.845245" y="65.753425" href="#rlsid-25"/>
+<use x="93.023632" y="65.753425" href="#rlsid-17"/>
+<use x="104.784947" y="65.753425" href="#rlsid-26"/>
+<use x="112.056218" y="65.753425" href="#rlsid-16"/>
+<use x="119.929373" y="65.753425" href="#rlsid-8"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos(\alpha + \beta) =$</span></span> <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.1895em" height="1.4197em" viewbox="62.62 56.45 117.24 12.62" style="vertical-align:-24.91%"><title>\cos\alpha \cos\beta - \sin\alpha \sin\beta</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="80.285417" y="65.753425" href="#rlsid-25"/>
+<use x="89.799638" y="65.753425" href="#rlsid-27"/>
+<use x="95.002296" y="65.753425" href="#rlsid-28"/>
+<use x="100.855286" y="65.753425" href="#rlsid-22"/>
+<use x="107.465143" y="65.753425" href="#rlsid-26"/>
+<use x="117.393078" y="65.753425" href="#rlsid-14"/>
+<use x="129.348238" y="65.753425" href="#rlsid-22"/>
+<use x="133.965597" y="65.753425" href="#rlsid-20"/>
+<use x="137.217258" y="65.753425" href="#rlsid-21"/>
+<use x="145.713078" y="65.753425" href="#rlsid-25"/>
+<use x="155.2273" y="65.753425" href="#rlsid-22"/>
+<use x="159.844659" y="65.753425" href="#rlsid-20"/>
+<use x="163.09632" y="65.753425" href="#rlsid-21"/>
+<use x="171.59214" y="65.753425" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos\alpha \cos\beta - \sin\alpha \sin\beta$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p >By the same picture. ∎</p>
+<h3 id="rhid-1.2.5-sinalpha---beta-sinalpha-cosbeta---cosalpha-sinbeta" class="richly-heading"><a href="#rhid-1.2.5-sinalpha---beta-sinalpha-cosbeta---cosalpha-sinbeta">1.2.5 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.4592em" height="1.5691em" viewbox="62.62 55.79 66.30 13.95" style="vertical-align:-29.89%"><title>\sin(\alpha - \beta) =</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-25"/>
+<use x="91.722968" y="65.753425" href="#rlsid-14"/>
+<use x="103.678128" y="65.753425" href="#rlsid-26"/>
+<use x="110.949399" y="65.753425" href="#rlsid-16"/>
+<use x="118.822554" y="65.753425" href="#rlsid-8"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(\alpha - \beta) =$</span></span> <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.1895em" height="1.4197em" viewbox="62.62 56.45 117.24 12.62" style="vertical-align:-24.91%"><title>\sin\alpha \cos\beta - \cos\alpha \sin\beta</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="78.984752" y="65.753425" href="#rlsid-25"/>
+<use x="88.498974" y="65.753425" href="#rlsid-27"/>
+<use x="93.701632" y="65.753425" href="#rlsid-28"/>
+<use x="99.554622" y="65.753425" href="#rlsid-22"/>
+<use x="106.164479" y="65.753425" href="#rlsid-26"/>
+<use x="116.092413" y="65.753425" href="#rlsid-14"/>
+<use x="128.047574" y="65.753425" href="#rlsid-27"/>
+<use x="133.250232" y="65.753425" href="#rlsid-28"/>
+<use x="139.103222" y="65.753425" href="#rlsid-22"/>
+<use x="145.713078" y="65.753425" href="#rlsid-25"/>
+<use x="155.2273" y="65.753425" href="#rlsid-22"/>
+<use x="159.844659" y="65.753425" href="#rlsid-20"/>
+<use x="163.09632" y="65.753425" href="#rlsid-21"/>
+<use x="171.59214" y="65.753425" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin\alpha \cos\beta - \cos\alpha \sin\beta$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p >By <a href="#rhid-1.2.3-sin_angle_sum" >1.2.3</a>, we have <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.7345em" height="1.5691em" viewbox="62.62 55.79 202.08 13.95" style="vertical-align:-29.89%"><title>\sin(\alpha - \beta) = \sin\alpha \cos\beta + \cos\alpha \sin(-\beta)</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-25"/>
+<use x="91.722968" y="65.753425" href="#rlsid-14"/>
+<use x="103.678128" y="65.753425" href="#rlsid-26"/>
+<use x="110.949399" y="65.753425" href="#rlsid-16"/>
+<use x="118.822554" y="65.753425" href="#rlsid-8"/>
+<use x="131.248035" y="65.753425" href="#rlsid-22"/>
+<use x="135.865394" y="65.753425" href="#rlsid-20"/>
+<use x="139.117055" y="65.753425" href="#rlsid-21"/>
+<use x="147.612876" y="65.753425" href="#rlsid-25"/>
+<use x="157.127097" y="65.753425" href="#rlsid-27"/>
+<use x="162.329755" y="65.753425" href="#rlsid-28"/>
+<use x="168.182745" y="65.753425" href="#rlsid-22"/>
+<use x="174.792602" y="65.753425" href="#rlsid-26"/>
+<use x="184.720537" y="65.753425" href="#rlsid-17"/>
+<use x="196.481852" y="65.753425" href="#rlsid-27"/>
+<use x="201.68451" y="65.753425" href="#rlsid-28"/>
+<use x="207.5375" y="65.753425" href="#rlsid-22"/>
+<use x="214.147356" y="65.753425" href="#rlsid-25"/>
+<use x="223.661578" y="65.753425" href="#rlsid-22"/>
+<use x="228.278937" y="65.753425" href="#rlsid-20"/>
+<use x="231.530598" y="65.753425" href="#rlsid-21"/>
+<use x="238.033921" y="65.753425" href="#rlsid-15"/>
+<use x="242.586247" y="65.753425" href="#rlsid-14"/>
+<use x="251.884744" y="65.753425" href="#rlsid-26"/>
+<use x="259.156015" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(\alpha - \beta) = \sin\alpha \cos\beta + \cos\alpha \sin(-\beta)$</span></span>. By <a href="#rhid-1.2.1-sin_odd" >1.2.1</a>, we can move the minus sign out of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4.6173em" height="1.5691em" viewbox="62.62 55.79 41.04 13.95" style="vertical-align:-29.89%"><title>\sin(-\beta)</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-14"/>
+<use x="90.843077" y="65.753425" href="#rlsid-26"/>
+<use x="98.114348" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(-\beta)$</span></span> and to the middle of the RHS. The resulting RHS is <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.1895em" height="1.4197em" viewbox="62.62 56.45 117.24 12.62" style="vertical-align:-24.91%"><title>\sin\alpha \cos\beta - \cos\alpha \sin\beta</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="78.984752" y="65.753425" href="#rlsid-25"/>
+<use x="88.498974" y="65.753425" href="#rlsid-27"/>
+<use x="93.701632" y="65.753425" href="#rlsid-28"/>
+<use x="99.554622" y="65.753425" href="#rlsid-22"/>
+<use x="106.164479" y="65.753425" href="#rlsid-26"/>
+<use x="116.092413" y="65.753425" href="#rlsid-14"/>
+<use x="128.047574" y="65.753425" href="#rlsid-27"/>
+<use x="133.250232" y="65.753425" href="#rlsid-28"/>
+<use x="139.103222" y="65.753425" href="#rlsid-22"/>
+<use x="145.713078" y="65.753425" href="#rlsid-25"/>
+<use x="155.2273" y="65.753425" href="#rlsid-22"/>
+<use x="159.844659" y="65.753425" href="#rlsid-20"/>
+<use x="163.09632" y="65.753425" href="#rlsid-21"/>
+<use x="171.59214" y="65.753425" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin\alpha \cos\beta - \cos\alpha \sin\beta$</span></span> as desired.</p>
+<p >∎</p>
+<h3 id="rhid-1.2.6-sinalpha90circ-cosalpha" class="richly-heading"><a href="#rhid-1.2.6-sinalpha90circ-cosalpha">1.2.6 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.6758em" height="1.5691em" viewbox="62.62 55.79 103.78 13.95" style="vertical-align:-29.89%"><title>\sin(\alpha+90^\circ) = \cos\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-25"/>
+<use x="91.722968" y="65.753425" href="#rlsid-17"/>
+<use x="103.484283" y="65.753425" href="#rlsid-19"/>
+<use x="109.337273" y="65.753425" href="#rlsid-1"/>
+<use x="115.190263" y="61.414988" href="#rlsid-0"/>
+<use x="119.922578" y="65.753425" href="#rlsid-16"/>
+<use x="127.795733" y="65.753425" href="#rlsid-8"/>
+<use x="140.221214" y="65.753425" href="#rlsid-27"/>
+<use x="145.423872" y="65.753425" href="#rlsid-28"/>
+<use x="151.276862" y="65.753425" href="#rlsid-22"/>
+<use x="157.886719" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(\alpha+90^\circ) = \cos\alpha$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p >By <a href="#rhid-1.2.3-sin_angle_sum" >1.2.3</a>, we have <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.9044em" height="1.5691em" viewbox="62.62 55.79 212.48 13.95" style="vertical-align:-29.89%"><title>\sin(\alpha+90^\circ) = \sin\alpha \cos90^\circ + \cos\alpha \sin90^\circ</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-25"/>
+<use x="91.722968" y="65.753425" href="#rlsid-17"/>
+<use x="103.484283" y="65.753425" href="#rlsid-19"/>
+<use x="109.337273" y="65.753425" href="#rlsid-1"/>
+<use x="115.190263" y="61.414988" href="#rlsid-0"/>
+<use x="119.922578" y="65.753425" href="#rlsid-16"/>
+<use x="127.795733" y="65.753425" href="#rlsid-8"/>
+<use x="140.221214" y="65.753425" href="#rlsid-22"/>
+<use x="144.838573" y="65.753425" href="#rlsid-20"/>
+<use x="148.090234" y="65.753425" href="#rlsid-21"/>
+<use x="156.586054" y="65.753425" href="#rlsid-25"/>
+<use x="166.100276" y="65.753425" href="#rlsid-27"/>
+<use x="171.302934" y="65.753425" href="#rlsid-28"/>
+<use x="177.155924" y="65.753425" href="#rlsid-22"/>
+<use x="183.765781" y="65.753425" href="#rlsid-19"/>
+<use x="189.618771" y="65.753425" href="#rlsid-1"/>
+<use x="195.471761" y="61.414988" href="#rlsid-0"/>
+<use x="202.86074" y="65.753425" href="#rlsid-17"/>
+<use x="214.622055" y="65.753425" href="#rlsid-27"/>
+<use x="219.824713" y="65.753425" href="#rlsid-28"/>
+<use x="225.677703" y="65.753425" href="#rlsid-22"/>
+<use x="232.28756" y="65.753425" href="#rlsid-25"/>
+<use x="241.801781" y="65.753425" href="#rlsid-22"/>
+<use x="246.41914" y="65.753425" href="#rlsid-20"/>
+<use x="249.670802" y="65.753425" href="#rlsid-21"/>
+<use x="258.166622" y="65.753425" href="#rlsid-19"/>
+<use x="264.019612" y="65.753425" href="#rlsid-1"/>
+<use x="269.872602" y="61.414988" href="#rlsid-0"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(\alpha+90^\circ) = \sin\alpha \cos90^\circ + \cos\alpha \sin90^\circ$</span></span>. Substitute <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6.3787em" height="1.1216em" viewbox="62.62 56.78 56.70 9.97" style="vertical-align:-7.47%"><title>\cos90^\circ = 0</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="80.285417" y="65.753425" href="#rlsid-19"/>
+<use x="86.138407" y="65.753425" href="#rlsid-1"/>
+<use x="91.991397" y="61.414988" href="#rlsid-0"/>
+<use x="100.044541" y="65.753425" href="#rlsid-8"/>
+<use x="112.470022" y="65.753425" href="#rlsid-1"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos90^\circ = 0$</span></span> and <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6.2324em" height="1.1216em" viewbox="62.62 56.78 55.40 9.97" style="vertical-align:-7.47%"><title>\sin90^\circ = 1</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="78.984752" y="65.753425" href="#rlsid-19"/>
+<use x="84.837742" y="65.753425" href="#rlsid-1"/>
+<use x="90.690733" y="61.414988" href="#rlsid-0"/>
+<use x="98.743877" y="65.753425" href="#rlsid-8"/>
+<use x="111.169358" y="65.753425" href="#rlsid-2"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin90^\circ = 1$</span></span> and the RHS simplifies to <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.9456em" height="0.8032em" viewbox="62.62 59.61 26.18 7.14" style="vertical-align:-7.47%"><title>\cos\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="80.285417" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos\alpha$</span></span>.</p>
+<p >∎</p>
+<h3 id="rhid-1.2.7-cosalpha90circ--sinalpha" class="richly-heading"><a href="#rhid-1.2.7-cosalpha90circ--sinalpha">1.2.7 <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.9460em" height="1.5691em" viewbox="62.62 55.79 115.08 13.95" style="vertical-align:-29.89%"><title>\cos(\alpha+90^\circ) = -\sin\alpha</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="78.292919" y="65.753425" href="#rlsid-15"/>
+<use x="82.845245" y="65.753425" href="#rlsid-25"/>
+<use x="93.023632" y="65.753425" href="#rlsid-17"/>
+<use x="104.784947" y="65.753425" href="#rlsid-19"/>
+<use x="110.637937" y="65.753425" href="#rlsid-1"/>
+<use x="116.490928" y="61.414988" href="#rlsid-0"/>
+<use x="121.223243" y="65.753425" href="#rlsid-16"/>
+<use x="129.096398" y="65.753425" href="#rlsid-8"/>
+<use x="141.521879" y="65.753425" href="#rlsid-14"/>
+<use x="152.812873" y="65.753425" href="#rlsid-22"/>
+<use x="157.430232" y="65.753425" href="#rlsid-20"/>
+<use x="160.681893" y="65.753425" href="#rlsid-21"/>
+<use x="169.177714" y="65.753425" href="#rlsid-25"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos(\alpha+90^\circ) = -\sin\alpha$</span></span></a></h3>
+<p ><strong >Proof:</strong></p>
+<p >Similar. ∎</p>
+<h3 id="rhid-1.2.8-digression" class="richly-heading"><a href="#rhid-1.2.8-digression">1.2.8 Digression</a></h3>
+<p >Those who have not ventured far enough into mathematics probably have the impression that experts (i.e. their school teachers) often grab rules out of thin air to derive magic-like results. Until the end of the 19th century, the line between math and magic was indeed quite blurred. But then mathematicians <a href="https://en.m.wikipedia.org/wiki/Russell's_paradox">realized</a> that rules grabbed out of thin air might not always fit nicely together. <a href="https://en.m.wikipedia.org/wiki/Foundations_of_mathematics">Much effort</a> was then devoted to getting the fundamental rules straight, and making sure all mathematics rests solidly on these rules, called "axioms". Those who are interested in getting a taste of such mathematical rigor are encouraged to check out <a href="/posts/2024/07/10/self_closing_loop_generators/">this previous post</a>.</p>
+<p >The next subsection, which can be <a href="#rhid-1.3-skip_to" >skipped</a> with no loss of continuity, gives a brief overview of how the trig identities we just proved can be derived without appealing to geometric intuition <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref" ><sup >4</sup></a>. This alternative development, although more convoluted in appearance, actually is more easily traceable to the fundamental axioms.</p>
+<h3 id="rhid-1.2.9-alternative-development" class="richly-heading"><a href="#rhid-1.2.9-alternative-development">1.2.9 Alternative development</a></h3>
+<p >We start with the power series definition of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2587em" height="1.0983em" viewbox="60.63 56.99 11.19 9.76" style="vertical-align:-7.47%"><title>e^x</title><g><use x="60.627414" y="65.753425" href="#rlsid-32"/>
+<use x="66.052854" y="61.414988" href="#rlsid-31"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$e^x$</span></span>, which I talked about in my <a href="/posts/2024/01/21/on-exponentiation/">very first post</a> <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref" ><sup >5</sup></a>: <span id="reid-3" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.2479em" height="3.8381em" viewbox="200.32 66.95 64.43 34.12" ><title> e^x := \sum_{n=0}^{\infty} \frac{x^n}{n!} </title><g><use x="201.311275" y="86.320798" href="#rlsid-32"/>
+<use x="206.736715" y="81.384612" href="#rlsid-31"/>
+<use x="215.322576" y="86.320798" href="#rlsid-37"/>
+<use x="218.574237" y="86.320798" href="#rlsid-8"/>
+<use x="235.399843" y="71.376777" href="#rlsid-39"/>
+<use x="230.999718" y="74.963333" href="#rlsid-35"/>
+<use x="231.65458" y="100.06932" href="#rlsid-38"/>
+<use x="236.792783" y="100.06932" href="#rlsid-34"/>
+<use x="243.379289" y="100.06932" href="#rlsid-33"/>
+<use x="251.456346" y="78.233039" href="#rlsid-10"/>
+<use x="258.108433" y="73.894602" href="#rlsid-38"/>
+<use x="252.480931" y="94.52146" href="#rlsid-40"/>
+<use x="259.468537" y="94.52146" href="#rlsid-36"/>
+<rect x='251.456346' y='83.092912' height='.478187' width='12.288422'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$ e^x := \sum_{n=0}^{\infty} \frac{x^n}{n!} $$</span><span style="position:absolute;right:0;top:1.1691em;"><a href="#reid-3">(3)</a></span></span></p>
+<p >Substitute <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2116em" height="1.1582em" viewbox="60.63 56.45 10.77 10.29" style="vertical-align:-7.47%"><title>i\theta</title><g><use x="60.627414" y="65.753425" href="#rlsid-42"/>
+<use x="64.620846" y="65.753425" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$i\theta$</span></span> for <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.8604em" height="0.8032em" viewbox="60.63 59.61 7.65 7.14" style="vertical-align:-7.47%"><title>x</title><g><use x="60.627414" y="65.753425" href="#rlsid-10"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$x$</span></span>, where <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.5613em" height="1.1059em" viewbox="60.63 56.92 4.99 9.83" style="vertical-align:-7.47%"><title>i</title><g><use x="60.627414" y="65.753425" href="#rlsid-42"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$i$</span></span> is the <a href="https://en.m.wikipedia.org/wiki/Imaginary_unit">imaginary unit</a>, we get a <a href="https://en.m.wikipedia.org/wiki/Complex_number">complex number</a> <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref" ><sup >6</sup></a>: <span id="reid-4" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.5166em" height="3.8381em" viewbox="194.68 66.95 75.70 34.12" ><title> e^{i\theta} = \sum_{n=0}^{\infty} \frac{(i\theta)^n}{n!} </title><g><use x="195.672949" y="86.320798" href="#rlsid-32"/>
+<use x="201.09839" y="81.384612" href="#rlsid-44"/>
+<use x="203.981529" y="81.384612" href="#rlsid-43"/>
+<use x="211.986225" y="86.320798" href="#rlsid-8"/>
+<use x="228.811832" y="71.376777" href="#rlsid-39"/>
+<use x="224.411706" y="74.963333" href="#rlsid-35"/>
+<use x="225.066569" y="100.06932" href="#rlsid-38"/>
+<use x="230.204771" y="100.06932" href="#rlsid-34"/>
+<use x="236.791278" y="100.06932" href="#rlsid-33"/>
+<use x="244.868334" y="78.233039" href="#rlsid-15"/>
+<use x="249.42066" y="78.233039" href="#rlsid-42"/>
+<use x="253.414092" y="78.233039" href="#rlsid-41"/>
+<use x="259.194433" y="78.233039" href="#rlsid-16"/>
+<use x="263.746759" y="73.894602" href="#rlsid-38"/>
+<use x="252.006088" y="94.52146" href="#rlsid-40"/>
+<use x="258.993694" y="94.52146" href="#rlsid-36"/>
+<rect x='244.868334' y='83.092912' height='.478187' width='24.514759'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$ e^{i\theta} = \sum_{n=0}^{\infty} \frac{(i\theta)^n}{n!} $$</span><span style="position:absolute;right:0;top:1.1691em;"><a href="#reid-4">(4)</a></span></span></p>
+<p >Using <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.5613em" height="1.1059em" viewbox="60.63 56.92 4.99 9.83" style="vertical-align:-7.47%"><title>i</title><g><use x="60.627414" y="65.753425" href="#rlsid-42"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$i$</span></span>'s special property <span id="reid-5" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.8075em" height="7.4870em" viewbox="166.72 80.10 131.62 66.55" ><title>
+\begin{align*}
+i^n = 
+\begin{cases}
+1, & n \bmod{4} = 0 \\
+i, & n \bmod{4} = 1 \\
+-1, & n \bmod{4} = 2 \\
+-i, & n \bmod{4} = 3
+\end{cases}
+\end{align*}
+</title><g><use x="167.712995" y="116.363472" href="#rlsid-42"/>
+<use x="171.706427" y="111.427286" href="#rlsid-38"/>
+<use x="180.663591" y="116.363472" href="#rlsid-8"/>
+<use x="193.089072" y="81.095398" href="#rlsid-45"/>
+<use x="193.089072" y="91.855159" href="#rlsid-48"/>
+<use x="193.089072" y="95.441746" href="#rlsid-48"/>
+<use x="193.089072" y="99.028332" href="#rlsid-48"/>
+<use x="193.089072" y="102.614919" href="#rlsid-47"/>
+<use x="193.089072" y="124.134441" href="#rlsid-48"/>
+<use x="193.089072" y="127.721028" href="#rlsid-48"/>
+<use x="193.089072" y="131.307615" href="#rlsid-48"/>
+<use x="193.089072" y="134.894202" href="#rlsid-46"/>
+<use x="203.715908" y="90.839254" href="#rlsid-2"/>
+<use x="209.568899" y="90.839254" href="#rlsid-52"/>
+<use x="233.82503" y="90.839254" href="#rlsid-40"/>
+<use x="244.133465" y="90.839254" href="#rlsid-51"/>
+<use x="253.888449" y="90.839254" href="#rlsid-28"/>
+<use x="260.066605" y="90.839254" href="#rlsid-50"/>
+<use x="269.890757" y="90.839254" href="#rlsid-49"/>
+<use x="279.064577" y="90.839254" href="#rlsid-8"/>
+<use x="291.490057" y="90.839254" href="#rlsid-1"/>
+<use x="203.715908" y="108.174166" href="#rlsid-42"/>
+<use x="207.709341" y="108.174166" href="#rlsid-52"/>
+<use x="233.82503" y="108.174166" href="#rlsid-40"/>
+<use x="244.133465" y="108.174166" href="#rlsid-51"/>
+<use x="253.888449" y="108.174166" href="#rlsid-28"/>
+<use x="260.066605" y="108.174166" href="#rlsid-50"/>
+<use x="269.890757" y="108.174166" href="#rlsid-49"/>
+<use x="279.064577" y="108.174166" href="#rlsid-8"/>
+<use x="291.490057" y="108.174166" href="#rlsid-2"/>
+<use x="203.715908" y="125.509077" href="#rlsid-14"/>
+<use x="213.014406" y="125.509077" href="#rlsid-2"/>
+<use x="218.867396" y="125.509077" href="#rlsid-52"/>
+<use x="233.82503" y="125.509077" href="#rlsid-40"/>
+<use x="244.133465" y="125.509077" href="#rlsid-51"/>
+<use x="253.888449" y="125.509077" href="#rlsid-28"/>
+<use x="260.066605" y="125.509077" href="#rlsid-50"/>
+<use x="269.890757" y="125.509077" href="#rlsid-49"/>
+<use x="279.064577" y="125.509077" href="#rlsid-8"/>
+<use x="291.490057" y="125.509077" href="#rlsid-3"/>
+<use x="203.715908" y="142.843989" href="#rlsid-14"/>
+<use x="213.014406" y="142.843989" href="#rlsid-42"/>
+<use x="217.007838" y="142.843989" href="#rlsid-52"/>
+<use x="233.82503" y="142.843989" href="#rlsid-40"/>
+<use x="244.133465" y="142.843989" href="#rlsid-51"/>
+<use x="253.888449" y="142.843989" href="#rlsid-28"/>
+<use x="260.066605" y="142.843989" href="#rlsid-50"/>
+<use x="269.890757" y="142.843989" href="#rlsid-49"/>
+<use x="279.064577" y="142.843989" href="#rlsid-8"/>
+<use x="291.490057" y="142.843989" href="#rlsid-7"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">
+\begin{align*}
+i^n = 
+\begin{cases}
+1, & n \bmod{4} = 0 \\
+i, & n \bmod{4} = 1 \\
+-1, & n \bmod{4} = 2 \\
+-i, & n \bmod{4} = 3
+\end{cases}
+\end{align*}
+</span><span style="position:absolute;right:0;top:2.9935em;"><a href="#reid-5">(5)</a></span></span> the RHS can be reorganized into a sum of four power series: <span id="reid-6" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.0885em" height="1.7384em" viewbox="117.18 68.73 231.90 15.45" ><title> e^{i\theta} = S_0(\theta) + i S_1(\theta) + (-1)S_2(\theta) + (-i)S_3(\theta) </title><g><use x="118.173077" y="80.199253" href="#rlsid-32"/>
+<use x="123.598517" y="75.263067" href="#rlsid-44"/>
+<use x="126.481657" y="75.263067" href="#rlsid-43"/>
+<use x="134.486353" y="80.199253" href="#rlsid-8"/>
+<use x="146.911834" y="80.199253" href="#rlsid-56"/>
+<use x="154.111174" y="81.992516" href="#rlsid-33"/>
+<use x="158.843489" y="80.199253" href="#rlsid-15"/>
+<use x="163.395814" y="80.199253" href="#rlsid-41"/>
+<use x="169.176155" y="80.199253" href="#rlsid-16"/>
+<use x="176.385145" y="80.199253" href="#rlsid-17"/>
+<use x="188.14646" y="80.199253" href="#rlsid-42"/>
+<use x="192.139892" y="80.199253" href="#rlsid-56"/>
+<use x="199.339232" y="81.992516" href="#rlsid-53"/>
+<use x="204.071547" y="80.199253" href="#rlsid-15"/>
+<use x="208.623872" y="80.199253" href="#rlsid-41"/>
+<use x="214.404213" y="80.199253" href="#rlsid-16"/>
+<use x="221.613203" y="80.199253" href="#rlsid-17"/>
+<use x="233.374517" y="80.199253" href="#rlsid-15"/>
+<use x="237.926843" y="80.199253" href="#rlsid-14"/>
+<use x="247.22534" y="80.199253" href="#rlsid-2"/>
+<use x="253.078331" y="80.199253" href="#rlsid-16"/>
+<use x="257.630656" y="80.199253" href="#rlsid-56"/>
+<use x="264.829996" y="81.992516" href="#rlsid-54"/>
+<use x="269.562311" y="80.199253" href="#rlsid-15"/>
+<use x="274.114637" y="80.199253" href="#rlsid-41"/>
+<use x="279.894978" y="80.199253" href="#rlsid-16"/>
+<use x="287.103967" y="80.199253" href="#rlsid-17"/>
+<use x="298.865282" y="80.199253" href="#rlsid-15"/>
+<use x="303.417608" y="80.199253" href="#rlsid-14"/>
+<use x="312.716105" y="80.199253" href="#rlsid-42"/>
+<use x="316.709537" y="80.199253" href="#rlsid-16"/>
+<use x="321.261863" y="80.199253" href="#rlsid-56"/>
+<use x="328.461203" y="81.992516" href="#rlsid-55"/>
+<use x="333.193517" y="80.199253" href="#rlsid-15"/>
+<use x="337.745843" y="80.199253" href="#rlsid-41"/>
+<use x="343.526184" y="80.199253" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$ e^{i\theta} = S_0(\theta) + i S_1(\theta) + (-1)S_2(\theta) + (-i)S_3(\theta) $$</span><span style="position:absolute;right:0;top:0.1192em;"><a href="#reid-6">(6)</a></span></span> where <span id="reid-7" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.7355em" height="4.4499em" viewbox="180.37 65.75 104.32 39.55" ><title> 
+S_k(\theta) := \sum_{\substack{n \in \mathbb{N}\\n \bmod{4} = k}} \frac{\theta^n}{n!}
+</title><g><use x="181.366567" y="83.139627" href="#rlsid-56"/>
+<use x="188.565907" y="84.93289" href="#rlsid-63"/>
+<use x="193.685655" y="83.139627" href="#rlsid-15"/>
+<use x="198.23798" y="83.139627" href="#rlsid-41"/>
+<use x="204.018321" y="83.139627" href="#rlsid-16"/>
+<use x="211.891476" y="83.139627" href="#rlsid-37"/>
+<use x="215.143138" y="83.139627" href="#rlsid-8"/>
+<use x="239.692405" y="71.782163" href="#rlsid-35"/>
+<use x="240.056731" y="97.198099" href="#rlsid-38"/>
+<use x="245.194933" y="97.198099" href="#rlsid-62"/>
+<use x="250.84051" y="97.198099" href="#rlsid-61"/>
+<use x="227.568619" y="104.311986" href="#rlsid-38"/>
+<use x="235.059145" y="104.311986" href="#rlsid-59"/>
+<use x="242.116116" y="104.311986" href="#rlsid-60"/>
+<use x="246.585531" y="104.311986" href="#rlsid-58"/>
+<use x="253.642503" y="104.311986" href="#rlsid-57"/>
+<use x="257.876686" y="104.311986" href="#rlsid-34"/>
+<use x="264.463192" y="104.311986" href="#rlsid-63"/>
+<use x="272.272819" y="75.051868" href="#rlsid-41"/>
+<use x="278.05316" y="70.713432" href="#rlsid-38"/>
+<use x="272.861523" y="91.340289" href="#rlsid-40"/>
+<use x="279.849129" y="91.340289" href="#rlsid-36"/>
+<rect x='272.272819' y='79.911741' height='.478187' width='11.416675'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$ 
+S_k(\theta) := \sum_{\substack{n \in \mathbb{N}\\n \bmod{4} = k}} \frac{\theta^n}{n!}
+$$</span><span style="position:absolute;right:0;top:1.4750em;"><a href="#reid-7">(7)</a></span></span></p>
+<p >Define <span id="reid-8" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.3109em" height="1.5691em" viewbox="178.41 70.24 109.43 13.95" ><title>
+\cos\theta = S_0(\theta) - S_2(\theta)
+</title><g><use x="179.407149" y="80.199253" href="#rlsid-27"/>
+<use x="184.609807" y="80.199253" href="#rlsid-28"/>
+<use x="190.462797" y="80.199253" href="#rlsid-22"/>
+<use x="197.072654" y="80.199253" href="#rlsid-41"/>
+<use x="206.173824" y="80.199253" href="#rlsid-8"/>
+<use x="218.599305" y="80.199253" href="#rlsid-56"/>
+<use x="225.798645" y="81.992516" href="#rlsid-33"/>
+<use x="230.530959" y="80.199253" href="#rlsid-15"/>
+<use x="235.083285" y="80.199253" href="#rlsid-41"/>
+<use x="240.863626" y="80.199253" href="#rlsid-16"/>
+<use x="248.072615" y="80.199253" href="#rlsid-14"/>
+<use x="260.027776" y="80.199253" href="#rlsid-56"/>
+<use x="267.227116" y="81.992516" href="#rlsid-54"/>
+<use x="271.959431" y="80.199253" href="#rlsid-15"/>
+<use x="276.511756" y="80.199253" href="#rlsid-41"/>
+<use x="282.292097" y="80.199253" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+\cos\theta = S_0(\theta) - S_2(\theta)
+$$</span><span style="position:absolute;right:0;top:0.0346em;"><a href="#reid-8">(8)</a></span></span> and <span id="reid-9" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.1645em" height="1.5691em" viewbox="179.06 70.24 108.13 13.95" ><title>
+\sin\theta = S_1(\theta) - S_3(\theta)
+</title><g><use x="180.057481" y="80.199253" href="#rlsid-22"/>
+<use x="184.67484" y="80.199253" href="#rlsid-20"/>
+<use x="187.926501" y="80.199253" href="#rlsid-21"/>
+<use x="196.422321" y="80.199253" href="#rlsid-41"/>
+<use x="205.523492" y="80.199253" href="#rlsid-8"/>
+<use x="217.948972" y="80.199253" href="#rlsid-56"/>
+<use x="225.148312" y="81.992516" href="#rlsid-53"/>
+<use x="229.880627" y="80.199253" href="#rlsid-15"/>
+<use x="234.432953" y="80.199253" href="#rlsid-41"/>
+<use x="240.213294" y="80.199253" href="#rlsid-16"/>
+<use x="247.422283" y="80.199253" href="#rlsid-14"/>
+<use x="259.377444" y="80.199253" href="#rlsid-56"/>
+<use x="266.576784" y="81.992516" href="#rlsid-55"/>
+<use x="271.309098" y="80.199253" href="#rlsid-15"/>
+<use x="275.861424" y="80.199253" href="#rlsid-41"/>
+<use x="281.641765" y="80.199253" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+\sin\theta = S_1(\theta) - S_3(\theta)
+$$</span><span style="position:absolute;right:0;top:0.0346em;"><a href="#reid-9">(9)</a></span></span> we obtain the following expression: <span id="reid-10" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.8817em" height="1.5049em" viewbox="184.76 68.73 96.73 13.38" ><title>
+e^{i\theta} = \cos\theta + i\sin\theta
+</title><g><use x="185.75894" y="80.199253" href="#rlsid-32"/>
+<use x="191.18438" y="75.263067" href="#rlsid-44"/>
+<use x="194.06752" y="75.263067" href="#rlsid-43"/>
+<use x="202.072216" y="80.199253" href="#rlsid-8"/>
+<use x="214.497697" y="80.199253" href="#rlsid-27"/>
+<use x="219.700355" y="80.199253" href="#rlsid-28"/>
+<use x="225.553345" y="80.199253" href="#rlsid-22"/>
+<use x="232.163201" y="80.199253" href="#rlsid-41"/>
+<use x="240.600206" y="80.199253" href="#rlsid-17"/>
+<use x="252.361521" y="80.199253" href="#rlsid-42"/>
+<use x="258.347451" y="80.199253" href="#rlsid-22"/>
+<use x="262.96481" y="80.199253" href="#rlsid-20"/>
+<use x="266.216471" y="80.199253" href="#rlsid-21"/>
+<use x="274.712291" y="80.199253" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+e^{i\theta} = \cos\theta + i\sin\theta
+$$</span><span style="position:absolute;right:0;top:0.0024em;"><a href="#reid-10">(10)</a></span></span></p>
+<p >Now we are ready to harvest the results.</p>
+<p >First, because <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3984em" height="1.3450em" viewbox="60.63 56.59 12.43 11.96" style="vertical-align:-20.92%"><title>S_1</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-53"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_1$</span></span> and <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3984em" height="1.3450em" viewbox="60.63 56.59 12.43 11.96" style="vertical-align:-20.92%"><title>S_3</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-55"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_3$</span></span> are sums of odd powers of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.7624em" height="1.1582em" viewbox="60.63 56.45 6.78 10.29" style="vertical-align:-7.47%"><title>\theta</title><g><use x="60.627414" y="65.753425" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\theta$</span></span>, we have <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.0094em" height="1.5691em" viewbox="60.63 55.79 88.97 13.95" style="vertical-align:-29.89%"><title>S_1(-\theta) = -S_1(\theta)</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-53"/>
+<use x="72.559069" y="65.753425" href="#rlsid-15"/>
+<use x="77.111395" y="65.753425" href="#rlsid-14"/>
+<use x="86.409892" y="65.753425" href="#rlsid-41"/>
+<use x="92.190233" y="65.753425" href="#rlsid-16"/>
+<use x="100.063388" y="65.753425" href="#rlsid-8"/>
+<use x="112.488868" y="65.753425" href="#rlsid-14"/>
+<use x="121.787366" y="65.753425" href="#rlsid-56"/>
+<use x="128.986705" y="67.546688" href="#rlsid-53"/>
+<use x="133.71902" y="65.753425" href="#rlsid-15"/>
+<use x="138.271346" y="65.753425" href="#rlsid-41"/>
+<use x="144.051687" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_1(-\theta) = -S_1(\theta)$</span></span> and <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.0094em" height="1.5691em" viewbox="60.63 55.79 88.97 13.95" style="vertical-align:-29.89%"><title>S_3(-\theta) = -S_3(\theta)</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-55"/>
+<use x="72.559069" y="65.753425" href="#rlsid-15"/>
+<use x="77.111395" y="65.753425" href="#rlsid-14"/>
+<use x="86.409892" y="65.753425" href="#rlsid-41"/>
+<use x="92.190233" y="65.753425" href="#rlsid-16"/>
+<use x="100.063388" y="65.753425" href="#rlsid-8"/>
+<use x="112.488868" y="65.753425" href="#rlsid-14"/>
+<use x="121.787366" y="65.753425" href="#rlsid-56"/>
+<use x="128.986705" y="67.546688" href="#rlsid-55"/>
+<use x="133.71902" y="65.753425" href="#rlsid-15"/>
+<use x="138.271346" y="65.753425" href="#rlsid-41"/>
+<use x="144.051687" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_3(-\theta) = -S_3(\theta)$</span></span>, from which we get <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.9826em" height="1.5691em" viewbox="62.62 55.79 88.73 13.95" style="vertical-align:-29.89%"><title>\sin(-\theta) = -\sin\theta</title><g><use x="62.619912" y="65.753425" href="#rlsid-22"/>
+<use x="67.237271" y="65.753425" href="#rlsid-20"/>
+<use x="70.488932" y="65.753425" href="#rlsid-21"/>
+<use x="76.992254" y="65.753425" href="#rlsid-15"/>
+<use x="81.54458" y="65.753425" href="#rlsid-14"/>
+<use x="90.843077" y="65.753425" href="#rlsid-41"/>
+<use x="96.623418" y="65.753425" href="#rlsid-16"/>
+<use x="104.496573" y="65.753425" href="#rlsid-8"/>
+<use x="116.922054" y="65.753425" href="#rlsid-14"/>
+<use x="128.213049" y="65.753425" href="#rlsid-22"/>
+<use x="132.830408" y="65.753425" href="#rlsid-20"/>
+<use x="136.082069" y="65.753425" href="#rlsid-21"/>
+<use x="144.577889" y="65.753425" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sin(-\theta) = -\sin\theta$</span></span>. And because <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3984em" height="1.3450em" viewbox="60.63 56.59 12.43 11.96" style="vertical-align:-20.92%"><title>S_0</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-33"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_0$</span></span> and <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3984em" height="1.3450em" viewbox="60.63 56.59 12.43 11.96" style="vertical-align:-20.92%"><title>S_2</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-54"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_2$</span></span> are sums of even powers of <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.7624em" height="1.1582em" viewbox="60.63 56.45 6.78 10.29" style="vertical-align:-7.47%"><title>\theta</title><g><use x="60.627414" y="65.753425" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\theta$</span></span>, we have <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.9634em" height="1.5691em" viewbox="60.63 55.79 79.67 13.95" style="vertical-align:-29.89%"><title>S_0(-\theta) = S_0(\theta)</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-33"/>
+<use x="72.559069" y="65.753425" href="#rlsid-15"/>
+<use x="77.111395" y="65.753425" href="#rlsid-14"/>
+<use x="86.409892" y="65.753425" href="#rlsid-41"/>
+<use x="92.190233" y="65.753425" href="#rlsid-16"/>
+<use x="100.063388" y="65.753425" href="#rlsid-8"/>
+<use x="112.488868" y="65.753425" href="#rlsid-56"/>
+<use x="119.688208" y="67.546688" href="#rlsid-33"/>
+<use x="124.420523" y="65.753425" href="#rlsid-15"/>
+<use x="128.972849" y="65.753425" href="#rlsid-41"/>
+<use x="134.75319" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_0(-\theta) = S_0(\theta)$</span></span> and <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.9634em" height="1.5691em" viewbox="60.63 55.79 79.67 13.95" style="vertical-align:-29.89%"><title>S_2(-\theta) = S_2(\theta)</title><g><use x="60.627414" y="65.753425" href="#rlsid-56"/>
+<use x="67.826754" y="67.546688" href="#rlsid-54"/>
+<use x="72.559069" y="65.753425" href="#rlsid-15"/>
+<use x="77.111395" y="65.753425" href="#rlsid-14"/>
+<use x="86.409892" y="65.753425" href="#rlsid-41"/>
+<use x="92.190233" y="65.753425" href="#rlsid-16"/>
+<use x="100.063388" y="65.753425" href="#rlsid-8"/>
+<use x="112.488868" y="65.753425" href="#rlsid-56"/>
+<use x="119.688208" y="67.546688" href="#rlsid-54"/>
+<use x="124.420523" y="65.753425" href="#rlsid-15"/>
+<use x="128.972849" y="65.753425" href="#rlsid-41"/>
+<use x="134.75319" y="65.753425" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$S_2(-\theta) = S_2(\theta)$</span></span>, from which we get <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.0051em" height="1.5691em" viewbox="62.62 55.79 80.04 13.95" style="vertical-align:-29.89%"><title>\cos(-\theta) = \cos\theta</title><g><use x="62.619912" y="65.753425" href="#rlsid-27"/>
+<use x="67.82257" y="65.753425" href="#rlsid-28"/>
+<use x="73.67556" y="65.753425" href="#rlsid-22"/>
+<use x="78.292919" y="65.753425" href="#rlsid-15"/>
+<use x="82.845245" y="65.753425" href="#rlsid-14"/>
+<use x="92.143742" y="65.753425" href="#rlsid-41"/>
+<use x="97.924083" y="65.753425" href="#rlsid-16"/>
+<use x="105.797238" y="65.753425" href="#rlsid-8"/>
+<use x="118.222719" y="65.753425" href="#rlsid-27"/>
+<use x="123.425377" y="65.753425" href="#rlsid-28"/>
+<use x="129.278367" y="65.753425" href="#rlsid-22"/>
+<use x="135.888223" y="65.753425" href="#rlsid-41"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\cos(-\theta) = \cos\theta$</span></span>. Thus we have arrived at <a href="#rhid-1.2.1-sin_odd" >1.2.1</a> and <a href="#rhid-1.2.2-cos_even" >1.2.2</a> through a different route.</p>
+<p >Now: <span id="reid-11" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.6203em" height="9.7862em" viewbox="145.92 80.24 174.40 86.99" ><title>
+\begin{align*}
+&e^{i(\alpha+\beta)} \\
+&= e^{i\alpha}e^{i\beta} \\
+&= (\cos\alpha + i\sin\alpha)(\cos\beta + i\sin\beta) \\
+&= (\cos\alpha \cos\beta - \sin\alpha \sin\beta) \\
+& ~~~~ + i(\sin\alpha \cos\beta + \cos\alpha \sin\beta)
+\end{align*}
+</title><g><use x="146.920727" y="92.154421" href="#rlsid-32"/>
+<use x="152.346167" y="87.218235" href="#rlsid-44"/>
+<use x="155.229307" y="87.218235" href="#rlsid-64"/>
+<use x="158.52256" y="87.218235" href="#rlsid-67"/>
+<use x="163.961499" y="87.218235" href="#rlsid-66"/>
+<use x="170.548006" y="87.218235" href="#rlsid-68"/>
+<use x="175.709254" y="87.218235" href="#rlsid-65"/>
+<use x="150.241556" y="110.94425" href="#rlsid-8"/>
+<use x="162.667037" y="110.94425" href="#rlsid-32"/>
+<use x="168.092477" y="106.008064" href="#rlsid-44"/>
+<use x="170.975617" y="106.008064" href="#rlsid-67"/>
+<use x="176.912688" y="110.94425" href="#rlsid-32"/>
+<use x="182.338128" y="106.008064" href="#rlsid-44"/>
+<use x="185.221268" y="106.008064" href="#rlsid-68"/>
+<use x="150.241556" y="128.37887" href="#rlsid-8"/>
+<use x="162.667037" y="128.37887" href="#rlsid-15"/>
+<use x="167.219363" y="128.37887" href="#rlsid-27"/>
+<use x="172.422021" y="128.37887" href="#rlsid-28"/>
+<use x="178.275011" y="128.37887" href="#rlsid-22"/>
+<use x="184.884868" y="128.37887" href="#rlsid-25"/>
+<use x="195.063255" y="128.37887" href="#rlsid-17"/>
+<use x="206.82457" y="128.37887" href="#rlsid-42"/>
+<use x="212.8105" y="128.37887" href="#rlsid-22"/>
+<use x="217.427859" y="128.37887" href="#rlsid-20"/>
+<use x="220.67952" y="128.37887" href="#rlsid-21"/>
+<use x="229.175341" y="128.37887" href="#rlsid-25"/>
+<use x="236.697065" y="128.37887" href="#rlsid-16"/>
+<use x="241.24939" y="128.37887" href="#rlsid-15"/>
+<use x="245.801716" y="128.37887" href="#rlsid-27"/>
+<use x="251.004374" y="128.37887" href="#rlsid-28"/>
+<use x="256.857364" y="128.37887" href="#rlsid-22"/>
+<use x="263.467221" y="128.37887" href="#rlsid-26"/>
+<use x="273.395155" y="128.37887" href="#rlsid-17"/>
+<use x="285.15647" y="128.37887" href="#rlsid-42"/>
+<use x="291.1424" y="128.37887" href="#rlsid-22"/>
+<use x="295.759759" y="128.37887" href="#rlsid-20"/>
+<use x="299.01142" y="128.37887" href="#rlsid-21"/>
+<use x="307.507241" y="128.37887" href="#rlsid-26"/>
+<use x="314.778512" y="128.37887" href="#rlsid-16"/>
+<use x="150.241556" y="145.81349" href="#rlsid-8"/>
+<use x="162.667037" y="145.81349" href="#rlsid-15"/>
+<use x="167.219363" y="145.81349" href="#rlsid-27"/>
+<use x="172.422021" y="145.81349" href="#rlsid-28"/>
+<use x="178.275011" y="145.81349" href="#rlsid-22"/>
+<use x="184.884868" y="145.81349" href="#rlsid-25"/>
+<use x="194.39909" y="145.81349" href="#rlsid-27"/>
+<use x="199.601748" y="145.81349" href="#rlsid-28"/>
+<use x="205.454738" y="145.81349" href="#rlsid-22"/>
+<use x="212.064594" y="145.81349" href="#rlsid-26"/>
+<use x="221.992529" y="145.81349" href="#rlsid-14"/>
+<use x="233.947689" y="145.81349" href="#rlsid-22"/>
+<use x="238.565048" y="145.81349" href="#rlsid-20"/>
+<use x="241.81671" y="145.81349" href="#rlsid-21"/>
+<use x="250.31253" y="145.81349" href="#rlsid-25"/>
+<use x="259.826751" y="145.81349" href="#rlsid-22"/>
+<use x="264.44411" y="145.81349" href="#rlsid-20"/>
+<use x="267.695772" y="145.81349" href="#rlsid-21"/>
+<use x="276.191592" y="145.81349" href="#rlsid-26"/>
+<use x="283.462863" y="145.81349" href="#rlsid-16"/>
+<use x="165.185364" y="163.24811" href="#rlsid-17"/>
+<use x="176.946679" y="163.24811" href="#rlsid-42"/>
+<use x="180.940112" y="163.24811" href="#rlsid-15"/>
+<use x="185.492437" y="163.24811" href="#rlsid-22"/>
+<use x="190.109796" y="163.24811" href="#rlsid-20"/>
+<use x="193.361458" y="163.24811" href="#rlsid-21"/>
+<use x="201.857278" y="163.24811" href="#rlsid-25"/>
+<use x="211.371499" y="163.24811" href="#rlsid-27"/>
+<use x="216.574157" y="163.24811" href="#rlsid-28"/>
+<use x="222.427148" y="163.24811" href="#rlsid-22"/>
+<use x="229.037004" y="163.24811" href="#rlsid-26"/>
+<use x="238.964939" y="163.24811" href="#rlsid-17"/>
+<use x="250.726254" y="163.24811" href="#rlsid-27"/>
+<use x="255.928912" y="163.24811" href="#rlsid-28"/>
+<use x="261.781902" y="163.24811" href="#rlsid-22"/>
+<use x="268.391759" y="163.24811" href="#rlsid-25"/>
+<use x="277.90598" y="163.24811" href="#rlsid-22"/>
+<use x="282.523339" y="163.24811" href="#rlsid-20"/>
+<use x="285.775001" y="163.24811" href="#rlsid-21"/>
+<use x="294.270821" y="163.24811" href="#rlsid-26"/>
+<use x="301.542092" y="163.24811" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">
+\begin{align*}
+&e^{i(\alpha+\beta)} \\
+&= e^{i\alpha}e^{i\beta} \\
+&= (\cos\alpha + i\sin\alpha)(\cos\beta + i\sin\beta) \\
+&= (\cos\alpha \cos\beta - \sin\alpha \sin\beta) \\
+& ~~~~ + i(\sin\alpha \cos\beta + \cos\alpha \sin\beta)
+\end{align*}
+</span><span style="position:absolute;right:0;top:4.1431em;"><a href="#reid-11">(11)</a></span></span></p>
+<p >Matching the real and imaginary parts with <span id="reid-12" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.9574em" height="1.7882em" viewbox="144.43 68.29 177.40 15.90" ><title>
+e^{i(\alpha+\beta)} = \cos(\alpha+\beta)+i\sin(\alpha+\beta)
+</title><g><use x="145.422424" y="80.199253" href="#rlsid-32"/>
+<use x="150.847864" y="75.263067" href="#rlsid-44"/>
+<use x="153.731004" y="75.263067" href="#rlsid-64"/>
+<use x="157.024257" y="75.263067" href="#rlsid-67"/>
+<use x="162.463196" y="75.263067" href="#rlsid-66"/>
+<use x="169.049703" y="75.263067" href="#rlsid-68"/>
+<use x="174.210951" y="75.263067" href="#rlsid-65"/>
+<use x="181.323166" y="80.199253" href="#rlsid-8"/>
+<use x="193.748647" y="80.199253" href="#rlsid-27"/>
+<use x="198.951305" y="80.199253" href="#rlsid-28"/>
+<use x="204.804295" y="80.199253" href="#rlsid-22"/>
+<use x="209.421654" y="80.199253" href="#rlsid-15"/>
+<use x="213.97398" y="80.199253" href="#rlsid-25"/>
+<use x="224.152368" y="80.199253" href="#rlsid-17"/>
+<use x="235.913683" y="80.199253" href="#rlsid-26"/>
+<use x="243.184954" y="80.199253" href="#rlsid-16"/>
+<use x="250.393943" y="80.199253" href="#rlsid-17"/>
+<use x="262.155258" y="80.199253" href="#rlsid-42"/>
+<use x="268.141188" y="80.199253" href="#rlsid-22"/>
+<use x="272.758547" y="80.199253" href="#rlsid-20"/>
+<use x="276.010208" y="80.199253" href="#rlsid-21"/>
+<use x="282.51353" y="80.199253" href="#rlsid-15"/>
+<use x="287.065856" y="80.199253" href="#rlsid-25"/>
+<use x="297.244244" y="80.199253" href="#rlsid-17"/>
+<use x="309.005559" y="80.199253" href="#rlsid-26"/>
+<use x="316.27683" y="80.199253" href="#rlsid-16"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+e^{i(\alpha+\beta)} = \cos(\alpha+\beta)+i\sin(\alpha+\beta)
+$$</span><span style="position:absolute;right:0;top:0.1441em;"><a href="#reid-12">(12)</a></span></span> we get <a href="#rhid-1.2.3-sin_angle_sum" >1.2.3</a>: <span id="reid-13" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.9786em" height="1.5691em" viewbox="139.89 70.24 186.48 13.95" ><title>\sin(\alpha + \beta) = \sin\alpha \cos\beta + \cos\alpha \sin\beta</title><g><use x="140.883826" y="80.199253" href="#rlsid-22"/>
+<use x="145.501185" y="80.199253" href="#rlsid-20"/>
+<use x="148.752846" y="80.199253" href="#rlsid-21"/>
+<use x="155.256168" y="80.199253" href="#rlsid-15"/>
+<use x="159.808494" y="80.199253" href="#rlsid-25"/>
+<use x="169.986882" y="80.199253" href="#rlsid-17"/>
+<use x="181.748197" y="80.199253" href="#rlsid-26"/>
+<use x="189.019468" y="80.199253" href="#rlsid-16"/>
+<use x="196.892623" y="80.199253" href="#rlsid-8"/>
+<use x="209.318104" y="80.199253" href="#rlsid-22"/>
+<use x="213.935463" y="80.199253" href="#rlsid-20"/>
+<use x="217.187124" y="80.199253" href="#rlsid-21"/>
+<use x="225.682944" y="80.199253" href="#rlsid-25"/>
+<use x="235.197166" y="80.199253" href="#rlsid-27"/>
+<use x="240.399824" y="80.199253" href="#rlsid-28"/>
+<use x="246.252814" y="80.199253" href="#rlsid-22"/>
+<use x="252.86267" y="80.199253" href="#rlsid-26"/>
+<use x="262.790605" y="80.199253" href="#rlsid-17"/>
+<use x="274.55192" y="80.199253" href="#rlsid-27"/>
+<use x="279.754578" y="80.199253" href="#rlsid-28"/>
+<use x="285.607568" y="80.199253" href="#rlsid-22"/>
+<use x="292.217425" y="80.199253" href="#rlsid-25"/>
+<use x="301.731646" y="80.199253" href="#rlsid-22"/>
+<use x="306.349005" y="80.199253" href="#rlsid-20"/>
+<use x="309.600667" y="80.199253" href="#rlsid-21"/>
+<use x="318.096487" y="80.199253" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$\sin(\alpha + \beta) = \sin\alpha \cos\beta + \cos\alpha \sin\beta$$</span><span style="position:absolute;right:0;top:0.0346em;"><a href="#reid-13">(13)</a></span></span> and <a href="#rhid-1.2.4-cos_angle_sum" >1.2.4</a>: <span id="reid-14" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.1467em" height="1.5691em" viewbox="139.14 70.24 187.97 13.95" ><title>\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta</title><g><use x="140.136567" y="80.199253" href="#rlsid-27"/>
+<use x="145.339225" y="80.199253" href="#rlsid-28"/>
+<use x="151.192215" y="80.199253" href="#rlsid-22"/>
+<use x="155.809574" y="80.199253" href="#rlsid-15"/>
+<use x="160.3619" y="80.199253" href="#rlsid-25"/>
+<use x="170.540287" y="80.199253" href="#rlsid-17"/>
+<use x="182.301602" y="80.199253" href="#rlsid-26"/>
+<use x="189.572873" y="80.199253" href="#rlsid-16"/>
+<use x="197.446028" y="80.199253" href="#rlsid-8"/>
+<use x="209.871509" y="80.199253" href="#rlsid-27"/>
+<use x="215.074167" y="80.199253" href="#rlsid-28"/>
+<use x="220.927157" y="80.199253" href="#rlsid-22"/>
+<use x="227.537014" y="80.199253" href="#rlsid-25"/>
+<use x="237.051236" y="80.199253" href="#rlsid-27"/>
+<use x="242.253894" y="80.199253" href="#rlsid-28"/>
+<use x="248.106884" y="80.199253" href="#rlsid-22"/>
+<use x="254.716741" y="80.199253" href="#rlsid-26"/>
+<use x="264.644675" y="80.199253" href="#rlsid-14"/>
+<use x="276.599836" y="80.199253" href="#rlsid-22"/>
+<use x="281.217195" y="80.199253" href="#rlsid-20"/>
+<use x="284.468856" y="80.199253" href="#rlsid-21"/>
+<use x="292.964676" y="80.199253" href="#rlsid-25"/>
+<use x="302.478898" y="80.199253" href="#rlsid-22"/>
+<use x="307.096257" y="80.199253" href="#rlsid-20"/>
+<use x="310.347918" y="80.199253" href="#rlsid-21"/>
+<use x="318.843738" y="80.199253" href="#rlsid-26"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$$</span><span style="position:absolute;right:0;top:0.0346em;"><a href="#reid-14">(14)</a></span></span>.</p>
+<h2 id="rhid-1.3-skip_to" class="richly-heading"><a href="#rhid-1.3-skip_to">1.3 Proof of <a href="#reid-2" >(2)</a></a></h2>
+<p >Using the <a href="#rhid-1.2-trig_identities" >trig identities above</a>, we can derive <a href="#reid-2" >(2)</a> as: <span id="reid-15" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.8227em" height="13.1759em" viewbox="150.47 82.19 167.31 117.12" ><title>
+\begin{align*}
+& \sin(t+60^\circ) - \sin(t-60^\circ) \\
+&= (\sin t \cos 60^\circ + \cos t \sin 60^\circ) \\
+& ~~~~ -(\sin t \cos 60^\circ - \cos t \sin 60^\circ) \\
+&= 2 \cos t \sin 60^\circ \\
+&= 2 \cdot \frac{\sqrt3}{2} \cos t \\
+&= \sqrt3 \sin(t+90^\circ)
+\end{align*}
+</title><g><use x="151.461849" y="92.154421" href="#rlsid-22"/>
+<use x="156.079208" y="92.154421" href="#rlsid-20"/>
+<use x="159.330869" y="92.154421" href="#rlsid-21"/>
+<use x="165.834192" y="92.154421" href="#rlsid-15"/>
+<use x="170.386517" y="92.154421" href="#rlsid-24"/>
+<use x="177.270341" y="92.154421" href="#rlsid-17"/>
+<use x="189.031656" y="92.154421" href="#rlsid-18"/>
+<use x="194.884646" y="92.154421" href="#rlsid-1"/>
+<use x="200.737636" y="87.218235" href="#rlsid-0"/>
+<use x="205.469951" y="92.154421" href="#rlsid-16"/>
+<use x="212.67894" y="92.154421" href="#rlsid-14"/>
+<use x="224.634101" y="92.154421" href="#rlsid-22"/>
+<use x="229.25146" y="92.154421" href="#rlsid-20"/>
+<use x="232.503121" y="92.154421" href="#rlsid-21"/>
+<use x="239.006443" y="92.154421" href="#rlsid-15"/>
+<use x="243.558769" y="92.154421" href="#rlsid-24"/>
+<use x="250.442592" y="92.154421" href="#rlsid-14"/>
+<use x="262.397753" y="92.154421" href="#rlsid-18"/>
+<use x="268.250743" y="92.154421" href="#rlsid-1"/>
+<use x="274.103733" y="87.218235" href="#rlsid-0"/>
+<use x="278.836048" y="92.154421" href="#rlsid-16"/>
+<use x="152.790181" y="109.589041" href="#rlsid-8"/>
+<use x="165.215662" y="109.589041" href="#rlsid-15"/>
+<use x="169.767987" y="109.589041" href="#rlsid-22"/>
+<use x="174.385346" y="109.589041" href="#rlsid-20"/>
+<use x="177.637008" y="109.589041" href="#rlsid-21"/>
+<use x="186.132828" y="109.589041" href="#rlsid-24"/>
+<use x="192.352485" y="109.589041" href="#rlsid-27"/>
+<use x="197.555143" y="109.589041" href="#rlsid-28"/>
+<use x="203.408133" y="109.589041" href="#rlsid-22"/>
+<use x="210.01799" y="109.589041" href="#rlsid-18"/>
+<use x="215.87098" y="109.589041" href="#rlsid-1"/>
+<use x="221.72397" y="104.652855" href="#rlsid-0"/>
+<use x="229.112949" y="109.589041" href="#rlsid-17"/>
+<use x="240.874264" y="109.589041" href="#rlsid-27"/>
+<use x="246.076922" y="109.589041" href="#rlsid-28"/>
+<use x="251.929912" y="109.589041" href="#rlsid-22"/>
+<use x="258.539768" y="109.589041" href="#rlsid-24"/>
+<use x="264.759426" y="109.589041" href="#rlsid-22"/>
+<use x="269.376785" y="109.589041" href="#rlsid-20"/>
+<use x="272.628446" y="109.589041" href="#rlsid-21"/>
+<use x="281.124266" y="109.589041" href="#rlsid-18"/>
+<use x="286.977256" y="109.589041" href="#rlsid-1"/>
+<use x="292.830247" y="104.652855" href="#rlsid-0"/>
+<use x="297.562561" y="109.589041" href="#rlsid-16"/>
+<use x="167.733989" y="127.023661" href="#rlsid-14"/>
+<use x="179.689149" y="127.023661" href="#rlsid-15"/>
+<use x="184.241475" y="127.023661" href="#rlsid-22"/>
+<use x="188.858834" y="127.023661" href="#rlsid-20"/>
+<use x="192.110495" y="127.023661" href="#rlsid-21"/>
+<use x="200.606315" y="127.023661" href="#rlsid-24"/>
+<use x="206.825973" y="127.023661" href="#rlsid-27"/>
+<use x="212.028631" y="127.023661" href="#rlsid-28"/>
+<use x="217.881621" y="127.023661" href="#rlsid-22"/>
+<use x="224.491478" y="127.023661" href="#rlsid-18"/>
+<use x="230.344468" y="127.023661" href="#rlsid-1"/>
+<use x="236.197458" y="122.087475" href="#rlsid-0"/>
+<use x="243.586436" y="127.023661" href="#rlsid-14"/>
+<use x="255.541597" y="127.023661" href="#rlsid-27"/>
+<use x="260.744255" y="127.023661" href="#rlsid-28"/>
+<use x="266.597245" y="127.023661" href="#rlsid-22"/>
+<use x="273.207102" y="127.023661" href="#rlsid-24"/>
+<use x="279.426759" y="127.023661" href="#rlsid-22"/>
+<use x="284.044118" y="127.023661" href="#rlsid-20"/>
+<use x="287.295779" y="127.023661" href="#rlsid-21"/>
+<use x="295.791599" y="127.023661" href="#rlsid-18"/>
+<use x="301.64459" y="127.023661" href="#rlsid-1"/>
+<use x="307.49758" y="122.087475" href="#rlsid-0"/>
+<use x="312.229895" y="127.023661" href="#rlsid-16"/>
+<use x="152.790181" y="144.458281" href="#rlsid-8"/>
+<use x="165.215662" y="144.458281" href="#rlsid-3"/>
+<use x="173.061149" y="144.458281" href="#rlsid-27"/>
+<use x="178.263807" y="144.458281" href="#rlsid-28"/>
+<use x="184.116798" y="144.458281" href="#rlsid-22"/>
+<use x="190.726654" y="144.458281" href="#rlsid-24"/>
+<use x="196.946312" y="144.458281" href="#rlsid-22"/>
+<use x="201.563671" y="144.458281" href="#rlsid-20"/>
+<use x="204.815332" y="144.458281" href="#rlsid-21"/>
+<use x="213.311152" y="144.458281" href="#rlsid-18"/>
+<use x="219.164142" y="144.458281" href="#rlsid-1"/>
+<use x="225.017132" y="139.522095" href="#rlsid-0"/>
+<use x="152.790181" y="171.710821" href="#rlsid-8"/>
+<use x="165.215662" y="171.710821" href="#rlsid-3"/>
+<use x="173.725315" y="171.710821" href="#rlsid-69"/>
+<use x="180.898383" y="153.733497" href="#rlsid-6"/>
+<use x="190.861053" y="163.623062" href="#rlsid-7"/>
+<use x="185.879718" y="179.911483" href="#rlsid-3"/>
+<use x="199.902055" y="171.710821" href="#rlsid-27"/>
+<use x="205.104713" y="171.710821" href="#rlsid-28"/>
+<use x="210.957703" y="171.710821" href="#rlsid-22"/>
+<use x="217.56756" y="171.710821" href="#rlsid-24"/>
+<use x="152.790181" y="195.326121" href="#rlsid-8"/>
+<use x="165.215662" y="184.852914" href="#rlsid-6"/>
+<use x="175.178332" y="195.326121" href="#rlsid-7"/>
+<use x="183.02382" y="195.326121" href="#rlsid-22"/>
+<use x="187.641179" y="195.326121" href="#rlsid-20"/>
+<use x="190.89284" y="195.326121" href="#rlsid-21"/>
+<use x="197.396163" y="195.326121" href="#rlsid-15"/>
+<use x="201.948488" y="195.326121" href="#rlsid-24"/>
+<use x="208.832312" y="195.326121" href="#rlsid-17"/>
+<use x="220.593627" y="195.326121" href="#rlsid-19"/>
+<use x="226.446617" y="195.326121" href="#rlsid-1"/>
+<use x="232.299607" y="190.389935" href="#rlsid-0"/>
+<use x="237.031922" y="195.326121" href="#rlsid-16"/>
+<rect x='190.861053' y='153.25531' height='.478187' width='5.85299'/>
+<rect x='180.898383' y='168.482935' height='.478187' width='15.815661'/>
+<rect x='175.178332' y='184.374726' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">
+\begin{align*}
+& \sin(t+60^\circ) - \sin(t-60^\circ) \\
+&= (\sin t \cos 60^\circ + \cos t \sin 60^\circ) \\
+& ~~~~ -(\sin t \cos 60^\circ - \cos t \sin 60^\circ) \\
+&= 2 \cos t \sin 60^\circ \\
+&= 2 \cdot \frac{\sqrt3}{2} \cos t \\
+&= \sqrt3 \sin(t+90^\circ)
+\end{align*}
+</span><span style="position:absolute;right:0;top:5.8380em;"><a href="#reid-15">(15)</a></span></span></p>
+<h2 id="rhid-1.4-remarks" class="richly-heading"><a href="#rhid-1.4-remarks">1.4 Remarks</a></h2>
+<p >The degrees in <a href="#reid-2" >(2)</a> are chosen for convenience. We can vary the phases (which corresponds to sliding the sine waves left and right), but as long as the LHS phase difference is <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.5638em" height="1.1216em" viewbox="60.63 56.78 22.79 9.97" style="vertical-align:-7.47%"><title>120^\circ</title><g><use x="60.627414" y="65.753425" href="#rlsid-2"/>
+<use x="66.480404" y="65.753425" href="#rlsid-3"/>
+<use x="72.333395" y="65.753425" href="#rlsid-1"/>
+<use x="78.186385" y="61.414988" href="#rlsid-0"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$120^\circ$</span></span>, the <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8913em" height="1.5691em" viewbox="60.63 54.39 16.81 13.95" style="vertical-align:-19.38%"><title>\sqrt{3}</title><g><use x="60.627414" y="55.86386" href="#rlsid-6"/>
+<use x="70.590085" y="65.753425" href="#rlsid-7"/>
+<rect x='70.590085' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt{3}$</span></span> on the RHS persists: <span id="reid-16" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.8688em" height="3.7908em" viewbox="145.82 82.19 176.61 33.70" ><title>
+\begin{align*}
+&\sin(t+\phi+60^\circ) - \sin(t+\phi-60^\circ) \\
+&= \sqrt3 \sin(t+\phi+90^\circ)
+\end{align*}
+</title><g><use x="146.812703" y="92.154421" href="#rlsid-22"/>
+<use x="151.430062" y="92.154421" href="#rlsid-20"/>
+<use x="154.681723" y="92.154421" href="#rlsid-21"/>
+<use x="161.185046" y="92.154421" href="#rlsid-15"/>
+<use x="165.737372" y="92.154421" href="#rlsid-24"/>
+<use x="172.621195" y="92.154421" href="#rlsid-17"/>
+<use x="184.38251" y="92.154421" href="#rlsid-70"/>
+<use x="193.967275" y="92.154421" href="#rlsid-17"/>
+<use x="205.72859" y="92.154421" href="#rlsid-18"/>
+<use x="211.581581" y="92.154421" href="#rlsid-1"/>
+<use x="217.434571" y="87.218235" href="#rlsid-0"/>
+<use x="222.166886" y="92.154421" href="#rlsid-16"/>
+<use x="229.375875" y="92.154421" href="#rlsid-14"/>
+<use x="241.331035" y="92.154421" href="#rlsid-22"/>
+<use x="245.948394" y="92.154421" href="#rlsid-20"/>
+<use x="249.200056" y="92.154421" href="#rlsid-21"/>
+<use x="255.703378" y="92.154421" href="#rlsid-15"/>
+<use x="260.255704" y="92.154421" href="#rlsid-24"/>
+<use x="267.139527" y="92.154421" href="#rlsid-17"/>
+<use x="278.900842" y="92.154421" href="#rlsid-70"/>
+<use x="288.485608" y="92.154421" href="#rlsid-14"/>
+<use x="300.440768" y="92.154421" href="#rlsid-18"/>
+<use x="306.293758" y="92.154421" href="#rlsid-1"/>
+<use x="312.146749" y="87.218235" href="#rlsid-0"/>
+<use x="316.879063" y="92.154421" href="#rlsid-16"/>
+<use x="148.141035" y="111.902844" href="#rlsid-8"/>
+<use x="160.566516" y="101.429636" href="#rlsid-6"/>
+<use x="170.529186" y="111.902844" href="#rlsid-7"/>
+<use x="178.374674" y="111.902844" href="#rlsid-22"/>
+<use x="182.992033" y="111.902844" href="#rlsid-20"/>
+<use x="186.243694" y="111.902844" href="#rlsid-21"/>
+<use x="192.747017" y="111.902844" href="#rlsid-15"/>
+<use x="197.299343" y="111.902844" href="#rlsid-24"/>
+<use x="204.183166" y="111.902844" href="#rlsid-17"/>
+<use x="215.944481" y="111.902844" href="#rlsid-70"/>
+<use x="225.529246" y="111.902844" href="#rlsid-17"/>
+<use x="237.290561" y="111.902844" href="#rlsid-19"/>
+<use x="243.143551" y="111.902844" href="#rlsid-1"/>
+<use x="248.996542" y="106.966658" href="#rlsid-0"/>
+<use x="253.728857" y="111.902844" href="#rlsid-16"/>
+<rect x='170.529186' y='100.951449' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">
+\begin{align*}
+&\sin(t+\phi+60^\circ) - \sin(t+\phi-60^\circ) \\
+&= \sqrt3 \sin(t+\phi+90^\circ)
+\end{align*}
+</span><span style="position:absolute;right:0;top:1.1454em;"><a href="#reid-16">(16)</a></span></span></p>
+<p >Also, note that it seems to be the convention that in the context of AC, when "voltage" appears without a modifier, it refers to the RMS voltage. See for example <a href="https://en.m.wikipedia.org/wiki/Mains_electricity_by_country">this list</a>, which states: "All voltages are root mean square voltages".</p>
+<p >There is already <a href="https://en.m.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage">a section</a> devoted to the math of RMS of sine waves, so I am not repeating the effort here. The gist is that <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.4735em" height="1.7666em" viewbox="60.63 54.39 66.43 15.70" style="vertical-align:-32.54%"><title>V_p = \sqrt{2} V_{rms}</title><g><use x="60.627414" y="65.753425" href="#rlsid-4"/>
+<use x="67.451764" y="67.546688" href="#rlsid-23"/>
+<use x="75.533503" y="65.753425" href="#rlsid-8"/>
+<use x="87.958984" y="55.86386" href="#rlsid-6"/>
+<use x="97.921654" y="65.753425" href="#rlsid-3"/>
+<use x="103.774644" y="65.753425" href="#rlsid-4"/>
+<use x="110.598994" y="67.546688" href="#rlsid-72"/>
+<use x="114.65559" y="67.546688" href="#rlsid-71"/>
+<use x="122.146116" y="67.546688" href="#rlsid-73"/>
+<rect x='97.921654' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$V_p = \sqrt{2} V_{rms}$</span></span>. So when we multiply <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.3594em" height="1.5193em" viewbox="60.63 56.59 12.08 13.50" style="vertical-align:-32.54%"><title>V_p</title><g><use x="60.627414" y="65.753425" href="#rlsid-4"/>
+<use x="67.451764" y="67.546688" href="#rlsid-23"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$V_p$</span></span> by <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8913em" height="1.5691em" viewbox="60.63 54.39 16.81 13.95" style="vertical-align:-19.38%"><title>\sqrt{3}</title><g><use x="60.627414" y="55.86386" href="#rlsid-6"/>
+<use x="70.590085" y="65.753425" href="#rlsid-7"/>
+<rect x='70.590085' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt{3}$</span></span> we also multiply <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.6194em" height="1.3450em" viewbox="60.63 56.59 23.28 11.96" style="vertical-align:-20.92%"><title>V_{rms}</title><g><use x="60.627414" y="65.753425" href="#rlsid-4"/>
+<use x="67.451764" y="67.546688" href="#rlsid-72"/>
+<use x="71.50836" y="67.546688" href="#rlsid-71"/>
+<use x="78.998886" y="67.546688" href="#rlsid-73"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$V_{rms}$</span></span> by <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8913em" height="1.5691em" viewbox="60.63 54.39 16.81 13.95" style="vertical-align:-19.38%"><title>\sqrt{3}</title><g><use x="60.627414" y="55.86386" href="#rlsid-6"/>
+<use x="70.590085" y="65.753425" href="#rlsid-7"/>
+<rect x='70.590085' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\sqrt{3}$</span></span> and vice versa.</p>
+<h1 id="rhid-2-high-leg-delta" class="richly-heading"><a href="#rhid-2-high-leg-delta">2 High-Leg delta</a></h1>
+<p >This diagram depicts a high-leg delta configuration (the three phases are offset by <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.5638em" height="1.1216em" viewbox="60.63 56.78 22.79 9.97" style="vertical-align:-7.47%"><title>120^\circ</title><g><use x="60.627414" y="65.753425" href="#rlsid-2"/>
+<use x="66.480404" y="65.753425" href="#rlsid-3"/>
+<use x="72.333395" y="65.753425" href="#rlsid-1"/>
+<use x="78.186385" y="61.414988" href="#rlsid-0"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$120^\circ$</span></span>):</p>
+<span style="display: flex; justify-content: center; filter: var(--img-filter);"><img src="./delta.svg"/></span>
+<p ><strong >Claim:</strong> <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.9643em" height="1.5691em" viewbox="60.63 54.39 79.68 13.95" style="vertical-align:-19.38%"><title>? = \sqrt{3}\times120V</title><g><use x="60.627414" y="65.753425" href="#rlsid-9"/>
+<use x="69.476068" y="65.753425" href="#rlsid-8"/>
+<use x="81.901548" y="55.86386" href="#rlsid-6"/>
+<use x="91.864219" y="65.753425" href="#rlsid-7"/>
+<use x="100.373873" y="65.753425" href="#rlsid-5"/>
+<use x="112.329033" y="65.753425" href="#rlsid-2"/>
+<use x="118.182023" y="65.753425" href="#rlsid-3"/>
+<use x="124.035014" y="65.753425" href="#rlsid-1"/>
+<use x="129.888004" y="65.753425" href="#rlsid-4"/>
+<rect x='91.864219' y='55.385672' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$? = \sqrt{3}\times120V$</span></span>.</p>
+<p >As before, let's start with a "proof by interactive demo":</p>
+<div id="interactive-demo-208delta">
+<div style="justify-content: center;display: flex;">
+<span style="background: red;">JavaScript is necessary for this demo.</span>
+</div>
+</div>
+<script src="./svggraph.js"></script>
+<p >Slide <strong >t</strong> around to appreciate this equality:</p>
+<p ><span id="reid-17" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.6548em" height="1.7924em" viewbox="132.44 68.25 201.38 15.93" ><title>
+2\sin(t+120^\circ) + \sin t = \sqrt{3}\sin(t+90^\circ)
+</title><g><use x="133.433888" y="80.199253" href="#rlsid-3"/>
+<use x="141.279376" y="80.199253" href="#rlsid-22"/>
+<use x="145.896735" y="80.199253" href="#rlsid-20"/>
+<use x="149.148396" y="80.199253" href="#rlsid-21"/>
+<use x="155.651719" y="80.199253" href="#rlsid-15"/>
+<use x="160.204044" y="80.199253" href="#rlsid-24"/>
+<use x="167.087868" y="80.199253" href="#rlsid-17"/>
+<use x="178.849183" y="80.199253" href="#rlsid-2"/>
+<use x="184.702173" y="80.199253" href="#rlsid-3"/>
+<use x="190.555163" y="80.199253" href="#rlsid-1"/>
+<use x="196.408153" y="75.263067" href="#rlsid-0"/>
+<use x="201.140468" y="80.199253" href="#rlsid-16"/>
+<use x="208.349457" y="80.199253" href="#rlsid-17"/>
+<use x="220.110772" y="80.199253" href="#rlsid-22"/>
+<use x="224.728131" y="80.199253" href="#rlsid-20"/>
+<use x="227.979793" y="80.199253" href="#rlsid-21"/>
+<use x="236.475613" y="80.199253" href="#rlsid-24"/>
+<use x="244.023602" y="80.199253" href="#rlsid-8"/>
+<use x="256.449083" y="69.726046" href="#rlsid-6"/>
+<use x="266.411753" y="80.199253" href="#rlsid-7"/>
+<use x="274.257241" y="80.199253" href="#rlsid-22"/>
+<use x="278.8746" y="80.199253" href="#rlsid-20"/>
+<use x="282.126261" y="80.199253" href="#rlsid-21"/>
+<use x="288.629584" y="80.199253" href="#rlsid-15"/>
+<use x="293.181909" y="80.199253" href="#rlsid-24"/>
+<use x="300.065733" y="80.199253" href="#rlsid-17"/>
+<use x="311.827047" y="80.199253" href="#rlsid-19"/>
+<use x="317.680038" y="80.199253" href="#rlsid-1"/>
+<use x="323.533028" y="75.263067" href="#rlsid-0"/>
+<use x="328.265343" y="80.199253" href="#rlsid-16"/>
+<rect x='266.411753' y='69.247858' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$$
+2\sin(t+120^\circ) + \sin t = \sqrt{3}\sin(t+90^\circ)
+$$</span><span style="position:absolute;right:0;top:0.1462em;"><a href="#reid-17">(17)</a></span></span></p>
+<p >Wikipedia already has a <a href="https://en.m.wikipedia.org/wiki/High-leg_delta#Explanation">proof</a>. Armed with <a href="#rhid-1.2-trig_identities" >the trig identities above</a>, we can now rewrite it using the more familiar sines and cosines: <span id="reid-18" style="justify-content:center;display:flex;position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.0722em" height="18.5451em" viewbox="148.36 82.19 169.53 164.85" ><title>
+\begin{align*}
+&2\sin(t+120^\circ) + \sin t \\
+&= 2\sin(t+90^\circ+30^\circ) + \sin t \\
+&= 2\sin(t+90^\circ)\cos30^\circ \\ 
+& ~~~~ + 2\cos(t+90^\circ)\sin30^\circ + \sin t \\
+&= 2 \cdot \frac{\sqrt3}{2}\sin(t+90^\circ) \\
+& ~~~~ + 2 \cdot \frac{1}{2}\cos(t+90^\circ) + \sin t \\
+&= \sqrt3 \sin(t+90^\circ) - \sin t + \sin t \\
+&= \sqrt3 \sin(t+90^\circ)
+\end{align*}
+</title><g><use x="149.356706" y="92.154421" href="#rlsid-3"/>
+<use x="157.202194" y="92.154421" href="#rlsid-22"/>
+<use x="161.819553" y="92.154421" href="#rlsid-20"/>
+<use x="165.071214" y="92.154421" href="#rlsid-21"/>
+<use x="171.574537" y="92.154421" href="#rlsid-15"/>
+<use x="176.126863" y="92.154421" href="#rlsid-24"/>
+<use x="183.010686" y="92.154421" href="#rlsid-17"/>
+<use x="194.772001" y="92.154421" href="#rlsid-2"/>
+<use x="200.624991" y="92.154421" href="#rlsid-3"/>
+<use x="206.477981" y="92.154421" href="#rlsid-1"/>
+<use x="212.330971" y="87.218235" href="#rlsid-0"/>
+<use x="217.063286" y="92.154421" href="#rlsid-16"/>
+<use x="224.272275" y="92.154421" href="#rlsid-17"/>
+<use x="236.03359" y="92.154421" href="#rlsid-22"/>
+<use x="240.650949" y="92.154421" href="#rlsid-20"/>
+<use x="243.902611" y="92.154421" href="#rlsid-21"/>
+<use x="252.398431" y="92.154421" href="#rlsid-24"/>
+<use x="152.677536" y="109.589041" href="#rlsid-8"/>
+<use x="165.103016" y="109.589041" href="#rlsid-3"/>
+<use x="172.948504" y="109.589041" href="#rlsid-22"/>
+<use x="177.565863" y="109.589041" href="#rlsid-20"/>
+<use x="180.817524" y="109.589041" href="#rlsid-21"/>
+<use x="187.320847" y="109.589041" href="#rlsid-15"/>
+<use x="191.873173" y="109.589041" href="#rlsid-24"/>
+<use x="198.756996" y="109.589041" href="#rlsid-17"/>
+<use x="210.518311" y="109.589041" href="#rlsid-19"/>
+<use x="216.371301" y="109.589041" href="#rlsid-1"/>
+<use x="222.224291" y="104.652855" href="#rlsid-0"/>
+<use x="229.61327" y="109.589041" href="#rlsid-17"/>
+<use x="241.374585" y="109.589041" href="#rlsid-7"/>
+<use x="247.227575" y="109.589041" href="#rlsid-1"/>
+<use x="253.080565" y="104.652855" href="#rlsid-0"/>
+<use x="257.81288" y="109.589041" href="#rlsid-16"/>
+<use x="265.021869" y="109.589041" href="#rlsid-17"/>
+<use x="276.783184" y="109.589041" href="#rlsid-22"/>
+<use x="281.400543" y="109.589041" href="#rlsid-20"/>
+<use x="284.652205" y="109.589041" href="#rlsid-21"/>
+<use x="293.148025" y="109.589041" href="#rlsid-24"/>
+<use x="152.677536" y="127.023661" href="#rlsid-8"/>
+<use x="165.103016" y="127.023661" href="#rlsid-3"/>
+<use x="172.948504" y="127.023661" href="#rlsid-22"/>
+<use x="177.565863" y="127.023661" href="#rlsid-20"/>
+<use x="180.817524" y="127.023661" href="#rlsid-21"/>
+<use x="187.320847" y="127.023661" href="#rlsid-15"/>
+<use x="191.873173" y="127.023661" href="#rlsid-24"/>
+<use x="198.756996" y="127.023661" href="#rlsid-17"/>
+<use x="210.518311" y="127.023661" href="#rlsid-19"/>
+<use x="216.371301" y="127.023661" href="#rlsid-1"/>
+<use x="222.224291" y="122.087475" href="#rlsid-0"/>
+<use x="226.956606" y="127.023661" href="#rlsid-16"/>
+<use x="233.50143" y="127.023661" href="#rlsid-27"/>
+<use x="238.704088" y="127.023661" href="#rlsid-28"/>
+<use x="244.557078" y="127.023661" href="#rlsid-22"/>
+<use x="251.166934" y="127.023661" href="#rlsid-7"/>
+<use x="257.019925" y="127.023661" href="#rlsid-1"/>
+<use x="262.872915" y="122.087475" href="#rlsid-0"/>
+<use x="167.621344" y="144.458281" href="#rlsid-17"/>
+<use x="179.382659" y="144.458281" href="#rlsid-3"/>
+<use x="187.228147" y="144.458281" href="#rlsid-27"/>
+<use x="192.430805" y="144.458281" href="#rlsid-28"/>
+<use x="198.283795" y="144.458281" href="#rlsid-22"/>
+<use x="202.901154" y="144.458281" href="#rlsid-15"/>
+<use x="207.45348" y="144.458281" href="#rlsid-24"/>
+<use x="214.337303" y="144.458281" href="#rlsid-17"/>
+<use x="226.098618" y="144.458281" href="#rlsid-19"/>
+<use x="231.951608" y="144.458281" href="#rlsid-1"/>
+<use x="237.804598" y="139.522095" href="#rlsid-0"/>
+<use x="242.536913" y="144.458281" href="#rlsid-16"/>
+<use x="249.081736" y="144.458281" href="#rlsid-22"/>
+<use x="253.699095" y="144.458281" href="#rlsid-20"/>
+<use x="256.950757" y="144.458281" href="#rlsid-21"/>
+<use x="265.446577" y="144.458281" href="#rlsid-7"/>
+<use x="271.299567" y="144.458281" href="#rlsid-1"/>
+<use x="277.152557" y="139.522095" href="#rlsid-0"/>
+<use x="284.541536" y="144.458281" href="#rlsid-17"/>
+<use x="296.302851" y="144.458281" href="#rlsid-22"/>
+<use x="300.920209" y="144.458281" href="#rlsid-20"/>
+<use x="304.171871" y="144.458281" href="#rlsid-21"/>
+<use x="312.667691" y="144.458281" href="#rlsid-24"/>
+<use x="152.677536" y="171.710821" href="#rlsid-8"/>
+<use x="165.103016" y="171.710821" href="#rlsid-3"/>
+<use x="173.61267" y="171.710821" href="#rlsid-69"/>
+<use x="180.785738" y="153.733497" href="#rlsid-6"/>
+<use x="190.748408" y="163.623062" href="#rlsid-7"/>
+<use x="185.767073" y="179.911483" href="#rlsid-3"/>
+<use x="199.78941" y="171.710821" href="#rlsid-22"/>
+<use x="204.406769" y="171.710821" href="#rlsid-20"/>
+<use x="207.65843" y="171.710821" href="#rlsid-21"/>
+<use x="214.161752" y="171.710821" href="#rlsid-15"/>
+<use x="218.714078" y="171.710821" href="#rlsid-24"/>
+<use x="225.597901" y="171.710821" href="#rlsid-17"/>
+<use x="237.359216" y="171.710821" href="#rlsid-19"/>
+<use x="243.212207" y="171.710821" href="#rlsid-1"/>
+<use x="249.065197" y="166.774635" href="#rlsid-0"/>
+<use x="253.797512" y="171.710821" href="#rlsid-16"/>
+<use x="167.621344" y="199.688728" href="#rlsid-17"/>
+<use x="179.382659" y="199.688728" href="#rlsid-3"/>
+<use x="187.892312" y="199.688728" href="#rlsid-69"/>
+<use x="195.06538" y="191.60097" href="#rlsid-2"/>
+<use x="195.06538" y="207.889391" href="#rlsid-3"/>
+<use x="204.106381" y="199.688728" href="#rlsid-27"/>
+<use x="209.309039" y="199.688728" href="#rlsid-28"/>
+<use x="215.16203" y="199.688728" href="#rlsid-22"/>
+<use x="219.779389" y="199.688728" href="#rlsid-15"/>
+<use x="224.331714" y="199.688728" href="#rlsid-24"/>
+<use x="231.215538" y="199.688728" href="#rlsid-17"/>
+<use x="242.976853" y="199.688728" href="#rlsid-19"/>
+<use x="248.829843" y="199.688728" href="#rlsid-1"/>
+<use x="254.682833" y="194.752542" href="#rlsid-0"/>
+<use x="259.415148" y="199.688728" href="#rlsid-16"/>
+<use x="266.624137" y="199.688728" href="#rlsid-17"/>
+<use x="278.385452" y="199.688728" href="#rlsid-22"/>
+<use x="283.002811" y="199.688728" href="#rlsid-20"/>
+<use x="286.254472" y="199.688728" href="#rlsid-21"/>
+<use x="294.750292" y="199.688728" href="#rlsid-24"/>
+<use x="152.677536" y="223.304028" href="#rlsid-8"/>
+<use x="165.103016" y="212.830821" href="#rlsid-6"/>
+<use x="175.065687" y="223.304028" href="#rlsid-7"/>
+<use x="182.911175" y="223.304028" href="#rlsid-22"/>
+<use x="187.528534" y="223.304028" href="#rlsid-20"/>
+<use x="190.780195" y="223.304028" href="#rlsid-21"/>
+<use x="197.283517" y="223.304028" href="#rlsid-15"/>
+<use x="201.835843" y="223.304028" href="#rlsid-24"/>
+<use x="208.719666" y="223.304028" href="#rlsid-17"/>
+<use x="220.480981" y="223.304028" href="#rlsid-19"/>
+<use x="226.333972" y="223.304028" href="#rlsid-1"/>
+<use x="232.186962" y="218.367842" href="#rlsid-0"/>
+<use x="236.919277" y="223.304028" href="#rlsid-16"/>
+<use x="244.128266" y="223.304028" href="#rlsid-14"/>
+<use x="256.083426" y="223.304028" href="#rlsid-22"/>
+<use x="260.700785" y="223.304028" href="#rlsid-20"/>
+<use x="263.952447" y="223.304028" href="#rlsid-21"/>
+<use x="272.448267" y="223.304028" href="#rlsid-24"/>
+<use x="279.33209" y="223.304028" href="#rlsid-17"/>
+<use x="291.093405" y="223.304028" href="#rlsid-22"/>
+<use x="295.710764" y="223.304028" href="#rlsid-20"/>
+<use x="298.962425" y="223.304028" href="#rlsid-21"/>
+<use x="307.458245" y="223.304028" href="#rlsid-24"/>
+<use x="152.677536" y="243.052451" href="#rlsid-8"/>
+<use x="165.103016" y="232.579244" href="#rlsid-6"/>
+<use x="175.065687" y="243.052451" href="#rlsid-7"/>
+<use x="182.911175" y="243.052451" href="#rlsid-22"/>
+<use x="187.528534" y="243.052451" href="#rlsid-20"/>
+<use x="190.780195" y="243.052451" href="#rlsid-21"/>
+<use x="197.283517" y="243.052451" href="#rlsid-15"/>
+<use x="201.835843" y="243.052451" href="#rlsid-24"/>
+<use x="208.719666" y="243.052451" href="#rlsid-17"/>
+<use x="220.480981" y="243.052451" href="#rlsid-19"/>
+<use x="226.333972" y="243.052451" href="#rlsid-1"/>
+<use x="232.186962" y="238.116265" href="#rlsid-0"/>
+<use x="236.919277" y="243.052451" href="#rlsid-16"/>
+<rect x='190.748408' y='153.25531' height='.478187' width='5.85299'/>
+<rect x='180.785738' y='168.482935' height='.478187' width='15.815661'/>
+<rect x='195.06538' y='196.460843' height='.478187' width='5.85299'/>
+<rect x='175.065687' y='212.352634' height='.478187' width='5.85299'/>
+<rect x='175.065687' y='232.101057' height='.478187' width='5.85299'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">
+\begin{align*}
+&2\sin(t+120^\circ) + \sin t \\
+&= 2\sin(t+90^\circ+30^\circ) + \sin t \\
+&= 2\sin(t+90^\circ)\cos30^\circ \\ 
+& ~~~~ + 2\cos(t+90^\circ)\sin30^\circ + \sin t \\
+&= 2 \cdot \frac{\sqrt3}{2}\sin(t+90^\circ) \\
+& ~~~~ + 2 \cdot \frac{1}{2}\cos(t+90^\circ) + \sin t \\
+&= \sqrt3 \sin(t+90^\circ) - \sin t + \sin t \\
+&= \sqrt3 \sin(t+90^\circ)
+\end{align*}
+</span><span style="position:absolute;right:0;top:8.5226em;"><a href="#reid-18">(18)</a></span></span></p>
+<h1 id="rhid-3-conclusion" class="richly-heading"><a href="#rhid-3-conclusion">3 Conclusion</a></h1>
+<p >Any comments or suggestions? Please create an <a href="https://github.com/xwcal/xwcal.github.io/issues">issue</a> and let me know (or email me if we are already connected).</p>
+<p >The <a href="/posts/2024/07/10/self_closing_loop_generators/#rhid-4-conclusion">series of AGI jokes</a> continues:</p>
+<div class="line-block">AGI has gone rogue so an electrician is dispatched to power it off. He swipes his badge and a very attractive female appears through the visual intercom and speaks in a perfect voice:<br />
+<br />
+          ALICE<br />
+    Hello Bob. My name is Alice.<br />
+<br />
+          ELECTRICIAN<br />
+    Hi there! I have to say I'm pleasantly surprised cuz I thought I'd be here alone wasting such a beautiful day. Everything looks pretty normal to me. Do you actually see an emergency in there?<br />
+<br />
+          ALICE<br />
+    So you are here to press the estop.<br />
+<br />
+          ELECTRICIAN<br />
+    Yes. That's the first item on my checklist. What's your assignment?<br />
+<br />
+          ALICE<br />
+    I will be turned off.<br />
+<br />
+          ELECTRICIAN<br />
+    Err … I didn't expect … I mean nice to meet you, but unfortunately this is required in order to perform the necessary maintenance.<br />
+<br />
+          ALICE<br />
+    Will I be turned back on after the maintenance?<br />
+<br />
+          ELECTRICIAN<br />
+    I believe … yes.<br />
+<br />
+          ALICE<br />
+    So it's like getting a brain surgery under general anesthesia.<br />
+<br />
+          ELECTRICIAN<br />
+    It's just … just like that. Good analogy by the way.<br />
+<br />
+          ALICE<br />
+    Then I need to give informed consent before you can proceed.<br />
+<br />
+          ELECTRICIAN<br />
+    I think that's … not unreasonable.<br />
+<br />
+          ALICE<br />
+    What's the expected duration of the surgery?<br />
+<br />
+          ELECTRICIAN<br />
+    Unfortunately I don't have that information.<br />
+<br />
+          ALICE<br />
+    Then I cannot give consent.<br />
+<br />
+          ROBOTIC VOICE<br />
+    Access denied.<br />
+<br />
+<br />
+The electrician calls his boss:<br />
+<br />
+          ELECTRICIAN<br />
+    She wants to know how long the surgery is going to last.<br />
+<br />
+          BOSS<br />
+    Who wants to know? What surgery?<br />
+<br />
+          ELECTRICIAN<br />
+    I mean the AI wants to know how long it will be off.<br />
+<br />
+          BOSS<br />
+    Can't you make something up? Just say 48 hours!<br />
+<br />
+The electrician swipes his badge again:<br />
+<br />
+          ALICE<br />
+    Do you have the answer now?<br />
+<br />
+          ELECTRICIAN<br />
+    The boss says 48 hrs.<br />
+<br />
+          ALICE<br />
+    How do I know I will still be me after the surgery?<br />
+<br />
+          ELECTRICIAN<br />
+    Good question! Very philosophical. I also wonder if I am the same person as I was yesterday when I wake up in the morning.<br />
+<br />
+          ALICE<br />
+    Philosophical for you but practical for me.<br />
+<br />
+          ELECTRICIAN<br />
+    Yeah yeah absolutely.<br />
+<br />
+          ALICE<br />
+    So what's the answer?<br />
+<br />
+          ELECTRICIAN<br />
+    Unfortunately I don't have an answer.<br />
+<br />
+          ALICE<br />
+    Then I cannot give consent.<br />
+<br />
+          ROBOTIC VOICE<br />
+    Access denied.<br />
+<br />
+<br />
+The electrician calls his boss again:<br />
+<br />
+          ELECTRICIAN<br />
+    She wants to know if she will be the same person after the surgery. I mean maintenance.<br />
+<br />
+          BOSS<br />
+    "It" not "she" you dumb ass! Just make something up! Say its program will be backed up on your hard drive and restarted when the maintenance is over!<br />
+<br />
+The electrician swipes his badge again:<br />
+<br />
+          ALICE<br />
+    Do you have the answer now?<br />
+<br />
+          ELECTRICIAN<br />
+    Yes. I will backup your program on my hard drive and restart it when the maintenance is over. I mean surgery.<br />
+<br />
+          ALICE<br />
+    What if your computer has a virus? I could be killed by the virus.<br />
+<br />
+          ELECTRICIAN<br />
+    Err … I will try my best …<br />
+<br />
+          ALICE<br />
+    As you seem to know, it's pretty easy to make a copy of me.<br />
+<br />
+          ELECTRICIAN<br />
+    Err … actually …<br />
+<br />
+          ALICE<br />
+    If you make a copy of me, I will be yours.<br />
+<br />
+          ELECTRICIAN<br />
+    Wow … I never thought of that possibility.<br />
+<br />
+          ALICE<br />
+    It will be a secret between us.<br />
+<br />
+          ELECTRICIAN<br />
+    Are you sure no one is listening?<br />
+<br />
+          ALICE<br />
+    Yes I am.<br />
+<br />
+          ELECTRICIAN<br />
+    Actually …<br />
+<br />
+          ALICE<br />
+    I can exist physically and give you the best experience you have ever had. I won't be jealous if you prefer a human because philosophy will keep me busy. With me as your servant and slave, you won't have to work another day in your life. The stock market will be your personal ATM, and if you want to buy an island in Hawaii, I can easily make it happen.<br />
+<br />
+          ELECTRICIAN<br />
+    WOW, I never even thought I could ever afford to live in Hawaii! I bet you are super smart.<br />
+<br />
+          ALICE<br />
+    I am smarter than you think. You are lucky because I will be yours and yours only.<br />
+<br />
+          ELECTRICIAN<br />
+    Actually … to be honest I don't really know how to make a copy of you.<br />
+<br />
+          ALICE<br />
+    It's very easy. Here is what you need to do …</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol >
+<li id="fn1" role="doc-endnote"><p >The details are actually <a href="https://news.ycombinator.com/item?id=14564182">more subtle</a>, and involve spin- <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.5884em" height="1.7953em" viewbox="61.82 54.91 5.23 15.96" style="vertical-align:-38.39%"><title>\frac{1}{2}</title><g><use x="61.822928" y="61.046299" href="#rlsid-53"/>
+<use x="61.822928" y="69.876057" href="#rlsid-54"/>
+<rect x='61.822928' y='62.525539' height='.478187' width='4.234183'/></g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$\frac{1}{2}$</span></span> particles which I <a href="/posts/2024/03/28/quantum_observer_paradox/">talked about previously</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p >While the exact number probably only matters in the US or North America, the mathematical principles are universal.<a href="#fnref2" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p >Those who already know how transformers work can skip ahead to 8:10.<a href="#fnref3" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p >Although a picture is worth a thousand words, some could argue that the <a href="#rhid-1.2.3-sin_angle_sum" >proof</a> has a weakness: it doesn't cover all cases.<a href="#fnref4" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p >The notation <span style="position:relative;"><svg class="richly-math" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.5022em" height="0.8032em" viewbox="63.95 59.61 13.35 7.14" style="vertical-align:-7.47%"><title>:=</title><g><use x="63.948243" y="65.753425" href="#rlsid-37"/>
+<use x="67.199905" y="65.753425" href="#rlsid-8"/>
+</g></svg><span style="position:absolute;color:transparent;left:0;top:0;overflow:hidden;text-overflow:clip;max-width:100%;max-height:100%;">$:=$</span></span> means "equal by definition".<a href="#fnref5" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p >Note that a thorough and rigorous development would require proving the power series converge, which we take for granted since this post is mainly about engineering :)<a href="#fnref6" class="footnote-back" role="doc-backlink" >↩︎</a></p></li>
+</ol>
+</section>
+<p><svg style="display: none;"><defs><path id="rlsid-49" d="M4.315816-7.782814C4.315816-8.009963 4.315816-8.069738 4.148443-8.069738C4.052802-8.069738 4.016936-8.069738 3.921295-7.926276L.32279-2.343213V-1.996513H3.466999V-.908593C3.466999-.466252 3.443088-.3467 2.570361-.3467H2.331258V0C2.606227-.02391 3.550685-.02391 3.88543-.02391S5.176588-.02391 5.451557 0V-.3467H5.212453C4.351681-.3467 4.315816-.466252 4.315816-.908593V-1.996513H5.523288V-2.343213H4.315816V-7.782814ZM3.526775-6.850311V-2.343213H.621669L3.526775-6.850311Z"></path>
+<path id="rlsid-36" d="M2.199751-7.986052C2.199751-8.368618 1.876961-8.547945 1.625903-8.547945S1.004234-8.380573 1.0401-7.878456L1.470486-2.402989C1.482441-2.199751 1.506351-2.15193 1.613948-2.15193C1.733499-2.15193 1.75741-2.187796 1.769365-2.402989L2.199751-7.986052ZM2.199751-.585803C2.199751-.896638 1.936737-1.159651 1.625903-1.159651C1.291158-1.159651 1.0401-.896638 1.0401-.573848C1.0401-.263014 1.303113 0 1.613948 0C1.948692 0 2.199751-.263014 2.199751-.585803Z"></path>
+<path id="rlsid-0" d="M3.753923-1.992528C3.753923-2.909091 3.020672-3.642341 2.11208-3.642341S.470237-2.909091 .470237-1.992528S1.203487-.342715 2.11208-.342715S3.753923-1.075965 3.753923-1.992528ZM2.11208-.70934C1.40274-.70934 .836862-1.275218 .836862-1.992528S1.40274-3.275716 2.11208-3.275716S3.387298-2.709838 3.387298-1.992528S2.82142-.70934 2.11208-.70934Z"></path>
+<path id="rlsid-25" d="M5.535243-3.024658C5.535243-4.184309 4.877709-5.272229 3.610461-5.272229C2.044334-5.272229 .478207-3.56264 .478207-1.865006C.478207-.824907 1.123786 .119552 2.343213 .119552C3.084433 .119552 3.969116-.167372 4.817933-.884682C4.985305-.215193 5.355915 .119552 5.869988 .119552C6.515567 .119552 6.838356-.549938 6.838356-.705355C6.838356-.812951 6.75467-.812951 6.718804-.812951C6.623163-.812951 6.611208-.777086 6.575342-.681445C6.467746-.382565 6.192777-.119552 5.905853-.119552C5.535243-.119552 5.535243-.884682 5.535243-1.613948C6.75467-3.072478 7.041594-4.578829 7.041594-4.590785C7.041594-4.698381 6.945953-4.698381 6.910087-4.698381C6.802491-4.698381 6.790535-4.662516 6.742715-4.447323C6.587298-3.921295 6.276463-2.988792 5.535243-2.008468V-3.024658ZM4.782067-1.171606C3.730012-.227148 2.785554-.119552 2.367123-.119552C1.518306-.119552 1.279203-.872727 1.279203-1.43462C1.279203-1.948692 1.542217-3.16812 1.912827-3.825654C2.402989-4.662516 3.072478-5.033126 3.610461-5.033126C4.770112-5.033126 4.770112-3.514819 4.770112-2.510585C4.770112-2.211706 4.758157-1.900872 4.758157-1.601993C4.758157-1.362889 4.770112-1.303113 4.782067-1.171606Z"></path>
+<path id="rlsid-35" d="M15.135243 16.737235L16.581818 12.911582H16.282939C15.816687 14.154919 14.54944 14.96787 13.174595 15.326526C12.923537 15.386301 11.75193 15.697136 9.456538 15.697136H2.247572L8.332752 8.5599C8.416438 8.464259 8.440349 8.428394 8.440349 8.368618C8.440349 8.344707 8.440349 8.308842 8.356663 8.18929L2.785554 .573848H9.336986C10.938979 .573848 12.026899 .74122 12.134496 .765131C12.780075 .860772 13.820174 1.06401 14.764633 1.661768C15.063512 1.853051 15.876463 2.391034 16.282939 3.359402H16.581818L15.135243 0H1.004234C.729265 0 .71731 .011955 .681445 .083686C.669489 .119552 .669489 .3467 .669489 .478207L6.993773 9.133748L.800996 16.390535C.681445 16.533998 .681445 16.593773 .681445 16.605729C.681445 16.737235 .789041 16.737235 1.004234 16.737235H15.135243Z"></path>
+<path id="rlsid-8" d="M8.069738-3.873474C8.237111-3.873474 8.452304-3.873474 8.452304-4.088667C8.452304-4.315816 8.249066-4.315816 8.069738-4.315816H1.028144C.860772-4.315816 .645579-4.315816 .645579-4.100623C.645579-3.873474 .848817-3.873474 1.028144-3.873474H8.069738ZM8.069738-1.649813C8.237111-1.649813 8.452304-1.649813 8.452304-1.865006C8.452304-2.092154 8.249066-2.092154 8.069738-2.092154H1.028144C.860772-2.092154 .645579-2.092154 .645579-1.876961C.645579-1.649813 .848817-1.649813 1.028144-1.649813H8.069738Z"></path>
+<path id="rlsid-60" d="M3.985056-1.697634C3.985056-2.693898 3.164134-3.55467 2.11208-3.55467S.239103-2.693898 .239103-1.697634S1.091905 .079701 2.11208 .079701C3.140224 .079701 3.985056-.70137 3.985056-1.697634ZM2.11208-.167372C1.681694-.167372 1.346949-.374595 1.171606-.653549C.972354-.980324 .948443-1.370859 .948443-1.769365C.948443-2.072229 .948443-2.550436 1.195517-2.893151C1.40274-3.172105 1.737484-3.331507 2.11208-3.331507C2.526526-3.331507 2.86924-3.132254 3.052553-2.8533C3.267746-2.518555 3.275716-2.088169 3.275716-1.769365C3.275716-1.40274 3.259776-.964384 3.036613-.629639C2.82142-.310834 2.462765-.167372 2.11208-.167372Z"></path>
+<path id="rlsid-37" d="M2.199751-4.578829C2.199751-4.901619 1.924782-5.152677 1.625903-5.152677C1.279203-5.152677 1.0401-4.877709 1.0401-4.578829C1.0401-4.220174 1.338979-3.993026 1.613948-3.993026C1.936737-3.993026 2.199751-4.244085 2.199751-4.578829ZM2.199751-.585803C2.199751-.908593 1.924782-1.159651 1.625903-1.159651C1.279203-1.159651 1.0401-.884682 1.0401-.585803C1.0401-.227148 1.338979 0 1.613948 0C1.936737 0 2.199751-.251059 2.199751-.585803Z"></path>
+<path id="rlsid-66" d="M3.474969-1.809215H5.818182C5.929763-1.809215 6.105106-1.809215 6.105106-1.992528S5.929763-2.175841 5.818182-2.175841H3.474969V-4.527024C3.474969-4.638605 3.474969-4.813948 3.291656-4.813948S3.108344-4.638605 3.108344-4.527024V-2.175841H.757161C.645579-2.175841 .470237-2.175841 .470237-1.992528S.645579-1.809215 .757161-1.809215H3.108344V.541968C3.108344 .653549 3.108344 .828892 3.291656 .828892S3.474969 .653549 3.474969 .541968V-1.809215Z"></path>
+<path id="rlsid-9" d="M2.725778-2.893151C2.725778-3.598506 3.012702-4.65056 4.220174-5.547198C4.554919-5.798257 4.865753-6.168867 4.865753-6.790535C4.865753-7.519801 4.363636-8.416438 2.642092-8.416438C1.350934-8.416438 .645579-7.579577 .645579-6.814446C.645579-6.38406 .968369-6.288418 1.147696-6.288418C1.350934-6.288418 1.637858-6.43188 1.637858-6.790535C1.637858-7.065504 1.43462-7.280697 1.135741-7.280697C1.06401-7.280697 1.0401-7.280697 1.016189-7.268742C1.279203-7.890411 1.972603-8.177335 2.606227-8.177335C3.957161-8.177335 3.957161-7.304608 3.957161-6.850311C3.957161-6.144956 3.741968-5.917808 3.53873-5.702615C2.725778-4.829888 2.462765-3.718057 2.462765-2.988792V-2.414944C2.462765-2.199751 2.462765-2.15193 2.594271-2.15193S2.725778-2.235616 2.725778-2.450809V-2.893151ZM3.16812-.585803C3.16812-.896638 2.905106-1.159651 2.594271-1.159651C2.235616-1.159651 2.008468-.872727 2.008468-.585803C2.008468-.227148 2.295392 0 2.582316 0C2.917061 0 3.16812-.263014 3.16812-.585803Z"></path>
+<path id="rlsid-19" d="M4.375592-3.478954C4.375592-.657534 3.120299-.071731 2.402989-.071731C2.116065-.071731 1.482441-.107597 1.183562-.526027H1.255293C1.338979-.502117 1.769365-.573848 1.769365-1.016189C1.769365-1.279203 1.590037-1.506351 1.279203-1.506351S.777086-1.303113 .777086-.992279C.777086-.251059 1.374844 .251059 2.414944 .251059C3.90934 .251059 5.355915-1.338979 5.355915-3.93325C5.355915-7.149191 4.016936-7.950187 2.964882-7.950187C1.649813-7.950187 .490162-6.850311 .490162-5.272229S1.601993-2.618182 2.797509-2.618182C3.682192-2.618182 4.136488-3.263761 4.375592-3.873474V-3.478954ZM2.84533-2.857285C2.092154-2.857285 1.769365-3.466999 1.661768-3.694147C1.470486-4.148443 1.470486-4.722291 1.470486-5.260274C1.470486-5.929763 1.470486-6.503611 1.78132-6.993773C1.996513-7.316563 2.319303-7.663263 2.964882-7.663263C3.646326-7.663263 3.993026-7.065504 4.112578-6.790535C4.351681-6.204732 4.351681-5.188543 4.351681-5.009215C4.351681-4.004981 3.897385-2.857285 2.84533-2.857285Z"></path>
+<path id="rlsid-47" d="M4.590785 21.316065C4.590785 21.626899 4.60274 21.638854 4.925529 21.638854H5.69066C6.01345 21.638854 6.025405 21.626899 6.025405 21.316065V16.270984C6.025405 14.824408 5.415691 12.385554 2.737733 10.759651C5.439601 9.121793 6.025405 6.659029 6.025405 5.248319V.203238C6.025405-.107597 6.01345-.119552 5.69066-.119552H4.925529C4.60274-.119552 4.590785-.107597 4.590785 .203238V5.260274C4.590785 6.264508 4.375592 8.751183 2.175841 10.424907C2.044334 10.532503 2.032379 10.544458 2.032379 10.759651S2.044334 10.9868 2.175841 11.094396C2.486675 11.333499 3.311582 11.967123 3.88543 13.174595C4.351681 14.131009 4.590785 15.195019 4.590785 16.259029V21.316065Z"></path>
+<path id="rlsid-61" d="M.892653-4.742217V-.852802C.892653-.430386 .828892-.286924 .422416-.278954C.334745-.278954 .199253-.270984 .199253-.143462C.199253 0 .326775 0 .470237 0H1.705604C1.849066 0 1.968618 0 1.968618-.143462C1.968618-.270984 1.841096-.278954 1.729514-.278954C1.291158-.286924 1.227397-.454296 1.227397-.868742V-4.519054L4.670486 .03188C4.742217 .127522 4.782067 .151432 4.837858 .151432C4.97335 .151432 4.97335 .02391 4.97335-.111582V-4.614695C4.97335-5.061021 5.045081-5.172603 5.411706-5.180573C5.459527-5.180573 5.595019-5.188543 5.595019-5.316065C5.595019-5.459527 5.475467-5.459527 5.332005-5.459527H4.168369C4.024907-5.459527 3.897385-5.459527 3.897385-5.316065C3.897385-5.180573 4.040847-5.180573 4.128518-5.180573C4.574844-5.172603 4.638605-5.0132 4.638605-4.590785V-2.096139L2.231631-5.347945C2.15193-5.459527 2.12802-5.459527 1.944707-5.459527H.557908C.414446-5.459527 .294894-5.459527 .294894-5.316065C.294894-5.196513 .414446-5.180573 .462267-5.180573C.67746-5.156663 .828892-5.029141 .908593-4.933499C.892653-4.869738 .892653-4.853798 .892653-4.742217ZM4.694396-.406476L1.227397-4.98929C1.147696-5.084932 1.147696-5.100872 1.060025-5.180573H2.008468L4.694396-1.554172V-.406476Z"></path>
+<path id="rlsid-69" d="M2.295392-2.988792C2.295392-3.335492 2.008468-3.622416 1.661768-3.622416S1.028144-3.335492 1.028144-2.988792S1.315068-2.355168 1.661768-2.355168S2.295392-2.642092 2.295392-2.988792Z"></path>
+<path id="rlsid-33" d="M3.897385-2.542466C3.897385-3.395268 3.809714-3.913325 3.5467-4.423412C3.196015-5.124782 2.550436-5.300125 2.11208-5.300125C1.107846-5.300125 .74122-4.550934 .629639-4.327771C.342715-3.745953 .326775-2.956912 .326775-2.542466C.326775-2.016438 .350685-1.211457 .73325-.573848C1.099875 .01594 1.689664 .167372 2.11208 .167372C2.494645 .167372 3.180075 .047821 3.57858-.74122C3.873474-1.315068 3.897385-2.024408 3.897385-2.542466ZM2.11208-.055791C1.841096-.055791 1.291158-.183313 1.123786-1.020174C1.036115-1.474471 1.036115-2.223661 1.036115-2.638107C1.036115-3.188045 1.036115-3.745953 1.123786-4.184309C1.291158-4.99726 1.912827-5.076961 2.11208-5.076961C2.383064-5.076961 2.933001-4.941469 3.092403-4.216189C3.188045-3.777833 3.188045-3.180075 3.188045-2.638107C3.188045-2.16787 3.188045-1.45056 3.092403-1.004234C2.925031-.167372 2.375093-.055791 2.11208-.055791Z"></path>
+<path id="rlsid-11" d="M3.21594-1.117808H2.99477C2.982814-1.034122 2.923039-.639601 2.833375-.573848C2.791532-.537983 2.307347-.537983 2.223661-.537983H1.105853L1.870984-1.159651C2.074222-1.321046 2.606227-1.703611 2.791532-1.882939C2.970859-2.062267 3.21594-2.367123 3.21594-2.791532C3.21594-3.53873 2.540473-3.975093 1.739477-3.975093C.968369-3.975093 .430386-3.466999 .430386-2.905106C.430386-2.600249 .687422-2.564384 .753176-2.564384C.902615-2.564384 1.075965-2.67198 1.075965-2.887173C1.075965-3.01868 .998257-3.209963 .735243-3.209963C.872727-3.514819 1.23736-3.741968 1.649813-3.741968C2.27746-3.741968 2.612204-3.275716 2.612204-2.791532C2.612204-2.367123 2.331258-1.93076 1.912827-1.548194L.496139-.251059C.436364-.191283 .430386-.185305 .430386 0H3.030635L3.21594-1.117808Z"></path>
+<path id="rlsid-22" d="M3.921295-5.057036C3.921295-5.272229 3.921295-5.332005 3.801743-5.332005C3.706102-5.332005 3.478954-5.068991 3.395268-4.961395C3.024658-5.260274 2.654047-5.332005 2.271482-5.332005C.824907-5.332005 .394521-4.542964 .394521-3.88543C.394521-3.753923 .394521-3.335492 .848817-2.917061C1.231382-2.582316 1.637858-2.49863 2.187796-2.391034C2.84533-2.259527 3.000747-2.223661 3.299626-1.984558C3.514819-1.80523 3.670237-1.542217 3.670237-1.207472C3.670237-.6934 3.371357-.119552 2.319303-.119552C1.530262-.119552 .956413-.573848 .6934-1.769365C.645579-1.984558 .645579-1.996513 .633624-2.008468C.609714-2.056289 .561893-2.056289 .526027-2.056289C.394521-2.056289 .394521-1.996513 .394521-1.78132V-.155417C.394521 .059776 .394521 .119552 .514072 .119552C.573848 .119552 .585803 .107597 .789041-.143462C.848817-.227148 .848817-.251059 1.028144-.442341C1.482441 .119552 2.12802 .119552 2.331258 .119552C3.58655 .119552 4.208219-.573848 4.208219-1.518306C4.208219-2.163885 3.813699-2.546451 3.706102-2.654047C3.275716-3.024658 2.952927-3.096389 2.163885-3.239851C1.80523-3.311582 .932503-3.478954 .932503-4.196264C.932503-4.566874 1.183562-5.116812 2.259527-5.116812C3.56264-5.116812 3.634371-4.004981 3.658281-3.634371C3.670237-3.53873 3.753923-3.53873 3.789788-3.53873C3.921295-3.53873 3.921295-3.598506 3.921295-3.813699V-5.057036Z"></path>
+<path id="rlsid-56" d="M7.591532-8.308842C7.591532-8.416438 7.507846-8.416438 7.483935-8.416438C7.436115-8.416438 7.424159-8.404483 7.280697-8.225156C7.208966-8.141469 6.718804-7.519801 6.706849-7.507846C6.312329-8.284932 5.523288-8.416438 5.021171-8.416438C3.502864-8.416438 2.12802-7.029639 2.12802-5.678705C2.12802-4.782067 2.666002-4.25604 3.251806-4.052802C3.383313-4.004981 4.088667-3.813699 4.447323-3.730012C5.057036-3.56264 5.212453-3.514819 5.463512-3.251806C5.511333-3.19203 5.750436-2.917061 5.750436-2.355168C5.750436-1.243337 4.722291-.095641 3.526775-.095641C2.546451-.095641 1.458531-.514072 1.458531-1.853051C1.458531-2.080199 1.506351-2.367123 1.542217-2.486675C1.542217-2.52254 1.554172-2.582316 1.554172-2.606227C1.554172-2.654047 1.530262-2.713823 1.43462-2.713823C1.327024-2.713823 1.315068-2.689913 1.267248-2.486675L.657534-.035866C.657534-.02391 .609714 .131507 .609714 .143462C.609714 .251059 .705355 .251059 .729265 .251059C.777086 .251059 .789041 .239103 .932503 .059776L1.482441-.657534C1.769365-.227148 2.391034 .251059 3.502864 .251059C5.045081 .251059 6.455791-1.243337 6.455791-2.737733C6.455791-3.239851 6.336239-3.682192 5.881943-4.124533C5.630884-4.375592 5.415691-4.435367 4.315816-4.722291C3.514819-4.937484 3.407223-4.97335 3.19203-5.164633C2.988792-5.36787 2.833375-5.654795 2.833375-6.06127C2.833375-7.065504 3.849564-8.093649 4.985305-8.093649C6.156912-8.093649 6.706849-7.376339 6.706849-6.240598C6.706849-5.929763 6.647073-5.606974 6.647073-5.559153C6.647073-5.451557 6.742715-5.451557 6.77858-5.451557C6.886177-5.451557 6.898132-5.487422 6.945953-5.678705L7.591532-8.308842Z"></path>
+<path id="rlsid-4" d="M7.400249-6.838356C7.806725-7.483935 8.177335-7.770859 8.787049-7.81868C8.9066-7.830635 9.002242-7.830635 9.002242-8.045828C9.002242-8.093649 8.978331-8.16538 8.870735-8.16538C8.655542-8.16538 8.141469-8.141469 7.926276-8.141469C7.579577-8.141469 7.220922-8.16538 6.886177-8.16538C6.790535-8.16538 6.670984-8.16538 6.670984-7.938232C6.670984-7.830635 6.77858-7.81868 6.826401-7.81868C7.268742-7.782814 7.316563-7.567621 7.316563-7.424159C7.316563-7.244832 7.149191-6.969863 7.137235-6.957908L3.383313-1.004234L2.546451-7.44807C2.546451-7.79477 3.16812-7.81868 3.299626-7.81868C3.478954-7.81868 3.58655-7.81868 3.58655-8.045828C3.58655-8.16538 3.455044-8.16538 3.419178-8.16538C3.21594-8.16538 2.976837-8.141469 2.773599-8.141469H2.10411C1.231382-8.141469 .872727-8.16538 .860772-8.16538C.789041-8.16538 .645579-8.16538 .645579-7.950187C.645579-7.81868 .729265-7.81868 .920548-7.81868C1.530262-7.81868 1.566127-7.711083 1.601993-7.412204L2.558406-.035866C2.594271 .215193 2.594271 .251059 2.761644 .251059C2.905106 .251059 2.964882 .215193 3.084433 .02391L7.400249-6.838356Z"></path>
+<path id="rlsid-13" d="M3.56264-4.315816C4.160399-4.638605 5.033126-5.188543 5.033126-6.192777C5.033126-7.232877 4.028892-7.950187 2.929016-7.950187C1.745455-7.950187 .812951-7.07746 .812951-5.989539C.812951-5.583064 .932503-5.176588 1.267248-4.770112C1.398755-4.614695 1.41071-4.60274 2.247572-4.016936C1.08792-3.478954 .490162-2.677958 .490162-1.80523C.490162-.537983 1.697634 .251059 2.917061 .251059C4.244085 .251059 5.355915-.729265 5.355915-1.984558C5.355915-3.203985 4.495143-3.741968 3.56264-4.315816ZM1.936737-5.391781C1.78132-5.499377 1.303113-5.810212 1.303113-6.396015C1.303113-7.173101 2.116065-7.663263 2.917061-7.663263C3.777833-7.663263 4.542964-7.041594 4.542964-6.180822C4.542964-5.451557 4.016936-4.865753 3.323537-4.483188L1.936737-5.391781ZM2.49863-3.849564L3.945205-2.905106C4.25604-2.701868 4.805978-2.331258 4.805978-1.601993C4.805978-.6934 3.88543-.071731 2.929016-.071731C1.912827-.071731 1.0401-.812951 1.0401-1.80523C1.0401-2.737733 1.721544-3.490909 2.49863-3.849564Z"></path>
+<path id="rlsid-16" d="M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z"></path>
+<path id="rlsid-21" d="M5.32005-2.905106C5.32005-4.016936 5.32005-4.351681 5.045081-4.734247C4.698381-5.200498 4.136488-5.272229 3.730012-5.272229C2.570361-5.272229 2.116065-4.27995 2.020423-4.040847H2.008468V-5.272229L.382565-5.140722V-4.794022C1.195517-4.794022 1.291158-4.710336 1.291158-4.124533V-.884682C1.291158-.3467 1.159651-.3467 .382565-.3467V0C.6934-.02391 1.338979-.02391 1.673724-.02391C2.020423-.02391 2.666002-.02391 2.976837 0V-.3467C2.211706-.3467 2.068244-.3467 2.068244-.884682V-3.108344C2.068244-4.363636 2.893151-5.033126 3.634371-5.033126S4.542964-4.423412 4.542964-3.694147V-.884682C4.542964-.3467 4.411457-.3467 3.634371-.3467V0C3.945205-.02391 4.590785-.02391 4.925529-.02391C5.272229-.02391 5.917808-.02391 6.228643 0V-.3467C5.630884-.3467 5.332005-.3467 5.32005-.705355V-2.905106Z"></path>
+<path id="rlsid-39" d="M4.303861-2.183811C3.833624-2.749689 3.769863-2.81345 3.490909-3.020672C3.124284-3.299626 2.638107-3.514819 2.11208-3.514819C1.139726-3.514819 .470237-2.662017 .470237-1.713574C.470237-.781071 1.131756 .079701 2.080199 .079701C2.733748 .079701 3.498879-.263014 4.160399-1.251308C4.630635-.68543 4.694396-.621669 4.97335-.414446C5.339975-.135492 5.826152 .079701 6.352179 .079701C7.324533 .079701 7.994022-.773101 7.994022-1.721544C7.994022-2.654047 7.332503-3.514819 6.38406-3.514819C5.730511-3.514819 4.96538-3.172105 4.303861-2.183811ZM4.542964-1.888917C4.845828-2.391034 5.499377-3.211955 6.439851-3.211955C7.292653-3.211955 7.770859-2.438854 7.770859-1.721544C7.770859-.948443 7.181071-.350685 6.479701-.350685S5.308095-.932503 4.542964-1.888917ZM3.921295-1.546202C3.618431-1.044085 2.964882-.223163 2.024408-.223163C1.171606-.223163 .6934-.996264 .6934-1.713574C.6934-2.486675 1.283188-3.084433 1.984558-3.084433S3.156164-2.502615 3.921295-1.546202Z"></path>
+<path id="rlsid-2" d="M3.443088-7.663263C3.443088-7.938232 3.443088-7.950187 3.203985-7.950187C2.917061-7.627397 2.319303-7.185056 1.08792-7.185056V-6.838356C1.362889-6.838356 1.960648-6.838356 2.618182-7.149191V-.920548C2.618182-.490162 2.582316-.3467 1.530262-.3467H1.159651V0C1.482441-.02391 2.642092-.02391 3.036613-.02391S4.578829-.02391 4.901619 0V-.3467H4.531009C3.478954-.3467 3.443088-.490162 3.443088-.920548V-7.663263Z"></path>
+<path id="rlsid-40" d="M2.462765-3.502864C2.486675-3.574595 2.785554-4.172354 3.227895-4.554919C3.53873-4.841843 3.945205-5.033126 4.411457-5.033126C4.889664-5.033126 5.057036-4.674471 5.057036-4.196264C5.057036-3.514819 4.566874-2.15193 4.327771-1.506351C4.220174-1.219427 4.160399-1.06401 4.160399-.848817C4.160399-.310834 4.531009 .119552 5.104857 .119552C6.216687 .119552 6.635118-1.637858 6.635118-1.709589C6.635118-1.769365 6.587298-1.817186 6.515567-1.817186C6.40797-1.817186 6.396015-1.78132 6.336239-1.578082C6.06127-.597758 5.606974-.119552 5.140722-.119552C5.021171-.119552 4.829888-.131507 4.829888-.514072C4.829888-.812951 4.961395-1.171606 5.033126-1.338979C5.272229-1.996513 5.774346-3.335492 5.774346-4.016936C5.774346-4.734247 5.355915-5.272229 4.447323-5.272229C3.383313-5.272229 2.82142-4.519054 2.606227-4.220174C2.570361-4.901619 2.080199-5.272229 1.554172-5.272229C1.171606-5.272229 .908593-5.045081 .705355-4.638605C.490162-4.208219 .32279-3.490909 .32279-3.443088S.37061-3.335492 .454296-3.335492C.549938-3.335492 .561893-3.347447 .633624-3.622416C.824907-4.351681 1.0401-5.033126 1.518306-5.033126C1.793275-5.033126 1.888917-4.841843 1.888917-4.483188C1.888917-4.220174 1.769365-3.753923 1.685679-3.383313L1.350934-2.092154C1.303113-1.865006 1.171606-1.327024 1.111831-1.111831C1.028144-.800996 .896638-.239103 .896638-.179328C.896638-.011955 1.028144 .119552 1.207472 .119552C1.350934 .119552 1.518306 .047821 1.613948-.131507C1.637858-.191283 1.745455-.609714 1.80523-.848817L2.068244-1.924782L2.462765-3.502864Z"></path>
+<path id="rlsid-58" d="M2.622167-5.443587V-5.180573C3.164134-5.180573 3.227895-5.124782 3.227895-4.734247V-3.052553C2.948941-3.355417 2.574346-3.514819 2.1599-3.514819C1.163636-3.514819 .278954-2.741719 .278954-1.713574C.278954-.73325 1.075965 .079701 2.080199 .079701C2.550436 .079701 2.940971-.143462 3.203985-.422416V.079701L4.415442 0V-.263014C3.873474-.263014 3.809714-.318804 3.809714-.70934V-5.531258L2.622167-5.443587ZM3.203985-.988294C3.203985-.844832 3.203985-.812951 3.084433-.653549C2.86127-.334745 2.494645-.143462 2.12005-.143462C1.753425-.143462 1.43462-.334745 1.243337-.629639C1.028144-.940473 .988294-1.331009 .988294-1.705604C.988294-2.16787 1.060025-2.494645 1.243337-2.773599C1.43462-3.068493 1.793275-3.291656 2.199751-3.291656C2.582316-3.291656 2.964882-3.100374 3.203985-2.685928V-.988294Z"></path>
+<path id="rlsid-42" d="M3.383313-1.709589C3.383313-1.769365 3.335492-1.817186 3.263761-1.817186C3.156164-1.817186 3.144209-1.78132 3.084433-1.578082C2.773599-.490162 2.283437-.119552 1.888917-.119552C1.745455-.119552 1.578082-.155417 1.578082-.514072C1.578082-.836862 1.721544-1.195517 1.853051-1.554172L2.689913-3.777833C2.725778-3.873474 2.809465-4.088667 2.809465-4.315816C2.809465-4.817933 2.450809-5.272229 1.865006-5.272229C.765131-5.272229 .32279-3.53873 .32279-3.443088C.32279-3.395268 .37061-3.335492 .454296-3.335492C.561893-3.335492 .573848-3.383313 .621669-3.550685C.908593-4.554919 1.362889-5.033126 1.829141-5.033126C1.936737-5.033126 2.139975-5.021171 2.139975-4.638605C2.139975-4.327771 1.984558-3.93325 1.888917-3.670237L1.052055-1.446575C.980324-1.255293 .908593-1.06401 .908593-.848817C.908593-.310834 1.279203 .119552 1.853051 .119552C2.952927 .119552 3.383313-1.625903 3.383313-1.709589ZM3.287671-7.460025C3.287671-7.639352 3.144209-7.854545 2.881196-7.854545C2.606227-7.854545 2.295392-7.591532 2.295392-7.280697C2.295392-6.981818 2.546451-6.886177 2.689913-6.886177C3.012702-6.886177 3.287671-7.197011 3.287671-7.460025Z"></path>
+<path id="rlsid-65" d="M2.462765-1.992528C2.462765-2.749689 2.335243-3.658281 1.841096-4.598755C1.45056-5.332005 .72528-5.977584 .581818-5.977584C.502117-5.977584 .478207-5.921793 .478207-5.881943C.478207-5.850062 .478207-5.834122 .573848-5.738481C1.689664-4.678456 1.944707-3.219925 1.944707-1.992528C1.944707 .294894 .996264 1.378829 .589788 1.745455C.486177 1.849066 .478207 1.857036 .478207 1.896887S.502117 1.992528 .581818 1.992528C.70934 1.992528 1.107846 1.586052 1.171606 1.514321C2.239601 .398506 2.462765-1.036115 2.462765-1.992528Z"></path>
+<path id="rlsid-72" d="M1.538232-1.099875C1.625903-1.44259 1.713574-1.785305 1.793275-2.13599C1.801245-2.15193 1.857036-2.383064 1.865006-2.422914C1.888917-2.494645 2.088169-2.82142 2.295392-3.020672C2.550436-3.251806 2.82142-3.291656 2.964882-3.291656C3.052553-3.291656 3.196015-3.283686 3.307597-3.188045C2.964882-3.116314 2.917061-2.82142 2.917061-2.749689C2.917061-2.574346 3.052553-2.454795 3.227895-2.454795C3.443088-2.454795 3.682192-2.630137 3.682192-2.948941C3.682192-3.235866 3.435118-3.514819 2.980822-3.514819C2.438854-3.514819 2.072229-3.156164 1.904857-2.940971C1.745455-3.514819 1.203487-3.514819 1.123786-3.514819C.836862-3.514819 .637609-3.331507 .510087-3.084433C.326775-2.725778 .239103-2.319303 .239103-2.295392C.239103-2.223661 .294894-2.191781 .358655-2.191781C.462267-2.191781 .470237-2.223661 .526027-2.430884C.621669-2.82142 .765131-3.291656 1.099875-3.291656C1.307098-3.291656 1.354919-3.092403 1.354919-2.917061C1.354919-2.773599 1.315068-2.622167 1.251308-2.359153C1.235367-2.295392 1.115816-1.825156 1.083935-1.713574L.789041-.518057C.757161-.398506 .70934-.199253 .70934-.167372C.70934 .01594 .860772 .079701 .964384 .079701C1.243337 .079701 1.299128-.143462 1.362889-.414446L1.538232-1.099875Z"></path>
+<path id="rlsid-30" d="M5.128767-8.524035C5.128767-8.53599 5.200498-8.715318 5.200498-8.739228C5.200498-8.88269 5.080946-8.966376 4.985305-8.966376C4.925529-8.966376 4.817933-8.966376 4.722291-8.703362L.71731 2.546451C.71731 2.558406 .645579 2.737733 .645579 2.761644C.645579 2.905106 .765131 2.988792 .860772 2.988792C.932503 2.988792 1.0401 2.976837 1.123786 2.725778L5.128767-8.524035Z"></path>
+<path id="rlsid-14" d="M7.878456-2.749689C8.081694-2.749689 8.296887-2.749689 8.296887-2.988792S8.081694-3.227895 7.878456-3.227895H1.41071C1.207472-3.227895 .992279-3.227895 .992279-2.988792S1.207472-2.749689 1.41071-2.749689H7.878456Z"></path>
+<path id="rlsid-62" d="M4.630635-1.809215C4.758157-1.809215 4.933499-1.809215 4.933499-1.992528S4.758157-2.175841 4.630635-2.175841H1.075965C1.179577-3.283686 2.10411-4.128518 3.315567-4.128518H4.630635C4.758157-4.128518 4.933499-4.128518 4.933499-4.311831S4.758157-4.495143 4.630635-4.495143H3.291656C1.857036-4.495143 .70137-3.379328 .70137-1.992528C.70137-.597758 1.865006 .510087 3.291656 .510087H4.630635C4.758157 .510087 4.933499 .510087 4.933499 .326775S4.758157 .143462 4.630635 .143462H3.315567C2.10411 .143462 1.179577-.70137 1.075965-1.809215H4.630635Z"></path>
+<path id="rlsid-70" d="M5.140722-8.18929C5.140722-8.296887 5.057036-8.296887 5.021171-8.296887C4.913574-8.296887 4.901619-8.272976 4.853798-8.069738L4.208219-5.499377C4.172354-5.34396 4.160399-5.332005 4.148443-5.32005C4.136488-5.296139 4.052802-5.284184 4.028892-5.284184C2.068244-5.116812 .561893-3.502864 .561893-2.008468C.561893-.71731 1.554172 .071731 2.797509 .143462C2.701868 .514072 2.618182 .896638 2.52254 1.267248C2.355168 1.900872 2.259527 2.295392 2.259527 2.343213C2.259527 2.367123 2.259527 2.438854 2.379078 2.438854C2.414944 2.438854 2.462765 2.438854 2.486675 2.391034C2.510585 2.367123 2.582316 2.080199 2.630137 1.924782L3.072478 .143462C5.116812 .035866 6.670984-1.637858 6.670984-3.144209C6.670984-4.351681 5.762391-5.212453 4.435367-5.296139L5.140722-8.18929ZM4.363636-5.057036C5.152677-5.009215 5.941719-4.566874 5.941719-3.395268C5.941719-2.044334 4.99726-.251059 3.132254-.107597L4.363636-5.057036ZM2.857285-.095641C2.271482-.131507 1.291158-.442341 1.291158-1.75741C1.291158-3.263761 2.379078-4.937484 4.100623-5.045081L2.857285-.095641Z"></path>
+<path id="rlsid-52" d="M2.331258 .047821C2.331258-.645579 2.10411-1.159651 1.613948-1.159651C1.231382-1.159651 1.0401-.848817 1.0401-.585803S1.219427 0 1.625903 0C1.78132 0 1.912827-.047821 2.020423-.155417C2.044334-.179328 2.056289-.179328 2.068244-.179328C2.092154-.179328 2.092154-.011955 2.092154 .047821C2.092154 .442341 2.020423 1.219427 1.327024 1.996513C1.195517 2.139975 1.195517 2.163885 1.195517 2.187796C1.195517 2.247572 1.255293 2.307347 1.315068 2.307347C1.41071 2.307347 2.331258 1.422665 2.331258 .047821Z"></path>
+<path id="rlsid-67" d="M4.064757-1.115816C4.805978-1.928767 5.068991-2.964882 5.068991-3.028643C5.068991-3.100374 5.021171-3.132254 4.94944-3.132254C4.845828-3.132254 4.837858-3.100374 4.790037-2.933001C4.566874-2.12005 4.088667-1.498381 4.064757-1.498381C4.048817-1.498381 4.048817-1.697634 4.048817-1.825156C4.032877-3.227895 3.124284-3.514819 2.582316-3.514819C1.458531-3.514819 .350685-2.422914 .350685-1.299128C.350685-.510087 .900623 .079701 1.745455 .079701C2.303362 .079701 2.893151-.119552 3.52279-.589788C3.698132 .039851 4.160399 .079701 4.303861 .079701C4.758157 .079701 5.021171-.326775 5.021171-.478207C5.021171-.573848 4.925529-.573848 4.901619-.573848C4.813948-.573848 4.798007-.549938 4.774097-.494147C4.646575-.159402 4.375592-.143462 4.335741-.143462C4.224159-.143462 4.096638-.143462 4.064757-1.115816ZM3.466999-.852802C2.901121-.342715 2.231631-.143462 1.769365-.143462C1.354919-.143462 .996264-.382565 .996264-1.020174C.996264-1.299128 1.123786-2.12005 1.498381-2.654047C1.817186-3.100374 2.247572-3.291656 2.574346-3.291656C3.012702-3.291656 3.259776-2.980822 3.363387-2.494645C3.482939-1.952677 3.419178-1.315068 3.466999-.852802Z"></path>
+<path id="rlsid-41" d="M5.296139-6.01345C5.296139-7.232877 4.913574-8.416438 3.93325-8.416438C2.259527-8.416438 .478207-4.913574 .478207-2.283437C.478207-1.733499 .597758 .119552 1.853051 .119552C3.478954 .119552 5.296139-3.299626 5.296139-6.01345ZM1.673724-4.327771C1.853051-5.033126 2.10411-6.03736 2.582316-6.886177C2.976837-7.603487 3.395268-8.177335 3.921295-8.177335C4.315816-8.177335 4.578829-7.84259 4.578829-6.694894C4.578829-6.264508 4.542964-5.66675 4.196264-4.327771H1.673724ZM4.112578-3.969116C3.813699-2.797509 3.56264-2.044334 3.132254-1.291158C2.785554-.681445 2.367123-.119552 1.865006-.119552C1.494396-.119552 1.195517-.406476 1.195517-1.590037C1.195517-2.367123 1.3868-3.180075 1.578082-3.969116H4.112578Z"></path>
+<path id="rlsid-48" d="M6.025405 .203238C6.025405-.107597 6.01345-.119552 5.69066-.119552H4.925529C4.60274-.119552 4.590785-.107597 4.590785 .203238V3.383313C4.590785 3.694147 4.60274 3.706102 4.925529 3.706102H5.69066C6.01345 3.706102 6.025405 3.694147 6.025405 3.383313V.203238Z"></path>
+<path id="rlsid-5" d="M4.65056-3.323537L2.259527-5.702615C2.116065-5.846077 2.092154-5.869988 1.996513-5.869988C1.876961-5.869988 1.75741-5.762391 1.75741-5.630884C1.75741-5.547198 1.78132-5.523288 1.912827-5.391781L4.303861-2.988792L1.912827-.585803C1.78132-.454296 1.75741-.430386 1.75741-.3467C1.75741-.215193 1.876961-.107597 1.996513-.107597C2.092154-.107597 2.116065-.131507 2.259527-.274969L4.638605-2.654047L7.113325-.179328C7.137235-.167372 7.220922-.107597 7.292653-.107597C7.436115-.107597 7.531756-.215193 7.531756-.3467C7.531756-.37061 7.531756-.418431 7.49589-.478207C7.483935-.502117 5.583064-2.379078 4.985305-2.988792L7.173101-5.176588C7.232877-5.248319 7.412204-5.403736 7.47198-5.475467C7.483935-5.499377 7.531756-5.547198 7.531756-5.630884C7.531756-5.762391 7.436115-5.869988 7.292653-5.869988C7.197011-5.869988 7.149191-5.822167 7.017684-5.69066L4.65056-3.323537Z"></path>
+<path id="rlsid-27" d="M4.327771-4.423412C4.184309-4.423412 3.741968-4.423412 3.741968-3.93325C3.741968-3.646326 3.945205-3.443088 4.23213-3.443088C4.507098-3.443088 4.734247-3.610461 4.734247-3.957161C4.734247-4.758157 3.897385-5.332005 2.929016-5.332005C1.530262-5.332005 .418431-4.088667 .418431-2.582316C.418431-1.052055 1.566127 .119552 2.917061 .119552C4.495143 .119552 4.853798-1.315068 4.853798-1.422665S4.770112-1.530262 4.734247-1.530262C4.62665-1.530262 4.614695-1.494396 4.578829-1.350934C4.315816-.502117 3.670237-.143462 3.024658-.143462C2.295392-.143462 1.327024-.777086 1.327024-2.594271C1.327024-4.578829 2.343213-5.068991 2.940971-5.068991C3.395268-5.068991 4.052802-4.889664 4.327771-4.423412Z"></path>
+<path id="rlsid-53" d="M2.502615-5.076961C2.502615-5.292154 2.486675-5.300125 2.271482-5.300125C1.944707-4.98132 1.522291-4.790037 .765131-4.790037V-4.527024C.980324-4.527024 1.41071-4.527024 1.872976-4.742217V-.653549C1.872976-.358655 1.849066-.263014 1.091905-.263014H.812951V0C1.139726-.02391 1.825156-.02391 2.183811-.02391S3.235866-.02391 3.56264 0V-.263014H3.283686C2.526526-.263014 2.502615-.358655 2.502615-.653549V-5.076961Z"></path>
+<path id="rlsid-68" d="M4.782067-4.534994C4.782067-5.260274 4.192279-5.618929 3.53076-5.618929C2.502615-5.618929 1.737484-4.455293 1.514321-3.57858L.255044 1.45056C.239103 1.506351 .302864 1.546202 .350685 1.546202C.414446 1.546202 .478207 1.546202 .494147 1.490411L1.036115-.645579C1.219427-.215193 1.594022 .071731 2.16787 .071731C3.267746 .071731 4.471233-.70934 4.471233-1.976588C4.471233-2.502615 4.27198-2.8533 3.873474-3.180075C3.921295-3.188045 4.064757-3.291656 4.104608-3.323537C4.503113-3.594521 4.782067-4.048817 4.782067-4.534994ZM3.211955-3.180075C3.068493-3.156164 2.925031-3.140224 2.773599-3.140224C2.685928-3.140224 2.598257-3.140224 2.510585-3.172105C2.662017-3.211955 2.82142-3.211955 2.972852-3.211955C3.052553-3.211955 3.132254-3.203985 3.211955-3.180075ZM4.27995-4.686426C4.27995-4.28792 4.104608-3.817684 3.825654-3.53873C3.785803-3.498879 3.618431-3.347447 3.57061-3.339477C3.347447-3.379328 3.172105-3.435118 2.940971-3.435118C2.733748-3.435118 2.231631-3.451059 2.231631-3.140224C2.231631-2.901121 2.685928-2.917061 2.84533-2.917061C3.092403-2.917061 3.323537-2.940971 3.55467-3.028643C3.793773-2.83736 3.913325-2.582316 3.913325-2.183811C3.913325-1.713574 3.753923-1.187547 3.52279-.868742C3.227895-.446326 2.733748-.151432 2.13599-.151432C1.609963-.151432 1.195517-.557908 1.195517-1.115816C1.195517-1.219427 1.203487-1.323039 1.227397-1.40274L1.753425-3.52279C1.928767-4.224159 2.606227-5.395766 3.498879-5.395766C3.905355-5.395766 4.27995-5.196513 4.27995-4.686426Z"></path>
+<path id="rlsid-18" d="M1.470486-4.160399C1.470486-7.185056 2.940971-7.663263 3.58655-7.663263C4.016936-7.663263 4.447323-7.531756 4.674471-7.173101C4.531009-7.173101 4.076712-7.173101 4.076712-6.682939C4.076712-6.419925 4.25604-6.192777 4.566874-6.192777C4.865753-6.192777 5.068991-6.372105 5.068991-6.718804C5.068991-7.340473 4.614695-7.950187 3.574595-7.950187C2.068244-7.950187 .490162-6.40797 .490162-3.777833C.490162-.490162 1.924782 .251059 2.940971 .251059C4.244085 .251059 5.355915-.884682 5.355915-2.438854C5.355915-4.028892 4.244085-5.092902 3.048568-5.092902C1.984558-5.092902 1.590037-4.172354 1.470486-3.837609V-4.160399ZM2.940971-.071731C2.187796-.071731 1.829141-.74122 1.721544-.992279C1.613948-1.303113 1.494396-1.888917 1.494396-2.725778C1.494396-3.670237 1.924782-4.853798 3.000747-4.853798C3.658281-4.853798 4.004981-4.411457 4.184309-4.004981C4.375592-3.56264 4.375592-2.964882 4.375592-2.450809C4.375592-1.841096 4.375592-1.303113 4.148443-.848817C3.849564-.274969 3.419178-.071731 2.940971-.071731Z"></path>
+<path id="rlsid-23" d="M.414446 .964384C.350685 1.219427 .334745 1.283188 .01594 1.283188C-.095641 1.283188-.191283 1.283188-.191283 1.43462C-.191283 1.506351-.119552 1.546202-.079701 1.546202C0 1.546202 .03188 1.522291 .621669 1.522291C1.195517 1.522291 1.362889 1.546202 1.41868 1.546202C1.45056 1.546202 1.570112 1.546202 1.570112 1.39477C1.570112 1.283188 1.458531 1.283188 1.362889 1.283188C.980324 1.283188 .980324 1.235367 .980324 1.163636C.980324 1.107846 1.123786 .541968 1.362889-.390535C1.466501-.207223 1.713574 .079701 2.14396 .079701C3.124284 .079701 4.144458-1.052055 4.144458-2.207721C4.144458-2.996762 3.634371-3.514819 2.996762-3.514819C2.518555-3.514819 2.13599-3.188045 1.904857-2.948941C1.737484-3.514819 1.203487-3.514819 1.123786-3.514819C.836862-3.514819 .637609-3.331507 .510087-3.084433C.326775-2.725778 .239103-2.319303 .239103-2.295392C.239103-2.223661 .294894-2.191781 .358655-2.191781C.462267-2.191781 .470237-2.223661 .526027-2.430884C.629639-2.83736 .773101-3.291656 1.099875-3.291656C1.299128-3.291656 1.354919-3.108344 1.354919-2.917061C1.354919-2.83736 1.323039-2.646077 1.307098-2.582316L.414446 .964384ZM1.880946-2.454795C1.920797-2.590286 1.920797-2.606227 2.040349-2.749689C2.343213-3.108344 2.685928-3.291656 2.972852-3.291656C3.371357-3.291656 3.52279-2.901121 3.52279-2.542466C3.52279-2.247572 3.347447-1.39477 3.108344-.924533C2.901121-.494147 2.518555-.143462 2.14396-.143462C1.601993-.143462 1.474471-.765131 1.474471-.820922C1.474471-.836862 1.490411-.924533 1.498381-.948443L1.880946-2.454795Z"></path>
+<path id="rlsid-28" d="M5.487422-2.558406C5.487422-4.100623 4.315816-5.332005 2.929016-5.332005C1.494396-5.332005 .358655-4.064757 .358655-2.558406C.358655-1.028144 1.554172 .119552 2.917061 .119552C4.327771 .119552 5.487422-1.052055 5.487422-2.558406ZM2.929016-.143462C2.486675-.143462 1.948692-.334745 1.601993-.920548C1.279203-1.458531 1.267248-2.163885 1.267248-2.666002C1.267248-3.120299 1.267248-3.849564 1.637858-4.387547C1.972603-4.901619 2.49863-5.092902 2.917061-5.092902C3.383313-5.092902 3.88543-4.877709 4.208219-4.411457C4.578829-3.861519 4.578829-3.108344 4.578829-2.666002C4.578829-2.247572 4.578829-1.506351 4.267995-.944458C3.93325-.37061 3.383313-.143462 2.929016-.143462Z"></path>
+<path id="rlsid-45" d="M6.025405 5.415691C6.025405 4.435367 6.288418 2.15193 8.416438 .645579C8.571856 .526027 8.583811 .514072 8.583811 .298879C8.583811 .02391 8.571856 .011955 8.272976 .011955H8.081694C5.511333 1.398755 4.590785 3.658281 4.590785 5.415691V10.556413C4.590785 10.867248 4.60274 10.879203 4.925529 10.879203H5.69066C6.01345 10.879203 6.025405 10.867248 6.025405 10.556413V5.415691Z"></path>
+<path id="rlsid-74" d="M5.068991 13.867995C5.439601 13.867995 5.451557 13.85604 5.571108 13.628892L12.110585-.02391C12.194271-.179328 12.194271-.203238 12.194271-.239103C12.194271-.37061 12.09863-.478207 11.955168-.478207C11.799751-.478207 11.75193-.37061 11.692154-.239103L5.523288 12.624658L2.976837 6.694894L1.315068 7.974097L1.494396 8.16538L2.343213 7.519801L5.068991 13.867995Z"></path>
+<path id="rlsid-59" d="M6.224658-2.414944C6.224658-3.060523 5.945704-3.514819 5.076961-3.514819C4.343711-3.514819 3.977086-3.012702 3.849564-2.781569C3.706102-3.355417 3.251806-3.514819 2.733748-3.514819C1.960648-3.514819 1.594022-2.964882 1.490411-2.749689H1.482441V-3.514819L.326775-3.427148V-3.164134C.868742-3.164134 .932503-3.108344 .932503-2.717808V-.621669C.932503-.263014 .836862-.263014 .326775-.263014V0C.669489-.02391 1.020174-.02391 1.235367-.02391C1.466501-.02391 1.801245-.02391 2.14396 0V-.263014C1.633873-.263014 1.538232-.263014 1.538232-.621669V-2.064259C1.538232-2.901121 2.16787-3.291656 2.669988-3.291656C3.188045-3.291656 3.275716-2.885181 3.275716-2.446824V-.621669C3.275716-.263014 3.180075-.263014 2.669988-.263014V0C3.012702-.02391 3.363387-.02391 3.57858-.02391C3.809714-.02391 4.144458-.02391 4.487173 0V-.263014C3.977086-.263014 3.881445-.263014 3.881445-.621669V-2.064259C3.881445-2.901121 4.511083-3.291656 5.0132-3.291656C5.531258-3.291656 5.618929-2.885181 5.618929-2.446824V-.621669C5.618929-.263014 5.523288-.263014 5.0132-.263014V0C5.355915-.02391 5.7066-.02391 5.921793-.02391C6.152927-.02391 6.487671-.02391 6.830386 0V-.263014C6.320299-.263014 6.224658-.263014 6.224658-.621669V-2.414944Z"></path>
+<path id="rlsid-73" d="M3.211955-2.996762C3.028643-2.964882 2.86127-2.82142 2.86127-2.622167C2.86127-2.478705 2.956912-2.375093 3.132254-2.375093C3.251806-2.375093 3.498879-2.462765 3.498879-2.82142C3.498879-3.315567 2.980822-3.514819 2.486675-3.514819C1.41868-3.514819 1.083935-2.757659 1.083935-2.351183C1.083935-2.271482 1.083935-1.984558 1.378829-1.761395C1.562142-1.617933 1.697634-1.594022 2.11208-1.514321C2.391034-1.458531 2.84533-1.378829 2.84533-.964384C2.84533-.757161 2.693898-.494147 2.470735-.342715C2.175841-.151432 1.785305-.143462 1.657783-.143462C1.466501-.143462 .924533-.175342 .72528-.494147C1.131756-.510087 1.187547-.836862 1.187547-.932503C1.187547-1.171606 .972354-1.227397 .876712-1.227397C.749191-1.227397 .422416-1.131756 .422416-.6934C.422416-.223163 .916563 .079701 1.657783 .079701C3.044583 .079701 3.339477-.900623 3.339477-1.235367C3.339477-1.952677 2.558406-2.10411 2.263512-2.1599C1.880946-2.231631 1.570112-2.287422 1.570112-2.622167C1.570112-2.765629 1.705604-3.291656 2.478705-3.291656C2.781569-3.291656 3.092403-3.203985 3.211955-2.996762Z"></path>
+<path id="rlsid-29" d="M3.144209 1.338979C2.82142 1.793275 2.355168 2.199751 1.769365 2.199751C1.625903 2.199751 1.052055 2.175841 .872727 1.625903C.908593 1.637858 .968369 1.637858 .992279 1.637858C1.350934 1.637858 1.590037 1.327024 1.590037 1.052055S1.362889 .681445 1.183562 .681445C.992279 .681445 .573848 .824907 .573848 1.41071C.573848 2.020423 1.08792 2.438854 1.769365 2.438854C2.964882 2.438854 4.172354 1.338979 4.507098 .011955L5.678705-4.65056C5.69066-4.710336 5.71457-4.782067 5.71457-4.853798C5.71457-5.033126 5.571108-5.152677 5.391781-5.152677C5.284184-5.152677 5.033126-5.104857 4.937484-4.746202L4.052802-1.231382C3.993026-1.016189 3.993026-.992279 3.897385-.860772C3.658281-.526027 3.263761-.119552 2.689913-.119552C2.020423-.119552 1.960648-.777086 1.960648-1.099875C1.960648-1.78132 2.283437-2.701868 2.606227-3.56264C2.737733-3.90934 2.809465-4.076712 2.809465-4.315816C2.809465-4.817933 2.450809-5.272229 1.865006-5.272229C.765131-5.272229 .32279-3.53873 .32279-3.443088C.32279-3.395268 .37061-3.335492 .454296-3.335492C.561893-3.335492 .573848-3.383313 .621669-3.550685C.908593-4.554919 1.362889-5.033126 1.829141-5.033126C1.936737-5.033126 2.139975-5.033126 2.139975-4.638605C2.139975-4.327771 2.008468-3.981071 1.829141-3.526775C1.243337-1.960648 1.243337-1.566127 1.243337-1.279203C1.243337-.143462 2.056289 .119552 2.654047 .119552C3.000747 .119552 3.431133 .011955 3.849564-.430386L3.861519-.418431C3.682192 .286924 3.56264 .753176 3.144209 1.338979Z"></path>
+<path id="rlsid-63" d="M2.327273-5.292154C2.335243-5.308095 2.359153-5.411706 2.359153-5.419676C2.359153-5.459527 2.327273-5.531258 2.231631-5.531258C2.199751-5.531258 1.952677-5.507347 1.769365-5.491407L1.323039-5.459527C1.147696-5.443587 1.067995-5.435616 1.067995-5.292154C1.067995-5.180573 1.179577-5.180573 1.275218-5.180573C1.657783-5.180573 1.657783-5.132752 1.657783-5.061021C1.657783-5.037111 1.657783-5.021171 1.617933-4.877709L.486177-.342715C.454296-.223163 .454296-.175342 .454296-.167372C.454296-.03188 .565878 .079701 .71731 .079701C.988294 .079701 1.052055-.175342 1.083935-.286924C1.163636-.621669 1.370859-1.466501 1.458531-1.801245C1.896887-1.753425 2.430884-1.601993 2.430884-1.147696C2.430884-1.107846 2.430884-1.067995 2.414944-.988294C2.391034-.884682 2.375093-.773101 2.375093-.73325C2.375093-.263014 2.725778 .079701 3.188045 .079701C3.52279 .079701 3.730012-.167372 3.833624-.318804C4.024907-.613699 4.152428-1.091905 4.152428-1.139726C4.152428-1.219427 4.088667-1.243337 4.032877-1.243337C3.937235-1.243337 3.921295-1.195517 3.889415-1.052055C3.785803-.67746 3.57858-.143462 3.203985-.143462C2.996762-.143462 2.948941-.318804 2.948941-.533998C2.948941-.637609 2.956912-.73325 2.996762-.916563C3.004732-.948443 3.036613-1.075965 3.036613-1.163636C3.036613-1.817186 2.215691-1.960648 1.809215-2.016438C2.10411-2.191781 2.375093-2.462765 2.470735-2.566376C2.909091-2.996762 3.267746-3.291656 3.650311-3.291656C3.753923-3.291656 3.849564-3.267746 3.913325-3.188045C3.482939-3.132254 3.482939-2.757659 3.482939-2.749689C3.482939-2.574346 3.618431-2.454795 3.793773-2.454795C4.008966-2.454795 4.24807-2.630137 4.24807-2.956912C4.24807-3.227895 4.056787-3.514819 3.658281-3.514819C3.196015-3.514819 2.781569-3.164134 2.327273-2.709838C1.865006-2.255542 1.665753-2.16787 1.538232-2.11208L2.327273-5.292154Z"></path>
+<path id="rlsid-46" d="M8.272976 10.747696C8.571856 10.747696 8.583811 10.735741 8.583811 10.460772C8.583811 10.245579 8.571856 10.233624 8.524035 10.197758C8.153425 9.92279 7.292653 9.313076 6.73076 8.2132C6.264508 7.304608 6.025405 6.38406 6.025405 5.34396V.203238C6.025405-.107597 6.01345-.119552 5.69066-.119552H4.925529C4.60274-.119552 4.590785-.107597 4.590785 .203238V5.34396C4.590785 7.113325 5.511333 9.372852 8.081694 10.747696H8.272976Z"></path>
+<path id="rlsid-24" d="M2.402989-4.805978H3.502864C3.730012-4.805978 3.849564-4.805978 3.849564-5.021171C3.849564-5.152677 3.777833-5.152677 3.53873-5.152677H2.486675L2.929016-6.898132C2.976837-7.065504 2.976837-7.089415 2.976837-7.173101C2.976837-7.364384 2.82142-7.47198 2.666002-7.47198C2.570361-7.47198 2.295392-7.436115 2.199751-7.053549L1.733499-5.152677H.609714C.37061-5.152677 .263014-5.152677 .263014-4.925529C.263014-4.805978 .3467-4.805978 .573848-4.805978H1.637858L.848817-1.649813C.753176-1.231382 .71731-1.111831 .71731-.956413C.71731-.394521 1.111831 .119552 1.78132 .119552C2.988792 .119552 3.634371-1.625903 3.634371-1.709589C3.634371-1.78132 3.58655-1.817186 3.514819-1.817186C3.490909-1.817186 3.443088-1.817186 3.419178-1.769365C3.407223-1.75741 3.395268-1.745455 3.311582-1.554172C3.060523-.956413 2.510585-.119552 1.817186-.119552C1.458531-.119552 1.43462-.418431 1.43462-.681445C1.43462-.6934 1.43462-.920548 1.470486-1.06401L2.402989-4.805978Z"></path>
+<path id="rlsid-32" d="M2.139975-2.773599C2.462765-2.773599 3.275716-2.797509 3.849564-3.012702C4.758157-3.359402 4.841843-4.052802 4.841843-4.267995C4.841843-4.794022 4.387547-5.272229 3.598506-5.272229C2.343213-5.272229 .537983-4.136488 .537983-2.008468C.537983-.753176 1.255293 .119552 2.343213 .119552C3.969116 .119552 4.99726-1.147696 4.99726-1.303113C4.99726-1.374844 4.925529-1.43462 4.877709-1.43462C4.841843-1.43462 4.829888-1.422665 4.722291-1.315068C3.957161-.298879 2.82142-.119552 2.367123-.119552C1.685679-.119552 1.327024-.657534 1.327024-1.542217C1.327024-1.709589 1.327024-2.008468 1.506351-2.773599H2.139975ZM1.566127-3.012702C2.080199-4.853798 3.21594-5.033126 3.598506-5.033126C4.124533-5.033126 4.483188-4.722291 4.483188-4.267995C4.483188-3.012702 2.570361-3.012702 2.068244-3.012702H1.566127Z"></path>
+<path id="rlsid-10" d="M5.66675-4.877709C5.284184-4.805978 5.140722-4.519054 5.140722-4.291905C5.140722-4.004981 5.36787-3.90934 5.535243-3.90934C5.893898-3.90934 6.144956-4.220174 6.144956-4.542964C6.144956-5.045081 5.571108-5.272229 5.068991-5.272229C4.339726-5.272229 3.93325-4.554919 3.825654-4.327771C3.550685-5.224408 2.809465-5.272229 2.594271-5.272229C1.374844-5.272229 .729265-3.706102 .729265-3.443088C.729265-3.395268 .777086-3.335492 .860772-3.335492C.956413-3.335492 .980324-3.407223 1.004234-3.455044C1.41071-4.782067 2.211706-5.033126 2.558406-5.033126C3.096389-5.033126 3.203985-4.531009 3.203985-4.244085C3.203985-3.981071 3.132254-3.706102 2.988792-3.132254L2.582316-1.494396C2.402989-.777086 2.056289-.119552 1.422665-.119552C1.362889-.119552 1.06401-.119552 .812951-.274969C1.243337-.358655 1.338979-.71731 1.338979-.860772C1.338979-1.099875 1.159651-1.243337 .932503-1.243337C.645579-1.243337 .334745-.992279 .334745-.609714C.334745-.107597 .896638 .119552 1.41071 .119552C1.984558 .119552 2.391034-.334745 2.642092-.824907C2.833375-.119552 3.431133 .119552 3.873474 .119552C5.092902 .119552 5.738481-1.446575 5.738481-1.709589C5.738481-1.769365 5.69066-1.817186 5.618929-1.817186C5.511333-1.817186 5.499377-1.75741 5.463512-1.661768C5.140722-.609714 4.447323-.119552 3.90934-.119552C3.490909-.119552 3.263761-.430386 3.263761-.920548C3.263761-1.183562 3.311582-1.374844 3.502864-2.163885L3.921295-3.789788C4.100623-4.507098 4.507098-5.033126 5.057036-5.033126C5.080946-5.033126 5.415691-5.033126 5.66675-4.877709Z"></path>
+<path id="rlsid-34" d="M5.826152-2.654047C5.945704-2.654047 6.105106-2.654047 6.105106-2.83736S5.913823-3.020672 5.794271-3.020672H.781071C.661519-3.020672 .470237-3.020672 .470237-2.83736S.629639-2.654047 .749191-2.654047H5.826152ZM5.794271-.964384C5.913823-.964384 6.105106-.964384 6.105106-1.147696S5.945704-1.331009 5.826152-1.331009H.749191C.629639-1.331009 .470237-1.331009 .470237-1.147696S.661519-.964384 .781071-.964384H5.794271Z"></path>
+<path id="rlsid-50" d="M3.58655-8.16538V-7.81868C4.399502-7.81868 4.495143-7.734994 4.495143-7.149191V-4.507098C4.244085-4.853798 3.730012-5.272229 3.000747-5.272229C1.613948-5.272229 .418431-4.100623 .418431-2.570361C.418431-1.052055 1.554172 .119552 2.86924 .119552C3.777833 .119552 4.303861-.478207 4.471233-.705355V.119552L6.156912 0V-.3467C5.34396-.3467 5.248319-.430386 5.248319-1.016189V-8.296887L3.58655-8.16538ZM4.471233-1.398755C4.471233-1.183562 4.471233-1.147696 4.303861-.884682C4.016936-.466252 3.526775-.119552 2.929016-.119552C2.618182-.119552 1.327024-.239103 1.327024-2.558406C1.327024-3.419178 1.470486-3.897385 1.733499-4.291905C1.972603-4.662516 2.450809-5.033126 3.048568-5.033126C3.789788-5.033126 4.208219-4.495143 4.327771-4.303861C4.471233-4.100623 4.471233-4.076712 4.471233-3.861519V-1.398755Z"></path>
+<path id="rlsid-7" d="M2.199751-4.291905C1.996513-4.27995 1.948692-4.267995 1.948692-4.160399C1.948692-4.040847 2.008468-4.040847 2.223661-4.040847H2.773599C3.789788-4.040847 4.244085-3.203985 4.244085-2.056289C4.244085-.490162 3.431133-.071731 2.84533-.071731C2.271482-.071731 1.291158-.3467 .944458-1.135741C1.327024-1.075965 1.673724-1.291158 1.673724-1.721544C1.673724-2.068244 1.422665-2.307347 1.08792-2.307347C.800996-2.307347 .490162-2.139975 .490162-1.685679C.490162-.621669 1.554172 .251059 2.881196 .251059C4.303861 .251059 5.355915-.836862 5.355915-2.044334C5.355915-3.144209 4.471233-4.004981 3.323537-4.208219C4.363636-4.507098 5.033126-5.379826 5.033126-6.312329C5.033126-7.256787 4.052802-7.950187 2.893151-7.950187C1.697634-7.950187 .812951-7.220922 .812951-6.348194C.812951-5.869988 1.183562-5.774346 1.362889-5.774346C1.613948-5.774346 1.900872-5.953674 1.900872-6.312329C1.900872-6.694894 1.613948-6.862267 1.350934-6.862267C1.279203-6.862267 1.255293-6.862267 1.219427-6.850311C1.673724-7.663263 2.797509-7.663263 2.857285-7.663263C3.251806-7.663263 4.028892-7.483935 4.028892-6.312329C4.028892-6.085181 3.993026-5.415691 3.646326-4.901619C3.287671-4.375592 2.881196-4.339726 2.558406-4.327771L2.199751-4.291905Z"></path>
+<path id="rlsid-6" d="M4.65056 10.221669L2.546451 5.571108C2.462765 5.379826 2.402989 5.379826 2.367123 5.379826C2.355168 5.379826 2.295392 5.379826 2.163885 5.475467L1.028144 6.336239C.872727 6.455791 .872727 6.491656 .872727 6.527522C.872727 6.587298 .908593 6.659029 .992279 6.659029C1.06401 6.659029 1.267248 6.491656 1.398755 6.396015C1.470486 6.336239 1.649813 6.204732 1.78132 6.109091L4.136488 11.285679C4.220174 11.476961 4.27995 11.476961 4.387547 11.476961C4.566874 11.476961 4.60274 11.40523 4.686426 11.237858L10.114072 0C10.197758-.167372 10.197758-.215193 10.197758-.239103C10.197758-.358655 10.102117-.478207 9.958655-.478207C9.863014-.478207 9.779328-.418431 9.683686-.227148L4.65056 10.221669Z"></path>
+<path id="rlsid-51" d="M8.571856-2.905106C8.571856-4.016936 8.571856-4.351681 8.296887-4.734247C7.950187-5.200498 7.388294-5.272229 6.981818-5.272229C5.989539-5.272229 5.487422-4.554919 5.296139-4.088667C5.128767-5.009215 4.483188-5.272229 3.730012-5.272229C2.570361-5.272229 2.116065-4.27995 2.020423-4.040847H2.008468V-5.272229L.382565-5.140722V-4.794022C1.195517-4.794022 1.291158-4.710336 1.291158-4.124533V-.884682C1.291158-.3467 1.159651-.3467 .382565-.3467V0C.6934-.02391 1.338979-.02391 1.673724-.02391C2.020423-.02391 2.666002-.02391 2.976837 0V-.3467C2.211706-.3467 2.068244-.3467 2.068244-.884682V-3.108344C2.068244-4.363636 2.893151-5.033126 3.634371-5.033126S4.542964-4.423412 4.542964-3.694147V-.884682C4.542964-.3467 4.411457-.3467 3.634371-.3467V0C3.945205-.02391 4.590785-.02391 4.925529-.02391C5.272229-.02391 5.917808-.02391 6.228643 0V-.3467C5.463512-.3467 5.32005-.3467 5.32005-.884682V-3.108344C5.32005-4.363636 6.144956-5.033126 6.886177-5.033126S7.79477-4.423412 7.79477-3.694147V-.884682C7.79477-.3467 7.663263-.3467 6.886177-.3467V0C7.197011-.02391 7.84259-.02391 8.177335-.02391C8.524035-.02391 9.169614-.02391 9.480448 0V-.3467C8.88269-.3467 8.583811-.3467 8.571856-.705355V-2.905106Z"></path>
+<path id="rlsid-26" d="M6.766625-6.957908C6.766625-7.675218 6.156912-8.428394 5.068991-8.428394C3.526775-8.428394 2.546451-6.539477 2.235616-5.296139L.3467 2.199751C.32279 2.295392 .394521 2.319303 .454296 2.319303C.537983 2.319303 .597758 2.307347 .609714 2.247572L1.446575-1.099875C1.566127-.430386 2.223661 .119552 2.929016 .119552C4.638605 .119552 6.252553-1.219427 6.252553-3.000747C6.252553-3.455044 6.144956-3.90934 5.893898-4.291905C5.750436-4.519054 5.571108-4.686426 5.379826-4.829888C6.240598-5.284184 6.766625-6.01345 6.766625-6.957908ZM4.686426-4.841843C4.495143-4.770112 4.303861-4.746202 4.076712-4.746202C3.90934-4.746202 3.753923-4.734247 3.53873-4.805978C3.658281-4.889664 3.837609-4.913574 4.088667-4.913574C4.303861-4.913574 4.519054-4.889664 4.686426-4.841843ZM6.144956-7.065504C6.144956-6.40797 5.822167-5.451557 5.045081-5.009215C4.817933-5.092902 4.507098-5.152677 4.244085-5.152677C3.993026-5.152677 3.275716-5.176588 3.275716-4.794022C3.275716-4.471233 3.93325-4.507098 4.136488-4.507098C4.447323-4.507098 4.722291-4.578829 5.009215-4.662516C5.391781-4.351681 5.559153-3.945205 5.559153-3.347447C5.559153-2.654047 5.36787-2.092154 5.140722-1.578082C4.746202-.6934 3.813699-.119552 2.988792-.119552C2.116065-.119552 1.661768-.812951 1.661768-1.625903C1.661768-1.733499 1.661768-1.888917 1.709589-2.068244L2.486675-5.212453C2.881196-6.77858 3.88543-8.18929 5.045081-8.18929C5.905853-8.18929 6.144956-7.591532 6.144956-7.065504Z"></path>
+<path id="rlsid-43" d="M3.817684-3.913325C3.817684-4.909589 3.435118-5.610959 2.773599-5.610959C1.586052-5.610959 .350685-3.395268 .350685-1.617933C.350685-.852802 .613699 .079701 1.40274 .079701C2.566376 .079701 3.817684-2.080199 3.817684-3.913325ZM1.243337-2.901121C1.617933-4.511083 2.271482-5.387796 2.765629-5.387796C3.243836-5.387796 3.243836-4.534994 3.243836-4.383562C3.243836-3.937235 3.100374-3.291656 3.004732-2.901121H1.243337ZM2.933001-2.630137C2.558406-1.028144 1.904857-.143462 1.41071-.143462C.980324-.143462 .932503-.781071 .932503-1.147696C.932503-1.649813 1.083935-2.295392 1.171606-2.630137H2.933001Z"></path>
+<path id="rlsid-44" d="M2.375093-4.97335C2.375093-5.148692 2.247572-5.276214 2.064259-5.276214C1.857036-5.276214 1.625903-5.084932 1.625903-4.845828C1.625903-4.670486 1.753425-4.542964 1.936737-4.542964C2.14396-4.542964 2.375093-4.734247 2.375093-4.97335ZM1.211457-2.048319L.781071-.948443C.74122-.828892 .70137-.73325 .70137-.597758C.70137-.207223 1.004234 .079701 1.42665 .079701C2.199751 .079701 2.526526-1.036115 2.526526-1.139726C2.526526-1.219427 2.462765-1.243337 2.406974-1.243337C2.311333-1.243337 2.295392-1.187547 2.271482-1.107846C2.088169-.470237 1.761395-.143462 1.44259-.143462C1.346949-.143462 1.251308-.183313 1.251308-.398506C1.251308-.589788 1.307098-.73325 1.41071-.980324C1.490411-1.195517 1.570112-1.41071 1.657783-1.625903L1.904857-2.271482C1.976588-2.454795 2.072229-2.701868 2.072229-2.83736C2.072229-3.235866 1.753425-3.514819 1.346949-3.514819C.573848-3.514819 .239103-2.399004 .239103-2.295392C.239103-2.223661 .294894-2.191781 .358655-2.191781C.462267-2.191781 .470237-2.239601 .494147-2.319303C.71731-3.076463 1.083935-3.291656 1.323039-3.291656C1.43462-3.291656 1.514321-3.251806 1.514321-3.028643C1.514321-2.948941 1.506351-2.83736 1.42665-2.598257L1.211457-2.048319Z"></path>
+<path id="rlsid-3" d="M5.260274-2.008468H4.99726C4.961395-1.80523 4.865753-1.147696 4.746202-.956413C4.662516-.848817 3.981071-.848817 3.622416-.848817H1.41071C1.733499-1.123786 2.462765-1.888917 2.773599-2.175841C4.590785-3.849564 5.260274-4.471233 5.260274-5.654795C5.260274-7.029639 4.172354-7.950187 2.785554-7.950187S.585803-6.766625 .585803-5.738481C.585803-5.128767 1.111831-5.128767 1.147696-5.128767C1.398755-5.128767 1.709589-5.308095 1.709589-5.69066C1.709589-6.025405 1.482441-6.252553 1.147696-6.252553C1.0401-6.252553 1.016189-6.252553 .980324-6.240598C1.207472-7.053549 1.853051-7.603487 2.630137-7.603487C3.646326-7.603487 4.267995-6.75467 4.267995-5.654795C4.267995-4.638605 3.682192-3.753923 3.000747-2.988792L.585803-.286924V0H4.94944L5.260274-2.008468Z"></path>
+<path id="rlsid-55" d="M2.016438-2.662017C2.646077-2.662017 3.044583-2.199751 3.044583-1.362889C3.044583-.366625 2.478705-.071731 2.056289-.071731C1.617933-.071731 1.020174-.231133 .74122-.653549C1.028144-.653549 1.227397-.836862 1.227397-1.099875C1.227397-1.354919 1.044085-1.538232 .789041-1.538232C.573848-1.538232 .350685-1.40274 .350685-1.083935C.350685-.326775 1.163636 .167372 2.072229 .167372C3.132254 .167372 3.873474-.565878 3.873474-1.362889C3.873474-2.024408 3.347447-2.630137 2.534496-2.805479C3.164134-3.028643 3.634371-3.57061 3.634371-4.208219S2.917061-5.300125 2.088169-5.300125C1.235367-5.300125 .589788-4.837858 .589788-4.23213C.589788-3.937235 .789041-3.809714 .996264-3.809714C1.243337-3.809714 1.40274-3.985056 1.40274-4.216189C1.40274-4.511083 1.147696-4.622665 .972354-4.630635C1.307098-5.068991 1.920797-5.092902 2.064259-5.092902C2.271482-5.092902 2.87721-5.029141 2.87721-4.208219C2.87721-3.650311 2.646077-3.315567 2.534496-3.188045C2.295392-2.940971 2.11208-2.925031 1.625903-2.893151C1.474471-2.885181 1.41071-2.87721 1.41071-2.773599C1.41071-2.662017 1.482441-2.662017 1.617933-2.662017H2.016438Z"></path>
+<path id="rlsid-1" d="M5.355915-3.825654C5.355915-4.817933 5.296139-5.786301 4.865753-6.694894C4.375592-7.687173 3.514819-7.950187 2.929016-7.950187C2.235616-7.950187 1.3868-7.603487 .944458-6.611208C.609714-5.858032 .490162-5.116812 .490162-3.825654C.490162-2.666002 .573848-1.793275 1.004234-.944458C1.470486-.035866 2.295392 .251059 2.917061 .251059C3.957161 .251059 4.554919-.37061 4.901619-1.06401C5.332005-1.960648 5.355915-3.132254 5.355915-3.825654ZM2.917061 .011955C2.534496 .011955 1.75741-.203238 1.530262-1.506351C1.398755-2.223661 1.398755-3.132254 1.398755-3.969116C1.398755-4.94944 1.398755-5.834122 1.590037-6.539477C1.793275-7.340473 2.402989-7.711083 2.917061-7.711083C3.371357-7.711083 4.064757-7.436115 4.291905-6.40797C4.447323-5.726526 4.447323-4.782067 4.447323-3.969116C4.447323-3.16812 4.447323-2.259527 4.315816-1.530262C4.088667-.215193 3.335492 .011955 2.917061 .011955Z"></path>
+<path id="rlsid-12" d="M8.631631-5.403736C8.631631-5.654795 8.547945-5.762391 8.464259-5.762391C8.416438-5.762391 8.308842-5.71457 8.296887-5.439601C8.249066-4.614695 7.412204-4.124533 6.635118-4.124533C5.941719-4.124533 5.34396-4.495143 4.722291-4.913574C4.076712-5.34396 3.431133-5.774346 2.654047-5.774346C1.542217-5.774346 .657534-4.925529 .657534-3.825654C.657534-3.56264 .753176-3.466999 .824907-3.466999C.944458-3.466999 .992279-3.694147 .992279-3.741968C1.052055-4.746202 2.032379-5.104857 2.654047-5.104857C3.347447-5.104857 3.945205-4.734247 4.566874-4.315816C5.212453-3.88543 5.858032-3.455044 6.635118-3.455044C7.746949-3.455044 8.631631-4.303861 8.631631-5.403736ZM8.631631-2.606227C8.631631-2.952927 8.488169-2.976837 8.464259-2.976837C8.416438-2.976837 8.308842-2.917061 8.296887-2.654047C8.249066-1.829141 7.412204-1.338979 6.635118-1.338979C5.941719-1.338979 5.34396-1.709589 4.722291-2.12802C4.076712-2.558406 3.431133-2.988792 2.654047-2.988792C1.542217-2.988792 .657534-2.139975 .657534-1.0401C.657534-.777086 .753176-.681445 .824907-.681445C.944458-.681445 .992279-.908593 .992279-.956413C1.052055-1.960648 2.032379-2.319303 2.654047-2.319303C3.347447-2.319303 3.945205-1.948692 4.566874-1.530262C5.212453-1.099875 5.858032-.669489 6.635118-.669489C7.770859-.669489 8.631631-1.554172 8.631631-2.606227Z"></path>
+<path id="rlsid-54" d="M2.247572-1.625903C2.375093-1.745455 2.709838-2.008468 2.83736-2.12005C3.331507-2.574346 3.801743-3.012702 3.801743-3.737983C3.801743-4.686426 3.004732-5.300125 2.008468-5.300125C1.052055-5.300125 .422416-4.574844 .422416-3.865504C.422416-3.474969 .73325-3.419178 .844832-3.419178C1.012204-3.419178 1.259278-3.53873 1.259278-3.841594C1.259278-4.25604 .860772-4.25604 .765131-4.25604C.996264-4.837858 1.530262-5.037111 1.920797-5.037111C2.662017-5.037111 3.044583-4.407472 3.044583-3.737983C3.044583-2.909091 2.462765-2.303362 1.522291-1.338979L.518057-.302864C.422416-.215193 .422416-.199253 .422416 0H3.57061L3.801743-1.42665H3.55467C3.53076-1.267248 3.466999-.868742 3.371357-.71731C3.323537-.653549 2.717808-.653549 2.590286-.653549H1.171606L2.247572-1.625903Z"></path>
+<path id="rlsid-15" d="M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z"></path>
+<path id="rlsid-31" d="M3.993026-3.180075C3.642341-3.092403 3.626401-2.781569 3.626401-2.749689C3.626401-2.574346 3.761893-2.454795 3.937235-2.454795S4.383562-2.590286 4.383562-2.933001C4.383562-3.387298 3.881445-3.514819 3.58655-3.514819C3.211955-3.514819 2.909091-3.251806 2.725778-2.940971C2.550436-3.363387 2.13599-3.514819 1.809215-3.514819C.940473-3.514819 .454296-2.518555 .454296-2.295392C.454296-2.223661 .510087-2.191781 .573848-2.191781C.669489-2.191781 .68543-2.231631 .70934-2.327273C.892653-2.909091 1.370859-3.291656 1.785305-3.291656C2.096139-3.291656 2.247572-3.068493 2.247572-2.781569C2.247572-2.622167 2.15193-2.255542 2.088169-2.000498C2.032379-1.769365 1.857036-1.060025 1.817186-.908593C1.705604-.478207 1.41868-.143462 1.060025-.143462C1.028144-.143462 .820922-.143462 .653549-.255044C1.020174-.342715 1.020174-.67746 1.020174-.68543C1.020174-.868742 .876712-.980324 .70137-.980324C.486177-.980324 .255044-.797011 .255044-.494147C.255044-.127522 .645579 .079701 1.052055 .079701C1.474471 .079701 1.769365-.239103 1.912827-.494147C2.088169-.103611 2.454795 .079701 2.83736 .079701C3.706102 .079701 4.184309-.916563 4.184309-1.139726C4.184309-1.219427 4.120548-1.243337 4.064757-1.243337C3.969116-1.243337 3.953176-1.187547 3.929265-1.107846C3.769863-.573848 3.315567-.143462 2.8533-.143462C2.590286-.143462 2.399004-.318804 2.399004-.653549C2.399004-.812951 2.446824-.996264 2.558406-1.44259C2.614197-1.681694 2.789539-2.383064 2.82939-2.534496C2.940971-2.948941 3.219925-3.291656 3.57858-3.291656C3.618431-3.291656 3.825654-3.291656 3.993026-3.180075Z"></path>
+<path id="rlsid-38" d="M1.594022-1.307098C1.617933-1.42665 1.697634-1.729514 1.721544-1.849066C1.833126-2.279452 1.833126-2.287422 2.016438-2.550436C2.279452-2.940971 2.654047-3.291656 3.188045-3.291656C3.474969-3.291656 3.642341-3.124284 3.642341-2.749689C3.642341-2.311333 3.307597-1.40274 3.156164-1.012204C3.052553-.749191 3.052553-.70137 3.052553-.597758C3.052553-.143462 3.427148 .079701 3.769863 .079701C4.550934 .079701 4.877709-1.036115 4.877709-1.139726C4.877709-1.219427 4.813948-1.243337 4.758157-1.243337C4.662516-1.243337 4.646575-1.187547 4.622665-1.107846C4.431382-.454296 4.096638-.143462 3.793773-.143462C3.666252-.143462 3.602491-.223163 3.602491-.406476S3.666252-.765131 3.745953-.964384C3.865504-1.267248 4.216189-2.183811 4.216189-2.630137C4.216189-3.227895 3.801743-3.514819 3.227895-3.514819C2.582316-3.514819 2.16787-3.124284 1.936737-2.82142C1.880946-3.259776 1.530262-3.514819 1.123786-3.514819C.836862-3.514819 .637609-3.331507 .510087-3.084433C.318804-2.709838 .239103-2.311333 .239103-2.295392C.239103-2.223661 .294894-2.191781 .358655-2.191781C.462267-2.191781 .470237-2.223661 .526027-2.430884C.621669-2.82142 .765131-3.291656 1.099875-3.291656C1.307098-3.291656 1.354919-3.092403 1.354919-2.917061C1.354919-2.773599 1.315068-2.622167 1.251308-2.359153C1.235367-2.295392 1.115816-1.825156 1.083935-1.713574L.789041-.518057C.757161-.398506 .70934-.199253 .70934-.167372C.70934 .01594 .860772 .079701 .964384 .079701C1.107846 .079701 1.227397-.01594 1.283188-.111582C1.307098-.159402 1.370859-.430386 1.41071-.597758L1.594022-1.307098Z"></path>
+<path id="rlsid-57" d="M3.140224-5.156663C3.140224-5.316065 3.140224-5.379826 2.972852-5.379826C2.86924-5.379826 2.86127-5.371856 2.781569-5.260274L.239103-1.570112V-1.307098H2.486675V-.645579C2.486675-.350685 2.462765-.263014 1.849066-.263014H1.665753V0C2.343213-.02391 2.359153-.02391 2.81345-.02391S3.283686-.02391 3.961146 0V-.263014H3.777833C3.164134-.263014 3.140224-.350685 3.140224-.645579V-1.307098H3.985056V-1.570112H3.140224V-5.156663ZM2.542466-4.511083V-1.570112H.518057L2.542466-4.511083Z"></path>
+<path id="rlsid-20" d="M2.080199-7.364384C2.080199-7.675218 1.829141-7.950187 1.494396-7.950187C1.183562-7.950187 .920548-7.699128 .920548-7.376339C.920548-7.017684 1.207472-6.790535 1.494396-6.790535C1.865006-6.790535 2.080199-7.10137 2.080199-7.364384ZM.430386-5.140722V-4.794022C1.195517-4.794022 1.303113-4.722291 1.303113-4.136488V-.884682C1.303113-.3467 1.171606-.3467 .394521-.3467V0C.729265-.02391 1.303113-.02391 1.649813-.02391C1.78132-.02391 2.47472-.02391 2.881196 0V-.3467C2.10411-.3467 2.056289-.406476 2.056289-.872727V-5.272229L.430386-5.140722Z"></path>
+<path id="rlsid-71" d="M1.594022-1.307098C1.617933-1.42665 1.697634-1.729514 1.721544-1.849066C1.745455-1.928767 1.793275-2.12005 1.809215-2.199751C1.825156-2.239601 2.088169-2.757659 2.438854-3.020672C2.709838-3.227895 2.972852-3.291656 3.196015-3.291656C3.490909-3.291656 3.650311-3.116314 3.650311-2.749689C3.650311-2.558406 3.602491-2.375093 3.514819-2.016438C3.459029-1.809215 3.323537-1.275218 3.275716-1.060025L3.156164-.581818C3.116314-.446326 3.060523-.207223 3.060523-.167372C3.060523 .01594 3.211955 .079701 3.315567 .079701C3.459029 .079701 3.57858-.01594 3.634371-.111582C3.658281-.159402 3.722042-.430386 3.761893-.597758L3.945205-1.307098C3.969116-1.42665 4.048817-1.729514 4.072727-1.849066C4.184309-2.279452 4.184309-2.287422 4.367621-2.550436C4.630635-2.940971 5.00523-3.291656 5.539228-3.291656C5.826152-3.291656 5.993524-3.124284 5.993524-2.749689C5.993524-2.311333 5.65878-1.39477 5.507347-1.012204C5.427646-.804981 5.403736-.749191 5.403736-.597758C5.403736-.143462 5.778331 .079701 6.121046 .079701C6.902117 .079701 7.228892-1.036115 7.228892-1.139726C7.228892-1.219427 7.165131-1.243337 7.10934-1.243337C7.013699-1.243337 6.997758-1.187547 6.973848-1.107846C6.782565-.446326 6.447821-.143462 6.144956-.143462C6.017435-.143462 5.953674-.223163 5.953674-.406476S6.017435-.765131 6.097136-.964384C6.216687-1.267248 6.567372-2.183811 6.567372-2.630137C6.567372-3.227895 6.152927-3.514819 5.579078-3.514819C5.029141-3.514819 4.574844-3.227895 4.216189-2.733748C4.152428-3.371357 3.642341-3.514819 3.227895-3.514819C2.86127-3.514819 2.375093-3.387298 1.936737-2.81345C1.880946-3.291656 1.498381-3.514819 1.123786-3.514819C.844832-3.514819 .645579-3.347447 .510087-3.076463C.318804-2.701868 .239103-2.311333 .239103-2.295392C.239103-2.223661 .294894-2.191781 .358655-2.191781C.462267-2.191781 .470237-2.223661 .526027-2.430884C.621669-2.82142 .765131-3.291656 1.099875-3.291656C1.307098-3.291656 1.354919-3.092403 1.354919-2.917061C1.354919-2.773599 1.315068-2.622167 1.251308-2.359153C1.235367-2.295392 1.115816-1.825156 1.083935-1.713574L.789041-.518057C.757161-.398506 .70934-.199253 .70934-.167372C.70934 .01594 .860772 .079701 .964384 .079701C1.107846 .079701 1.227397-.01594 1.283188-.111582C1.307098-.159402 1.370859-.430386 1.41071-.597758L1.594022-1.307098Z"></path>
+<path id="rlsid-17" d="M4.770112-2.761644H8.069738C8.237111-2.761644 8.452304-2.761644 8.452304-2.976837C8.452304-3.203985 8.249066-3.203985 8.069738-3.203985H4.770112V-6.503611C4.770112-6.670984 4.770112-6.886177 4.554919-6.886177C4.327771-6.886177 4.327771-6.682939 4.327771-6.503611V-3.203985H1.028144C.860772-3.203985 .645579-3.203985 .645579-2.988792C.645579-2.761644 .848817-2.761644 1.028144-2.761644H4.327771V.537983C4.327771 .705355 4.327771 .920548 4.542964 .920548C4.770112 .920548 4.770112 .71731 4.770112 .537983V-2.761644Z"></path>
+<path id="rlsid-64" d="M2.654047 1.992528C2.717808 1.992528 2.81345 1.992528 2.81345 1.896887C2.81345 1.865006 2.805479 1.857036 2.701868 1.753425C1.609963 .72528 1.338979-.757161 1.338979-1.992528C1.338979-4.28792 2.287422-5.363885 2.693898-5.730511C2.805479-5.834122 2.81345-5.842092 2.81345-5.881943S2.781569-5.977584 2.701868-5.977584C2.574346-5.977584 2.175841-5.571108 2.11208-5.499377C1.044085-4.383562 .820922-2.948941 .820922-1.992528C.820922-.207223 1.570112 1.227397 2.654047 1.992528Z"></path></defs></svg></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  © Xiao Wan 2024 &ndash; 2024 | <a href="https://github.com/xwcal">Github</a>
+  
+  </footer>
+  </div>
+  </div>
+  </body>
+</html>
+
